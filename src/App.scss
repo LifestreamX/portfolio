@@ -1,0 +1,21 @@
+@import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+// Color variables
+$black: #010101;
+$background: #362c5f;
+$salmon: #fc8a68;
+$soft-peach: #fefdfd;
+$amethyst-smoke: #a095af;
+$copper-rust: #964b48;
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: $soft-peach;
+  background-color: $background;
+  overflow: hidden;
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
