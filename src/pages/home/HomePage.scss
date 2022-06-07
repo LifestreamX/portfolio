@@ -1,0 +1,79 @@
+@import '../../App.scss';
+
+.home-page {
+  .portfolio-title {
+    position: relative;
+    right: 110px;
+  }
+
+  .typing-text {
+    position: absolute;
+    left: 1000px;
+  }
+
+  .text {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+  }
+
+  h1 {
+    color: $soft-peach;
+    font-family: $primary-font;
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  h2 {
+    color: $salmon;
+    font-family: $secondary-font;
+    font-size: 30px;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+
+  a {
+    color: $soft-peach;
+    text-decoration: none;
+    margin-top: 20px;
+    z-index: 10;
+    position: relative;
+    display: inline-block;
+    padding: 0 1em;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    font-size: 0.8rem;
+    line-height: 1.91667;
+    color: #2e1e43;
+    background-color: #ff8c67;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    font-family: $secondary-font;
+    width: 40%;
+    font-size: 16px;
+    font-size: 1.06667rem;
+    line-height: 1.4375;
+    padding: 0.7em;
+    margin-bottom: 1.5em;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+
+  a:hover {
+    background-color: $soft-peach;
+    color: $background;
+  }
+
+  .t-animation-wrapper {
+    position: absolute;
+    left: 50%;
+  }
+}

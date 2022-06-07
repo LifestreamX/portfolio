@@ -1,5 +1,7 @@
 @import 'animate.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 // Color variables
 $black: #010101;
@@ -8,6 +10,11 @@ $salmon: #fc8a68;
 $soft-peach: #fefdfd;
 $amethyst-smoke: #a095af;
 $copper-rust: #964b48;
+$button-hover: #5f2e8e;
+
+// Fonts
+$primary-font: 'Bungee', cursive;
+$secondary-font: 'Audiowide', cursive;
 
 body {
   margin: 0;

@@ -1,0 +1,166 @@
+//   T an
+
+// T Animations
+.t {
+  svg {
+    width: 1000px;
+    animation: svg-fill 3000ms ease-in-out 2500ms both;
+    .t-start-c2,
+    .t-follow-c2 {
+      stroke-dashoffset: 364.77;
+      stroke-dasharray: 364.77;
+      animation: t-c2 cubic-bezier(0, 0.47, 0.1, 0.99) forwards;
+    }
+    .t-start-c1,
+    .t-follow-c1 {
+      stroke-dashoffset: 198;
+      stroke-dasharray: 198;
+      animation: t-c1 cubic-bezier(0, 0.47, 0.1, 0.99) forwards;
+    }
+    .t-start-c1,
+    .t-start-c2 {
+      animation-duration: 4000ms;
+      animation-delay: 1350ms;
+    }
+
+    .t-follow-c1,
+    .t-follow-c2 {
+      animation-duration: 4000ms;
+      animation-delay: 1200ms;
+    }
+    .t-start-b3,
+    .t-follow-b3 {
+      stroke-dashoffset: 196;
+      stroke-dasharray: 196;
+      animation: t-b3 cubic-bezier(0, 0.47, 0.1, 0.99) forwards;
+    }
+    .t-start-b2,
+    .t-follow-b2 {
+      stroke-dashoffset: 192;
+      stroke-dasharray: 192;
+      animation: t-b2 ease-out forwards;
+    }
+    .t-start-b1,
+    .t-follow-b1 {
+      stroke-dashoffset: 380;
+      stroke-dasharray: 380;
+      animation: t-b1 cubic-bezier(0, 0.47, 0.1, 0.99) forwards;
+    }
+    polygon[class^='t-start-b'] {
+      animation-duration: 4000ms;
+      animation-delay: 850ms;
+    }
+    polygon[class^='t-follow-b'] {
+      animation-duration: 4000ms;
+      animation-delay: 700ms;
+    }
+    .t-start-a,
+    .t-follow-a {
+      stroke-dashoffset: 363.65;
+      stroke-dasharray: 363.65;
+      animation: t-a cubic-bezier(0, 0.47, 0.1, 0.99) forwards;
+    }
+    .t-start-a {
+      animation-duration: 4000ms;
+      animation-delay: 650ms;
+    }
+    .t-follow-a {
+      animation-duration: 4000ms;
+      animation-delay: 500ms;
+    }
+  }
+}
+
+// T Keyframes
+@keyframes svg-fill {
+  0% {
+    fill: RGBA(16, 25, 40, 0);
+  }
+  100% {
+    fill: RGBA(16, 25, 40, 0.3);
+  }
+}
+
+@keyframes t-c2 {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 364.77;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes t-c1 {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 198;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes t-b3 {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 196;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes t-b2 {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 192;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes t-b1 {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 380;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes t-a {
+  0% {
+    opacity: 0;
+    stroke-dashoffset: 363.65;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
+}

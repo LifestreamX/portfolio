@@ -1,4 +1,4 @@
-@import '../../../App.scss';
+@import '../../App.scss';
 
 .navigation-wrapper {
   background: $black;
@@ -38,7 +38,8 @@
       }
 
       .icons:hover {
-        color: $amethyst-smoke !important;
+        color: $salmon !important;
+        
       }
     }
   }

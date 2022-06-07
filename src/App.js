@@ -1,13 +1,16 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.scss';
-import Layout from './assets/components/Layout/Layout';
+import Layout from './Layout/Layout';
+import HomePage from './pages/home/HomePage';
 
 function App() {
+
   return (
-    <div className="App">
+    <div className='App'>
       <Routes>
-        <Route path='' element={<Layout/>} />
-        
+        <Route path='' element={<Layout />}>
+          <Route index element={<HomePage />} />
+        </Route>
       </Routes>
     </div>
   );

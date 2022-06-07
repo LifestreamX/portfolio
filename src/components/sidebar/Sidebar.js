@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.scss';
-import SidebarText from './NavTextAnimation';
 import HomeIcon from '@mui/icons-material/Home';
 import Tooltip from '@mui/material/Tooltip';
 import PersonIcon from '@mui/icons-material/Person';
@@ -9,6 +8,7 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { createTheme, ThemeProvider } from '@mui/material';
+import SidebarText from '../NavTextAnimation';
 
 const Sidebar = () => {
   const theme = createTheme({
@@ -33,7 +33,6 @@ const Sidebar = () => {
     <ThemeProvider theme={theme}>
       <div className='navigation-wrapper'>
         <div className='logo'>
-          <SidebarText />
         </div>
 
         {/* Page links */}
