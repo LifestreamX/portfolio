@@ -1,3 +1,12 @@
+- ABout me sidebar
+- fade in react
+
+
+
+
+
+
+
 - React
 - emailjs
 - fontawesome

@@ -1,14 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import LetterAnimations from '../../components/LetterAnimations';
+import LetterAnimations from '../../components/letteranimations/LetterAnimations';
 import SidebarText from '../../components/NavTextAnimation';
-import TAnimation from '../../components/TAnimation';
+import TAnimation from '../../components/textanimations/TAnimation';
 import './HomePage.scss';
 
 const HomePage = () => {
   const [timer, setTimer] = useState(false);
 
   const [letterClass, setLetterClass] = useState('text-animate');
+
+  const titleSection = [
+    't',
+    'y',
+    'l',
+    'e',
+    'r',
+    "'",
+    's',
+    ' ',
+    'p',
+    'o',
+    'r',
+    't',
+    'f',
+    'o',
+    'l',
+    'i',
+    'o',
+  ];
 
   const firstLine = ['h', 'e', 'l', 'l', 'o', ','];
 
@@ -66,7 +86,15 @@ const HomePage = () => {
         {timer === false ? (
           <SidebarText />
         ) : (
-          <h1 className='portfolio-title '>Tyler's Portfolio</h1>
+          <h1 className='portfolio-title '>
+            {' '}
+            <LetterAnimations
+              letterClass={letterClass}
+              strArray={titleSection}
+              idx={35}
+
+            />
+          </h1>
         )}
       </div>
 
@@ -76,7 +104,7 @@ const HomePage = () => {
           <LetterAnimations
             letterClass={letterClass}
             strArray={firstLine}
-            idx={15}
+            idx={53}
           />{' '}
           <br />{' '}
           <LetterAnimations

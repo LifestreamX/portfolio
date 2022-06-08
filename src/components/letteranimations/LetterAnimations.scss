@@ -1,4 +1,4 @@
-@import '.././App.scss';
+@import '../../App.scss';
 
 .text-animate {
   display: inline-block;
@@ -22,7 +22,7 @@
   }
 }
 
-@for $i from 1 through 52 {
+@for $i from 1 through 70 {
   .text-animate._#{$i} {
     animation-delay: #{$i / 20}s;
   }

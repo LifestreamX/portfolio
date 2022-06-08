@@ -1,0 +1,50 @@
+@import '../../App.scss';
+
+.about-page {
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    transform: translateY(50%);
+    width: 35%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+
+    h1 {
+      font-size: 50px;
+      font-family: $primary-font;
+      margin-top: 0;
+      position: relative;
+      margin-bottom: 40px;
+      color: $salmon;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      animation: pulse 3s;
+      line-height: 35px;
+      font-size: 25px;
+
+      &:nth-child(2) {
+        animation-delay: 2s;
+      }
+      &:nth-child(3) {
+        animation-delay: 4s;
+      }
+    }
+  }
+
+  .text-animate-hover {
+    &:hover {
+      color: $soft-peach;
+    }
+  }
+
+  .right-side {
+    position: absolute;
+    left: 55%;
+    top: 20%;
+  }
+}
