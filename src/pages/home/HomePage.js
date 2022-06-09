@@ -4,6 +4,7 @@ import LetterAnimations from '../../components/letteranimations/LetterAnimations
 import SidebarText from '../../components/NavTextAnimation';
 import TAnimation from '../../components/textanimations/TAnimation';
 import './HomePage.scss';
+import { motion } from 'framer-motion';
 
 const HomePage = () => {
   const [timer, setTimer] = useState(false);
@@ -80,7 +81,12 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className='container home-page'>
+    <motion.div
+      className='container home-page'
+      initial={{ width: 0 }}
+      animate={{ width: '100%' }}
+      exit={{ x: window.innerWidth, transition: { duration: 1 } }}
+    >
       {/* Top section */}
       <div className='typing-text'>
         {timer === false ? (
@@ -92,7 +98,6 @@ const HomePage = () => {
               letterClass={letterClass}
               strArray={titleSection}
               idx={35}
-
             />
           </h1>
         )}
@@ -130,7 +135,7 @@ const HomePage = () => {
       <div className='t-animation-wrapper'>
         <TAnimation />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

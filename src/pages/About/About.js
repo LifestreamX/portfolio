@@ -3,6 +3,7 @@ import './About.scss';
 import '../../App.scss';
 import LetterAnimations from '../../components/letteranimations/LetterAnimations';
 import ReactLogo from '../../components/reactlogo/ReactLogo';
+import { motion } from 'framer-motion';
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -16,7 +17,12 @@ const About = () => {
   }, []);
 
   return (
-    <div className='container about-page'>
+    <motion.div
+      className='container about-page'
+      initial={{ width: 0 }}
+      animate={{ width: '100%' }}
+      exit={{ x: window.innerWidth, transition: { duration: 1 } }}
+    >
       {/* Left section */}
       <div className='text-zone'>
         <h1>
@@ -50,7 +56,7 @@ const About = () => {
       <div className='right-side'>
         <ReactLogo />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

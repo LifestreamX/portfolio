@@ -1,5 +1,4 @@
-- ABout me sidebar
-- fade in react
+
 
 
 
@@ -19,6 +18,7 @@
 - sass
 - react-typical
 - Material-ui
+- Framer Motion
 
 
 

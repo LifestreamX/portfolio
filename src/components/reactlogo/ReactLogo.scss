@@ -8,11 +8,7 @@ $color: #fc8a68;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  @include flexBox(row, center, center);
-  overflow: hidden;
+
 
   section {
     width: 60vh;
