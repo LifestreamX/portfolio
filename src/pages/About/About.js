@@ -29,16 +29,20 @@ const About = () => {
         </h1>
 
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
-          atque recusandae ex laborum nemo quas pariatur, suscipit dolore iure,
-          reiciendis praesentium, deserunt adipisci incidunt voluptas sapiente
-          expedita tenetur eligendi minima.
+          I'm a very passionate self-taught front-end developer looking forward
+          to be part of a team to help develop and maintain web applications. I
+          ambitious when it comes to continuous learning as a web developer
+          always discovering new thing tools to increase my skills.
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae
-          atque recusandae ex laborum nemo quas pariatur, suscipit dolore iure,
-          reiciendis praesentium, deserunt adipisci incidunt voluptas sapiente
-          expedita tenetur eligendi minima.
+          I am easy to work with along with always being open to learn new
+          things to help further my knowledge. I always try to keep up to date
+          with the new technology coming out as this field is always changing.
+        </p>
+        <p>
+          A couple fun facts about me is I like to stay active as well as
+          helping others stay active as by being a personal trainer . I also
+          love animals and own 2 corgis.
         </p>
       </div>
 
