@@ -64,7 +64,7 @@ const Sidebar = () => {
           </NavLink>
         </nav>
         {/* Links for Github and Linkedin */}
-        <section>
+        <div className='links-wrapper-2'>
           <li>
             <a
               href='https://github.com/LifestreamX'
@@ -89,7 +89,7 @@ const Sidebar = () => {
               </Tooltip>
             </a>
           </li>
-        </section>
+        </div>
       </div>
     </ThemeProvider>
   );

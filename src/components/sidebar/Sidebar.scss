@@ -39,13 +39,12 @@
 
       .icons:hover {
         color: $salmon !important;
-        
       }
     }
   }
 
   //   Nav github and linkedin links
-  section {
+  .links-wrapper-2 {
     position: absolute;
     bottom: 20px;
     width: 100%;
@@ -66,7 +65,7 @@
           font-size: 48px;
         }
         .nav-2-icons:hover {
-          color: $amethyst-smoke !important;
+          color: $salmon;
         }
       }
     }
