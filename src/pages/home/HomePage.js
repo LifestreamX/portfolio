@@ -71,7 +71,6 @@ const HomePage = () => {
     'r',
   ];
 
-  console.log(firstLine.length + secondLine.length + thirdLine.length);
 
   useEffect(() => {
     setTimeout(() => {

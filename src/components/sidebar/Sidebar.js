@@ -8,7 +8,6 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { createTheme, ThemeProvider } from '@mui/material';
-import SidebarText from '../NavTextAnimation';
 
 const Sidebar = () => {
   const theme = createTheme({
