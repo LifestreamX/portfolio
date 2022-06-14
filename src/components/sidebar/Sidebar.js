@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.scss';
 import HomeIcon from '@mui/icons-material/Home';
@@ -8,8 +8,14 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { createTheme, ThemeProvider } from '@mui/material';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { useHistory } from 'react-router-dom';
+import { red } from '@mui/material/colors';
 
 const Sidebar = () => {
+  const [currentIcon, setCurrentIcon] = useState(null);
+  const [currentPage, setCurrentPage] = useState(false);
+
   const theme = createTheme({
     components: {
       MuiTooltip: {
@@ -28,37 +34,66 @@ const Sidebar = () => {
     },
   });
 
+  // Button icon color change on active link
+  let activeStyle = {
+    color: '#fc8a68',
+    fontSize: '48px',
+    textDecoration: 'none',
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <div className='navigation-wrapper'>
-        <div className='logo'>
-        </div>
+        <div className='logo'></div>
 
         {/* Page links */}
         <nav>
-          <NavLink to='/' exact='true' activeclassname='active'>
+          {/* Home icon link */}
+          <NavLink
+            to='/'
+            className='about-nav-link'
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
             <Tooltip title='Home' placement='right' arrow>
-              <HomeIcon className='icons' />
+              <HomeIcon
+                className={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                }
+                id='icons'
+              />
             </Tooltip>
           </NavLink>
+
+          {/* About icon link */}
           <NavLink
             to='/about'
             className='about-nav-link'
             exact='true'
-            activeclassname='active'
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             <Tooltip title='About' placement='right' arrow>
-              <PersonIcon className='icons' />
+              <PersonIcon
+                className={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                }
+                id='icons'
+              />
             </Tooltip>
           </NavLink>
+          {/* Contact icon link */}
           <NavLink
             to='/contact'
             className='contact-nav-link'
             exact='true'
-            activeclassname='active'
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             <Tooltip title='Contact' placement='right' arrow>
-              <ContactMailIcon className='icons' />
+              <ContactMailIcon
+                className={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                }
+                id='icons'
+              />
             </Tooltip>
           </NavLink>
         </nav>

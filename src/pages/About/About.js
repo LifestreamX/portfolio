@@ -4,6 +4,7 @@ import '../../App.scss';
 import LetterAnimations from '../../components/letteranimations/LetterAnimations';
 import ReactLogo from '../../components/reactlogo/ReactLogo';
 import { motion } from 'framer-motion';
+import gsap from 'gsap';
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -14,14 +15,51 @@ const About = () => {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, '3000');
+    // Animations
+
+    gsap.fromTo(
+      'p',
+      { opacity: 0 },
+      { stagger: 2, opacity: 1, duration: 4, delay: 1 }
+    );
   }, []);
+  // React-logo
+  gsap
+    .timeline()
+    .fromTo(
+      '.right-side',
+      {
+        opacity: 1,
+      },
+      {
+        scale: 1,
+        duration: 10,
+        opacity: 1,
+        ease: 'power2.out',
+      }
+    )
+    .fromTo(
+      '.right-side',
+      {
+        rotation: 0,
+      },
+      {
+        rotation: 360,
+        duration: 10,
+        repeat: -1,
+        ease: 'linear',
+      },
+      0
+    )
+    .timeScale(1);
+  // About me text
 
   return (
-    <motion.div
+    <motion.main
       className='container about-page'
       initial={{ width: 0 }}
       animate={{ width: '100%' }}
-      exit={{ x: window.innerWidth, transition: { duration: 1 } }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.7 } }}
     >
       {/* Left section */}
       <div className='text-zone'>
@@ -53,10 +91,10 @@ const About = () => {
       </div>
 
       {/* Right sections with animation */}
-      <div className='right-side'>
-        <ReactLogo />
-      </div>
-    </motion.div>
+      <section className='right-side'>
+        <ReactLogo className='react-logo' />
+      </section>
+    </motion.main>
   );
 };
 

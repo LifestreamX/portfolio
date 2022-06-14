@@ -10,7 +10,7 @@
 - emailjs
 - fontawesome
 - animate.css
-- gsap-trial
+- gsap
 - loader.css
 - react-leaflet (map wont install yet)
 - react-loaders

@@ -23,19 +23,19 @@
 
     p {
       font-family: 'Roboto', sans-serif;
-      animation: pulse 3s;
+      // animation: pulse 3s;
       line-height: 35px;
       font-size: 25px;
 
-      &:nth-child(2) {
-        animation-delay: 1s;
-      }
-      &:nth-child(3) {
-        animation-delay: 2s;
-      }
-      &:nth-child(4) {
-        animation-delay: 3s;
-      }
+      // &:nth-child(2) {
+      //   animation-delay: 1s;
+      // }
+      // &:nth-child(3) {
+      //   animation-delay: 2s;
+      // }
+      // &:nth-child(4) {
+      //   animation-delay: 3s;
+      // }
     }
   }
 

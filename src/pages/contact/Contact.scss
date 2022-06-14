@@ -1,6 +1,14 @@
 @import '../../App.scss';
 
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.animation-wrapper {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
+.contact-page-logo {
+  font-size: 400px !important;
+  color: $salmon;
+}
 
 .container {
   width: 100%;
@@ -11,10 +19,6 @@
   font-family: $primary-font;
 }
 
-body.menu-active .container {
-  transform: scale(0.9);
-}
-
 .container .inner {
   width: 100%;
   height: 100%;
@@ -22,89 +26,6 @@ body.menu-active .container {
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
-}
-
-.nav {
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 75px;
-  margin: 0;
-  padding: 0 25px;
-  box-sizing: border-box;
-  z-index: 99;
-}
-
-.nav a {
-  display: inline-block;
-  height: 75px;
-  line-height: 75px;
-  font-size: 30px;
-  padding: 0 25px;
-  color: #212121;
-  text-decoration: none;
-  cursor: pointer;
-  text-align: center;
-
-  transition: all 0.32s ease;
-}
-
-body:not(.menu-active) .nav a.menu-activator:hover {
-  transform: rotate(90deg);
-}
-
-body.menu-active .nav a.menu-activator {
-  transform: rotate(90deg);
-}
-
-.nav a.white {
-  color: #fafafa;
-}
-
-body.menu-active .nav a.white {
-  color: #212121;
-  transition: all 0.15s ease;
-}
-
-.nav a.link {
-  float: right;
-  position: relative;
-  text-align: center;
-}
-
-.nav a.link i {
-  position: absolute;
-  display: block;
-  transform: translateX(-50%);
-
-  transition: all 0.32s ease;
-}
-
-.nav a.link i.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.nav a.link:hover i {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.nav a.link:hover i.hidden {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.nav i.ion-cube {
-  display: inline-block;
-  position: absolute;
-  height: 75px;
-  line-height: 75px;
-  font-size: 35px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .container .inner .panel {
@@ -125,22 +46,8 @@ body.menu-active .nav a.white {
   width: 100%;
   height: 100%;
   left: 30%;
-  top: 30%;
+  top: 20%;
   transform: translateX(-50%) translateY(-50%) skew(20deg);
-}
-
-.container .inner .panel.panel-left .panel-content .image-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 50%;
-  top: 50%;
-  opacity: 0.95;
-  background-image: url('http://uplusion23.net/images/RickGenestSm.png');
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: 50%;
-  transform: translateX(-50%) translateY(-50%);
 }
 
 .container .inner .panel.panel-right {
@@ -159,7 +66,7 @@ body.menu-active .nav a.white {
   transform: translateX(-50%) translateY(-25%);
 }
 
-.container .inner .panel.panel-right .panel-content .form h1 {
+.container .inner .panel.panel-right .panel-content .form {
   display: block;
   margin: 0 0 45px 0;
   color: #b1b1b1;
@@ -167,8 +74,11 @@ body.menu-active .nav a.white {
   font-size: 18px;
 }
 
+// Contact title
 h1 {
   color: white !important;
+  font-size: 24px;
+  margin-bottom: 50px;
 }
 
 .group {
@@ -198,7 +108,7 @@ textarea {
 }
 
 input {
-  font-size: 13px;
+  font-size: 16px;
   height: 25px;
   padding: 10px 10px 10px 5px;
   display: block;
@@ -215,11 +125,12 @@ input {
 input:focus {
   outline: none;
   opacity: 1;
+  font-family: 'Roboto', sans-serif;
 }
 
 label {
   color: #b1b1b1;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: normal;
   position: absolute;
   pointer-events: none;
@@ -234,7 +145,7 @@ label {
 /* active state */
 input:focus ~ label,
 input:valid ~ label {
-  top: -10px;
+  top: -15px;
   font-size: 12px;
   color: #b1b1b1;
   opacity: 1;
@@ -243,6 +154,8 @@ input:valid ~ label {
 textarea {
   background-color: white;
   opacity: 0.7;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
 }
 
 textarea:focus {
@@ -300,46 +213,59 @@ input:focus ~ .highlight {
   }
 }
 
-.send-btn {
-  color: #b1b1b1;
-  transition: 0.2s ease;
-}
-
-.send-btn:hover {
-  color: #fafafa;
+// Send button
+button {
+  font-family: inherit;
+  font-size: 20px;
+  background: $background;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
   cursor: pointer;
+  margin-top: 100px;
+  display: flex;
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  transition: all 0.33s ease;
-}
-
-.menu::before {
-  content: '';
+button span {
   display: block;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(240, 240, 240, 0);
-
-  transition: all 0.45s ease;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
 }
 
-body.menu-active .menu {
-  left: 0;
+button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
 }
 
-body.menu-active .menu::before {
-  background: rgba(240, 240, 240, 0.9);
+button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+button:hover span {
+  transform: translateX(5em);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
 }
