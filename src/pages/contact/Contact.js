@@ -1,15 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Contact.scss';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence, useCycle  } from 'framer-motion';
 import '../../pages/home/HomePage.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import gsap from 'gsap';
 import emailjs from '@emailjs/browser';
+import Alert from '@mui/material/Alert';
+
 
 const Contact = () => {
   library.add(faEnvelope);
+  const [sent, setSent] = useState(false);
 
   useEffect(() => {
     // Left side logo
@@ -64,8 +67,16 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+    setSent(true);
     e.target.reset();
+
+    setTimeout(() => {
+      setSent(false);
+    }, '5000');
   };
+
+  console.log(sent);
+
 
   return (
     <motion.div
@@ -92,6 +103,13 @@ const Contact = () => {
               {/* Form */}
               <form className='form' ref={form} onSubmit={sendEmail}>
                 <h1 className='input-1'>CONTACT ME</h1>
+
+                {sent === true && (
+                  <Alert className='alert' severity='success'>
+                    Email has been sent.
+                  </Alert>
+                )}
+
                 {/* Name input */}
                 <div className='group input-2'>
                   <input type='text' required name='name' />
@@ -104,7 +122,7 @@ const Contact = () => {
                   <span className='highlight'></span>
                   <label>Email</label>
                 </div>
-                {/* SUbject input */}
+                {/* Subject input */}
                 <div className='group input-4'>
                   <input type='text' required name='subject' />
                   <span className='highlight'></span>
