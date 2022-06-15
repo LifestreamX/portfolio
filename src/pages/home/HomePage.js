@@ -71,7 +71,6 @@ const HomePage = () => {
     'r',
   ];
 
-
   useEffect(() => {
     setTimeout(() => {
       setTimer(!timer);
@@ -84,15 +83,14 @@ const HomePage = () => {
       className='container home-page'
       initial={{ width: 0 }}
       animate={{ width: '100%' }}
-      exit={{ x: window.innerWidth, transition: { duration: .7 } }}
-
+      exit={{ x: window.innerWidth, transition: { duration: 0.7 } }}
     >
       {/* Top section */}
       <div className='typing-text'>
         {timer === false ? (
           <SidebarText />
         ) : (
-          <h1 className='portfolio-title '>
+          <h1 className='portfolio-title'>
             {' '}
             <LetterAnimations
               letterClass={letterClass}
@@ -109,19 +107,19 @@ const HomePage = () => {
           <LetterAnimations
             letterClass={letterClass}
             strArray={firstLine}
-            idx={53}
+            idx={21}
           />{' '}
           <br />{' '}
           <LetterAnimations
             letterClass={letterClass}
             strArray={secondLine}
-            idx={21}
+            idx={35}
           />
           <br />{' '}
           <LetterAnimations
             letterClass={letterClass}
             strArray={thirdLine}
-            idx={35}
+            idx={53}
           />
         </h1>
 

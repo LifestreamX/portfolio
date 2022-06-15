@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Contact.scss';
 import { motion } from 'framer-motion';
 import '../../pages/home/HomePage.scss';
@@ -6,6 +6,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import gsap from 'gsap';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   library.add(faEnvelope);
@@ -25,8 +26,8 @@ const Contact = () => {
         ease: 'bounce',
       }
     );
-    // Form section
 
+    // Form section
     gsap.fromTo('h1', { x: '1000%' }, { stagger: 0.3, duration: 1.5, x: '0' });
 
     gsap.fromTo(
@@ -36,10 +37,35 @@ const Contact = () => {
     );
     gsap.fromTo(
       'button',
-      { y: '1000%' },
-      { stagger: 0.3, duration: 1.4, delay: 1.5, y: '0' }
+      { opacity: 0 },
+      { stagger: 0.3, duration: 1.4, delay: 3, opacity: 1 }
     );
   }, []);
+
+  // Email
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_nhlx8vb',
+        'template_95sbm8s',
+        form.current,
+        'VGREUHM3uBzR_I_AT'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
 
   return (
     <motion.div
@@ -64,25 +90,29 @@ const Contact = () => {
           <div className='panel panel-right'>
             <div className='panel-content'>
               {/* Form */}
-              <form className='form'>
+              <form className='form' ref={form} onSubmit={sendEmail}>
                 <h1 className='input-1'>CONTACT ME</h1>
+                {/* Name input */}
                 <div className='group input-2'>
-                  <input type='text' required />
+                  <input type='text' required name='name' />
                   <span className='highlight'></span>
                   <label>Name</label>
                 </div>
+                {/* Email input */}
                 <div className='group input-3'>
-                  <input type='text' required />
+                  <input type='email' required name='email' />
                   <span className='highlight'></span>
                   <label>Email</label>
                 </div>
+                {/* SUbject input */}
                 <div className='group input-4'>
-                  <input type='text' required />
+                  <input type='text' required name='subject' />
                   <span className='highlight'></span>
-                  <label>Topic</label>
+                  <label>Subject</label>
                 </div>
+                {/* Message input */}
                 <div className='group message-wrapper input-5'>
-                  <textarea required className='message-box' />
+                  <textarea required className='message-box' name='message' />
                   <label>Message</label>
                 </div>
                 {/* Send button  */}
