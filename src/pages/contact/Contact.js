@@ -120,7 +120,7 @@ const Contact = () => {
                 <div className='group input-3'>
                   <input type='email' required name='email' />
                   <span className='highlight'></span>
-                  <label>Email</label>
+                  <label for='email'>Email</label>
                 </div>
                 {/* Subject input */}
                 <div className='group input-4'>

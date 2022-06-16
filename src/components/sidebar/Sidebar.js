@@ -7,15 +7,10 @@ import PersonIcon from '@mui/icons-material/Person';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import SettingsIcon from '@mui/icons-material/Settings';
 import { createTheme, ThemeProvider } from '@mui/material';
-import { icon } from '@fortawesome/fontawesome-svg-core';
-import { useHistory } from 'react-router-dom';
-import { red } from '@mui/material/colors';
 
 const Sidebar = () => {
-  const [currentIcon, setCurrentIcon] = useState(null);
-  const [currentPage, setCurrentPage] = useState(false);
-
   const theme = createTheme({
     components: {
       MuiTooltip: {
@@ -80,6 +75,24 @@ const Sidebar = () => {
               />
             </Tooltip>
           </NavLink>
+
+          {/* Skills */}
+          <NavLink
+            to='/skills'
+            className='about-nav-link'
+            exact='true'
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            <Tooltip title='Skills' placement='right' arrow>
+              <SettingsIcon
+                className={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                }
+                id='icons'
+              />
+            </Tooltip>
+          </NavLink>
+
           {/* Contact icon link */}
           <NavLink
             to='/contact'
