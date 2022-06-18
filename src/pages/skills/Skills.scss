@@ -4,12 +4,16 @@
   .text-zone {
     position: absolute;
     left: 10%;
-    top: 5%;
+    top: -10%;
     transform: translateY(50%);
     width: 35%;
     vertical-align: middle;
     display: table-cell;
     max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     h1 {
       font-size: 50px;
@@ -19,6 +23,11 @@
       margin-bottom: 40px;
       color: $salmon !important;
       letter-spacing: 2px;
+    }
+
+    .sentence {
+      font-family: $secondary-font;
+      font-size: 36px !important;
     }
 
     p {
@@ -36,10 +45,10 @@
 
   .skills-right-side {
     position: absolute;
-    left: 55%;
-    top: 20%;
+    left: 20%;
+    top: 35%;
     display: grid;
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(6, 150px);
     grid-gap: 100px;
     transition: 2s;
 
@@ -49,6 +58,18 @@
     }
     .skills-icons:hover {
       transform: scale(1.23);
+    }
+  }
+  .individual-project-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 20px;
+      font-family: $secondary-font;
+      margin-top: 30px;
     }
   }
 }

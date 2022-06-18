@@ -41,7 +41,7 @@ const Contact = () => {
         delay: 1,
 
         x: '0%',
-        ease: 'bounce',
+        ease: 'back',
       }
     );
 

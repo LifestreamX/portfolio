@@ -1,10 +1,10 @@
 
 TODO: 
+ - Edit skills page
  - Finish Projects page
  - change secondary color
- - Edit about me paragraphs
- - Edit skills paragraphs 
  - Make mobile responsive
+ - User test
  
 
 

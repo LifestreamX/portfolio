@@ -77,14 +77,14 @@ const Sidebar = () => {
             </Tooltip>
           </NavLink>
 
-          {/* Skills */}
+          {/* Experience */}
           <NavLink
             to='/skills'
             className='about-nav-link'
             exact='true'
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
-            <Tooltip title='Skills' placement='right' arrow>
+            <Tooltip title='Experience' placement='right' arrow>
               <SettingsIcon
                 className={({ isActive }) =>
                   isActive ? activeStyle : undefined

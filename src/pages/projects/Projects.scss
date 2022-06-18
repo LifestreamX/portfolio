@@ -1,9 +1,5 @@
 @import '../../App.scss';
 
-
-
-
-
 .projects-page {
   overflow: scroll !important;
 }
@@ -18,11 +14,15 @@
 // Title
 .project__title {
   position: absolute;
-  left: 41%;
+  left: 45.6%;
   font-size: 50px;
-  top: -100px;
+  top: -80px;
+  margin-top: 40px;
+  letter-spacing: 2px;
+  color: $salmon !important;
 }
 
+// Star animation background
 .background {
   display: block;
   position: absolute;
@@ -138,10 +138,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    perspective: 800px;
-    position: relative;
     position: absolute;
-    top: 5%;
+    top: 8%;
     left: 10%;
 
     .cards {
@@ -151,7 +149,8 @@
       grid-template-columns: repeat(3, 1fr);
       width: 80%;
       height: auto;
-      grid-gap: 200px;
+      grid-gap: 13%;
+      margin-left: 4%;
     }
 
     .card {
@@ -182,10 +181,6 @@
         -webkit-box-reflect: below 0
           linear-gradient(transparent, transparent, rgba(0, 0, 0, 0));
 
-        // h1 {
-        //   color: #021027 !important;
-        // }
-
         img {
           width: 360px;
           height: 450px;
@@ -194,6 +189,17 @@
 
         &--back {
           transform: rotateY(0.5turn);
+          /* From https://css.glass */
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.3);
+
+          .project-title {
+            letter-spacing: 2px;
+            color: $salmon !important;
+          }
         }
       }
     }

@@ -74,19 +74,19 @@ const About = () => {
 
         <p>
           I'm a very passionate self-taught front-end developer looking forward
-          to be part of a team to help develop and maintain web applications. I
-          ambitious when it comes to continuous learning as a web developer
-          always discovering new thing tools to increase my skills.
+          to being part of a team creating and maintaining web applications. I'm
+          ambitious and believe in continuous learning, always discovering new
+          tools to increase my skills.
         </p>
         <p>
-          I am easy to work with along with always being open to learn new
-          things to help further my knowledge. I always try to keep up to date
-          with the new technology coming out as this field is always changing.
+          I am easy to work with, collaborative, and always open to learning new
+          things to further my knowledge. I always try to keep up to date with
+          new technologies as the development field is always changing.
         </p>
         <p>
-          A couple fun facts about me is I like to stay active as well as
-          helping others stay active as by being a personal trainer . I also
-          love animals and own 2 corgis.
+          When I'm not on the computer, I like to stay active and help others
+          stay active through being a personal trainer. I also love animals and
+          own 2 corgis that you can see featured in some of my projects.
         </p>
       </div>
 
