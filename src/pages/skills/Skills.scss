@@ -1,6 +1,6 @@
 @import '../../App.scss';
 
-.about-page {
+.skills-page {
   .text-zone {
     position: absolute;
     left: 10%;
@@ -10,7 +10,6 @@
     vertical-align: middle;
     display: table-cell;
     max-height: 90%;
-    
 
     h1 {
       font-size: 50px;
@@ -26,8 +25,6 @@
       font-family: 'Roboto', sans-serif;
       line-height: 35px;
       font-size: 25px;
-
- 
     }
   }
 
@@ -37,9 +34,21 @@
     }
   }
 
-  .right-side {
+  .skills-right-side {
     position: absolute;
     left: 55%;
     top: 20%;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-gap: 100px;
+    transition: 2s;
+
+    .skills-icons {
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .skills-icons:hover {
+      transform: scale(1.23);
+    }
   }
 }

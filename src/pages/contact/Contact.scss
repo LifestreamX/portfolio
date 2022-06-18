@@ -1,14 +1,18 @@
 @import '../../App.scss';
 
+// Left side
 .animation-wrapper {
   position: absolute;
   left: 20%;
   top: 20%;
+  z-index: 1;
 }
 .contact-page-logo {
   font-size: 400px !important;
   color: $salmon;
+
 }
+
 
 .container {
   width: 100%;

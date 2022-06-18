@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  overflow: hidden;
 }
 
 .container {
@@ -17,5 +18,6 @@
   transform-style: preserve-3d;
   animation: fadeIn 1s forwards;
   animation-delay: 1s;
+
 }
 

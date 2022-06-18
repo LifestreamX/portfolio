@@ -20,9 +20,31 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: $soft-peach;
-  background-color: $background;
-  overflow: hidden;
+  background-color: #021027;
+  // overflow: hidden;
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+// Scrollbar
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $salmon;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fc734a;
 }

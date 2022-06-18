@@ -1,5 +1,11 @@
 
-
+TODO: 
+ - Finish Projects page
+ - change secondary color
+ - Edit about me paragraphs
+ - Edit skills paragraphs 
+ - Make mobile responsive
+ 
 
 
 
@@ -19,6 +25,7 @@
 - react-typical
 - Material-ui
 - Framer Motion
+- React-spring
 
 
 

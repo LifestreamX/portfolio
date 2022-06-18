@@ -8,6 +8,7 @@ import ContactMailIcon from '@mui/icons-material/ContactMail';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SettingsIcon from '@mui/icons-material/Settings';
+import VisibilityIcon from '@mui/icons-material/Visibility';
 import { createTheme, ThemeProvider } from '@mui/material';
 
 const Sidebar = () => {
@@ -85,6 +86,22 @@ const Sidebar = () => {
           >
             <Tooltip title='Skills' placement='right' arrow>
               <SettingsIcon
+                className={({ isActive }) =>
+                  isActive ? activeStyle : undefined
+                }
+                id='icons'
+              />
+            </Tooltip>
+          </NavLink>
+          {/* Projects */}
+          <NavLink
+            to='/projects'
+            className='about-nav-link'
+            exact='true'
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            <Tooltip title='Projects' placement='right' arrow>
+              <VisibilityIcon
                 className={({ isActive }) =>
                   isActive ? activeStyle : undefined
                 }
