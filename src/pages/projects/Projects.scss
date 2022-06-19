@@ -4,13 +4,6 @@
   overflow: scroll !important;
 }
 
-.container2 {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
 // Title
 .project__title {
   position: absolute;
@@ -20,6 +13,10 @@
   margin-top: 40px;
   letter-spacing: 2px;
   color: $salmon !important;
+}
+
+.card__face h1 {
+  font-family: $secondary-font !important;
 }
 
 // Star animation background
@@ -135,12 +132,12 @@
 // Cards
 .projects-page {
   .scene {
-    width: 100%;
+    width: 96%;
     display: flex;
     justify-content: space-between;
     position: absolute;
     top: 8%;
-    left: 10%;
+    left: 4%;
 
     .cards {
       // border: 1px solid red;
@@ -149,19 +146,19 @@
       grid-template-columns: repeat(3, 1fr);
       width: 80%;
       height: auto;
-      grid-gap: 13%;
+      grid-gap: 10%;
       margin-left: 4%;
     }
 
     .card {
       position: relative;
-      width: 360px;
+      width: 600px;
       height: 450px;
       color: white;
       cursor: pointer;
       transition: 1s ease-in-out;
       transform-style: preserve-3d;
-
+      box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 20px;
       &:hover {
         transform: rotateY(0.5turn);
       }
@@ -182,8 +179,8 @@
           linear-gradient(transparent, transparent, rgba(0, 0, 0, 0));
 
         img {
-          width: 360px;
-          height: 450px;
+          width: 100%;
+          height: 100%;
           object-fit: cover;
         }
 
@@ -199,9 +196,14 @@
           .project-title {
             letter-spacing: 2px;
             color: $salmon !important;
+            font-size: 36px;
           }
         }
       }
     }
+  }
+
+  .bottom {
+    height: 50px;
   }
 }

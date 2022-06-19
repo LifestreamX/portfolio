@@ -5,6 +5,13 @@ import '../../App.scss';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import PersonalTraining from '../../assets/project-images/personal-training.png';
+import ClickAMole from '../../assets/project-images/click-a-mole.png';
+import TheCoziCorgi from '../../assets/project-images/the-cozi-corgi.png';
+import ContactManager from '../../assets/project-images/contact-manager.png';
+import CorgiLand from '../../assets/project-images/corgi-land.png';
+import NameUsername from '../../assets/project-images/name-username.png';
+import RockPaperScissors from '../../assets/project-images/rock-paper-scissors.png';
+import GroceryList from '../../assets/project-images/grocery-list.png';
 
 const Projects = () => {
   const [letterClass] = useState('text-animate');
@@ -16,7 +23,7 @@ const Projects = () => {
     gsap.fromTo(
       '.card',
       { opacity: 0 },
-      { stagger: 0.3, opacity: 1, duration: 4, delay: 1 }
+      { stagger: 0.4, opacity: 1, duration: 1, delay: 0.5 }
     );
   }, []);
 
@@ -37,393 +44,135 @@ const Projects = () => {
           />
         </h1>
 
-        <div className='container2'>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>
-          <div className='circle-container'>
-            <div className='circle'></div>
-          </div>{' '}
-        </div>
-
         {/* Cards */}
         <div className='scene'>
           <div className='cards'>
             {/* Project 1 */}
-            <div className='card'>
-              <div className='card__face card__face--front'>
-                <img src={PersonalTraining} />
+            <a
+              href='https://github.com/LifestreamX/personal-training'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='card'>
+                <div className='card__face card__face--front'>
+                  <img src={PersonalTraining} alt='Personal Training' />
+                </div>
+                <div className='card__face card__face--back'>
+                  <h1 className='project-title'>Personal Training</h1>{' '}
+                </div>
               </div>
-              <div className='card__face card__face--back'>
-                <h1 className='project-title'>Personal Training</h1>{' '}
-              </div>
-            </div>
+            </a>
             {/* Project 2 */}
-            <div className='card'>
-              <div className='card__face card__face--front'>
-                <img src='https://i.loli.net/2019/11/16/FLnzi5Kq4tkRZSm.jpg' />
+            <a
+              href='https://github.com/LifestreamX/the-cozi-corgi'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='card'>
+                <div className='card__face card__face--front'>
+                  <img src={TheCoziCorgi} alt='The Cozi Corgi' />
+                </div>
+                <div className='card__face card__face--back'>
+                  <h1 className='project-title'>The Cozi Corgi</h1>{' '}
+                </div>
               </div>
-              <div className='card__face card__face--back'>
-                <h1 className='project-title'>Personal Training</h1>{' '}
-              </div>
-            </div>
+            </a>
             {/* Project 3 */}
-            <div className='card'>
-              <div className='card__face card__face--front'>
-                <img src='https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg' />
+            <a
+              href='https://github.com/LifestreamX/contact-manager'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='card'>
+                <div className='card__face card__face--front'>
+                  <img src={ContactManager} alt='Contact Manager' />
+                </div>
+                <div className='card__face card__face--back'>
+                  <h1 className='project-title'>Contact Manager</h1>{' '}
+                </div>
               </div>
-              <div className='card__face card__face--back'>
-                <h1 className='project-title'>Personal Training</h1>{' '}
-              </div>
-            </div>
+            </a>
             {/* Project 4 */}
-            <div className='card'>
-              <div className='card__face card__face--front'>
-                <img src='https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg' />
+            <a
+              href='https://github.com/LifestreamX/click-a-mole'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='card'>
+                <div className='card__face card__face--front'>
+                  <img src={ClickAMole} alt='Click A Mole' />
+                </div>
+                <div className='card__face card__face--back'>
+                  <h1 className='project-title'>Click A Mole</h1>{' '}
+                </div>
               </div>
-              <div className='card__face card__face--back'>
-                <h1 className='project-title'>Personal Training</h1>{' '}
-              </div>
-            </div>
+            </a>
+
             {/* Project 5 */}
-            <div className='card'>
-              <div className='card__face card__face--front'>
-                <img src='https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg' />
+            <a
+              href='https://github.com/LifestreamX/corgi-land-merch'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='card'>
+                <div className='card__face card__face--front'>
+                  <img src={CorgiLand} alt='Corgi Land' />
+                </div>
+                <div className='card__face card__face--back'>
+                  <h1 className='project-title'>Corgi Land</h1>{' '}
+                </div>
               </div>
-              <div className='card__face card__face--back'>
-                <h1 className='project-title'>Personal Training</h1>{' '}
-              </div>
-            </div>
+            </a>
             {/* Project 6 */}
-            <div className='card'>
-              <div className='card__face card__face--front'>
-                <img src='https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg' />
+            <a
+              href='https://github.com/LifestreamX/name-username-app'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='card'>
+                <div className='card__face card__face--front'>
+                  <img src={NameUsername} alt='Name and Username' />
+                </div>
+                <div className='card__face card__face--back'>
+                  <h1 className='project-title'>Name and Username</h1>{' '}
+                </div>
               </div>
-              <div className='card__face card__face--back'>
-                <h1 className='project-title'>Personal Training</h1>{' '}
-              </div>
-            </div>
+            </a>
             {/* Project 7 */}
-            <div className='card'>
-              <div className='card__face card__face--front'>
-                <img src='https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg' />
+            <a
+              href='https://github.com/LifestreamX/rock-paper-scissors'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='card'>
+                <div className='card__face card__face--front'>
+                  <img src={RockPaperScissors} alt='Rock Paper Scissors' />
+                </div>
+                <div className='card__face card__face--back'>
+                  <h1 className='project-title'>Rock Paper Scissors</h1>{' '}
+                </div>
               </div>
-              <div className='card__face card__face--back'>
-                <h1 className='project-title'>Personal Training</h1>{' '}
-              </div>
-            </div>
+            </a>
             {/* Project 8 */}
+            <a
+              href='https://github.com/LifestreamX/grocery-list'
+              target='_blank'
+              rel='noreferrer'
+            >
             <div className='card'>
               <div className='card__face card__face--front'>
-                <img src='https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg' />
+                <img src={GroceryList} alt='Grocery List ' />
               </div>
               <div className='card__face card__face--back'>
-                <h1 className='project-title'>Personal Training</h1>{' '}
+                <h1 className='project-title'>Grocery List</h1>{' '}
               </div>
             </div>
+            </a>
             {/* Project 9 */}
-            <div className='card'>
-              <div className='card__face card__face--front'>
-                <img src='https://i.loli.net/2019/10/18/uXF1Kx7lzELB6wf.jpg' />
-              </div>
-              <div className='card__face card__face--back'>
-                <h1 className='project-title'>Personal Training</h1>{' '}
-              </div>
+            <div >
+              
             </div>
+            <div className='bottom'></div>
           </div>
         </div>
       </motion.main>

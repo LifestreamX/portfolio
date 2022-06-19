@@ -3,15 +3,21 @@
 .home-page {
   // overflow: hidden !important;
 
-  .portfolio-title {
-    position: relative;
-    right: 110px;
-    z-index: 1;
-  }
-
   .typing-text {
+    // position: absolute;
+    // left: 1000px;
     position: absolute;
-    left: 1000px;
+    left: 42%;
+    width: 100%;
+
+    .portfolio-title {
+      position: relative;
+      // right: 110px;
+
+      right: 5%;
+      z-index: 1;
+      text-transform: uppercase;
+    }
   }
 
   .text {
@@ -77,6 +83,30 @@
 
   .t-animation-wrapper {
     position: absolute;
-    left: 50%;
+    left: 40%;
+   
+  }
+}
+
+//  Responsive
+
+@media screen and (max-width: 480px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 32px !important;
+  }
+
+  .t-animation-wrapper {
+    position: absolute;
+    right: 400px;
+    width: 20px;
   }
 }

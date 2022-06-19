@@ -1,8 +1,5 @@
 
 TODO: 
- - Edit skills page
- - Finish Projects page
- - change secondary color
  - Make mobile responsive
  - User test
  
