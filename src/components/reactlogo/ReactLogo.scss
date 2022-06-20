@@ -89,3 +89,100 @@ body {
     box-shadow: -2px 0px 5px $color;
   }
 }
+
+// Responsiveness
+
+@media screen and (max-width: 1600px) {
+  .logo {
+    position: absolute;
+    &:nth-child(4) {
+      // Cicrle kenel
+      width: 40px;
+      height: 40px;
+    }
+
+    @for $i from 1 through 3 {
+      // Cicrle around
+      &:nth-child(#{$i}) {
+        width: 30vh !important;
+        height: 30vh !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logo {
+    position: absolute;
+    &:nth-child(4) {
+      // Cicrle kenel
+      width: 30px !important;
+      height: 30px !important;
+    }
+
+    @for $i from 1 through 3 {
+      // Cicrle around
+      &:nth-child(#{$i}) {
+        width: 25vh !important;
+        height: 25vh !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    position: absolute;
+    &:nth-child(4) {
+      // Cicrle kenel
+      width: 20px !important;
+      height: 20px !important;
+    }
+
+    @for $i from 1 through 3 {
+      // Cicrle around
+      &:nth-child(#{$i}) {
+        width: 20vh !important;
+        height: 20vh !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    position: absolute;
+    &:nth-child(4) {
+      // Cicrle kenel
+      width: 15px !important;
+      height: 15px !important;
+    }
+
+    @for $i from 1 through 3 {
+      // Cicrle around
+      &:nth-child(#{$i}) {
+        width: 15vh !important;
+        height: 15vh !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    position: absolute;
+    &:nth-child(4) {
+      // Cicrle kenel
+      width: 10px !important;
+      height: 10px !important;
+    }
+
+    @for $i from 1 through 3 {
+      // Cicrle around
+      &:nth-child(#{$i}) {
+        width: 10vh !important;
+        height: 10vh !important;
+      }
+    }
+  }
+}

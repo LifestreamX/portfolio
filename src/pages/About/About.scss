@@ -4,13 +4,12 @@
   .text-zone {
     position: absolute;
     left: 10%;
-    top: 5%;
+    top: 1%;
     transform: translateY(50%);
     width: 35%;
     vertical-align: middle;
     display: table-cell;
     max-height: 90%;
-    
 
     h1 {
       font-size: 50px;
@@ -26,8 +25,6 @@
       font-family: 'Roboto', sans-serif;
       line-height: 35px;
       font-size: 25px;
-
- 
     }
   }
 
@@ -41,5 +38,90 @@
     position: absolute;
     left: 55%;
     top: 20%;
+  }
+}
+
+// Responsiveness
+
+@media screen and (max-width: 1600px) {
+  .text-zone {
+    top: -300px !important;
+  }
+
+  .right-side {
+    position: absolute;
+    left: 45% !important;
+    top: 5% !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .text-zone p {
+    font-size: 20px !important;
+  }
+
+  .right-side {
+    position: absolute;
+    left: 45% !important;
+    top: 5% !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .text-zone {
+    position: relative;
+    left: 20% !important;
+  }
+
+  .text-zone p {
+    font-size: 18px !important;
+  }
+
+  .right-side {
+    position: absolute;
+    left: 35% !important;
+    top: 5% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-zone {
+    position: relative;
+    left: 38% !important;
+    bottom: 45% !important;
+  }
+
+  .text-zone h1 {
+    font-size: 25px !important;
+  }
+
+  .text-zone p {
+    font-size: 12px !important;
+  }
+
+  .right-side {
+    position: relative;
+    left: -15% !important;
+    top: -25% !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text-zone {
+    position: relative;
+    left: 38% !important;
+    bottom: 80% !important;
+  }
+
+  .text-zone h1 {
+    font-size: 20px !important;
+  }
+
+  .text-zone p {
+    font-size: 11px !important;
+  }
+
+  .right-side {
+    display: none;
   }
 }
