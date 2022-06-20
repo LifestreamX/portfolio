@@ -40,7 +40,6 @@ const Sidebar = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className='navigation-wrapper'>
-        <div className='logo'></div>
 
         {/* Page links */}
         <nav>

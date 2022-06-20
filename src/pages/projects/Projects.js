@@ -44,6 +44,309 @@ const Projects = () => {
           />
         </h1>
 
+        <div class='container'>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+          <div class='circle-container'>
+            <div class='circle'></div>
+          </div>
+        </div>
+
         {/* Cards */}
         <div className='scene'>
           <div className='cards'>
@@ -159,19 +462,17 @@ const Projects = () => {
               target='_blank'
               rel='noreferrer'
             >
-            <div className='card'>
-              <div className='card__face card__face--front'>
-                <img src={GroceryList} alt='Grocery List ' />
+              <div className='card'>
+                <div className='card__face card__face--front'>
+                  <img src={GroceryList} alt='Grocery List ' />
+                </div>
+                <div className='card__face card__face--back'>
+                  <h1 className='project-title'>Grocery List</h1>{' '}
+                </div>
               </div>
-              <div className='card__face card__face--back'>
-                <h1 className='project-title'>Grocery List</h1>{' '}
-              </div>
-            </div>
             </a>
             {/* Project 9 */}
-            <div >
-              
-            </div>
+            <div></div>
             <div className='bottom'></div>
           </div>
         </div>
