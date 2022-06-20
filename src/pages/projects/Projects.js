@@ -23,7 +23,7 @@ const Projects = () => {
     gsap.fromTo(
       '.card',
       { opacity: 0 },
-      { stagger: 0.4, opacity: 1, duration: 1, delay: 0.5 }
+      { stagger: 0.2, opacity: 1, duration: 1, delay: 0.5 }
     );
   }, []);
 

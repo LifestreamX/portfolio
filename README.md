@@ -1,32 +1,30 @@
+TODO:
 
-TODO: 
- - Make mobile responsive
- - User test
- 
-
+- Take a look at responsiveness on phone and tablet
+- User test
 
 
 
 
 
-- React
-- emailjs
-- fontawesome
-- animate.css
-- gsap
-- loader.css
-- react-leaflet (map wont install yet)
-- react-loaders
-- react-router-dom
-- sass
-- react-typical
-- Material-ui
-- Framer Motion
-- React-spring
 
 
 
 
+* React
+* emailjs
+* fontawesome
+* animate.css
+* gsap
+* loader.css
+* react-leaflet (map wont install yet)
+* react-loaders
+* react-router-dom
+* sass
+* react-typical
+* Material-ui
+* Framer Motion
+* React-spring
 
 # Getting Started with Create React App
 

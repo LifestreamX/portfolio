@@ -20,7 +20,7 @@ const About = () => {
     gsap.fromTo(
       'p',
       { opacity: 0 },
-      { stagger: 0.3, opacity: 1, duration: 1, delay: 0.6 }
+      { stagger: 0.5, opacity: 1, duration: .5, delay: 1 }
     );
   }, []);
   // React-logo

@@ -27,7 +27,7 @@ const Skills = () => {
     gsap.fromTo(
       '.individual-project-wrapper',
       { opacity: 0 },
-      { stagger: 0.2, opacity: 1, duration: 2.5, delay: 1 }
+      { stagger: 0.2, opacity: 1, duration: 2, delay: 0.5 }
     );
   }, []);
 

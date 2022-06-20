@@ -10,9 +10,7 @@
 .contact-page-logo {
   font-size: 400px !important;
   color: $salmon;
-
 }
-
 
 .container {
   width: 100%;
@@ -291,5 +289,82 @@ button:active {
 
   to {
     transform: translateY(-0.1em);
+  }
+}
+
+// Responsiveness
+
+@media screen and (max-width: 1200px) {
+  .contact-page-logo {
+    font-size: 300px !important;
+  }
+
+  h1 {
+    font-size: 18px !important;
+    margin-left: 120px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 20px !important;
+    margin-left: 60px;
+  }
+  .contact-page-logo {
+    font-size: 200px !important;
+  }
+
+  .panel-content {
+    left: 40% !important;
+  }
+
+  input {
+    width: 170px !important;
+  }
+
+  textarea {
+    width: 170px !important;
+  }
+
+  input:focus {
+    outline: none;
+    opacity: 1;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px !important;
+    margin-left: 0px;
+  }
+
+  .animation-wrapper {
+    position: absolute;
+    left: 30%;
+    top: -8%;
+  }
+
+  .container .inner .panel.panel-right {
+    background: $background !important;
+  }
+
+  .contact-page-logo {
+    font-size: 150px !important;
+  }
+
+  .panel-content {
+    left: -25% !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 20px !important;
+    margin-left: 25px;
+  }
+
+  .animation-wrapper {
+    display: none !important;
   }
 }
