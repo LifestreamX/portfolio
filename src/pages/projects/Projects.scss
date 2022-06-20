@@ -156,9 +156,8 @@
       height: 450px;
       color: white;
       cursor: pointer;
-      transition: 1s ease-in-out;
+      transition: .3s ease-in-out;
       transform-style: preserve-3d;
-      box-shadow: rgba(255, 255, 255, 0.2) 0px 8px 20px;
       &:hover {
         transform: rotateY(0.5turn);
       }
