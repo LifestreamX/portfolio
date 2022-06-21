@@ -20,7 +20,7 @@ const About = () => {
     gsap.fromTo(
       'p',
       { opacity: 0 },
-      { stagger: 0.5, opacity: 1, duration: .5, delay: 1 }
+      { stagger: 0.5, opacity: 1, duration: .5, delay: 0 }
     );
   }, []);
   // React-logo
@@ -86,7 +86,7 @@ const About = () => {
         <p>
           When I'm not on the computer, I like to stay active and help others
           stay active through being a personal trainer. I also love animals and
-          own 2 corgis that you can see featured in some of my projects.
+          own two corgis that you can see featured in some of my projects.
         </p>
       </div>
 

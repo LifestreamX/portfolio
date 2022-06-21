@@ -351,126 +351,193 @@ const Projects = () => {
         <div className='scene'>
           <div className='cards'>
             {/* Project 1 */}
-            <a
-              href='https://github.com/LifestreamX/personal-training'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <div className='card'>
-                <div className='card__face card__face--front'>
-                  <img src={PersonalTraining} alt='Personal Training' />
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/personal-training'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <h1 className='project-title'>Personal Training</h1>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/personal-training'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={PersonalTraining} alt='Personal Training' />
+                  </div>
+                 
                 </div>
-                <div className='card__face card__face--back'>
-                  <h1 className='project-title'>Personal Training</h1>{' '}
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
             {/* Project 2 */}
-            <a
-              href='https://github.com/LifestreamX/the-cozi-corgi'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <div className='card'>
-                <div className='card__face card__face--front'>
-                  <img src={TheCoziCorgi} alt='The Cozi Corgi' />
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/the-cozi-corgi'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <h1 className='project-title'>The Cozi Corgi</h1>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/the-cozi-corgi'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={TheCoziCorgi} alt='The Cozi Corgi' />
+                  </div>
+                 
                 </div>
-                <div className='card__face card__face--back'>
-                  <h1 className='project-title'>The Cozi Corgi</h1>{' '}
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
             {/* Project 3 */}
-            <a
-              href='https://github.com/LifestreamX/contact-manager'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <div className='card'>
-                <div className='card__face card__face--front'>
-                  <img src={ContactManager} alt='Contact Manager' />
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/contact-manager'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <h1 className='project-title'>Contact Manager</h1>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/contact-manager'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={ContactManager} alt='Contact Manager' />
+                  </div>
+                
                 </div>
-                <div className='card__face card__face--back'>
-                  <h1 className='project-title'>Contact Manager</h1>{' '}
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
             {/* Project 4 */}
-            <a
-              href='https://github.com/LifestreamX/click-a-mole'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <div className='card'>
-                <div className='card__face card__face--front'>
-                  <img src={ClickAMole} alt='Click A Mole' />
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/click-a-mole'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <h1 className='project-title'>Click A Mole</h1>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/click-a-mole'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={ClickAMole} alt='Click A Mole' />
+                  </div>
+                 
                 </div>
-                <div className='card__face card__face--back'>
-                  <h1 className='project-title'>Click A Mole</h1>{' '}
-                </div>
-              </div>
-            </a>
-
+              </a>
+            </div>
             {/* Project 5 */}
-            <a
-              href='https://github.com/LifestreamX/corgi-land-merch'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <div className='card'>
-                <div className='card__face card__face--front'>
-                  <img src={CorgiLand} alt='Corgi Land' />
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/corgi-land-merch'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <h1 className='project-title'>Corgi Land</h1>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/corgi-land-merch'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={CorgiLand} alt='Corgi Land' />
+                  </div>
                 </div>
-                <div className='card__face card__face--back'>
-                  <h1 className='project-title'>Corgi Land</h1>{' '}
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
             {/* Project 6 */}
-            <a
-              href='https://github.com/LifestreamX/name-username-app'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <div className='card'>
-                <div className='card__face card__face--front'>
-                  <img src={NameUsername} alt='Name and Username' />
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/name-username-app'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <h1 className='project-title'>Name and Username</h1>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/name-username-app'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={NameUsername} alt='Name and Username' />
+                  </div>
                 </div>
-                <div className='card__face card__face--back'>
-                  <h1 className='project-title'>Name and Username</h1>{' '}
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
             {/* Project 7 */}
-            <a
-              href='https://github.com/LifestreamX/rock-paper-scissors'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <div className='card'>
-                <div className='card__face card__face--front'>
-                  <img src={RockPaperScissors} alt='Rock Paper Scissors' />
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/rock-paper-scissors'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <h1 className='project-title'>Rock Paper Scissors</h1>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/rock-paper-scissors'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={RockPaperScissors} alt='Rock Paper Scissors' />
+                  </div>
                 </div>
-                <div className='card__face card__face--back'>
-                  <h1 className='project-title'>Rock Paper Scissors</h1>{' '}
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
             {/* Project 8 */}
-            <a
-              href='https://github.com/LifestreamX/grocery-list'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <div className='card'>
-                <div className='card__face card__face--front'>
-                  <img src={GroceryList} alt='Grocery List ' />
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/grocery-list'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <h1 className='project-title'>Grocery List</h1>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/grocery-list'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={GroceryList} alt='Grocery List ' />
+                  </div>
                 </div>
-                <div className='card__face card__face--back'>
-                  <h1 className='project-title'>Grocery List</h1>{' '}
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
             {/* Project 9 */}
             <div></div>
             <div className='bottom'></div>

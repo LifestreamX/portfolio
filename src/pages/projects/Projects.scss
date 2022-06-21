@@ -10,6 +10,7 @@
   left: 45.6%;
   font-size: 50px;
   top: -80px;
+  z-index: 1;
   margin-top: 40px;
   letter-spacing: 2px;
   color: $salmon !important;
@@ -137,7 +138,7 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    top: 8%;
+    top: 11%;
     left: 4%;
     z-index: 1;
 
@@ -152,16 +153,53 @@
       margin-left: 4%;
     }
 
+    .card-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-decoration: none;
+      margin-top: -100px;
+
+      .project-title {
+        position: relative;
+        top: 30px;
+      }
+
+      a {
+        text-decoration: none;
+        h1 {
+          font-family: $secondary-font;
+          font-size: 28px;
+          letter-spacing: 1px;
+          text-decoration: none;
+          background-image: linear-gradient($salmon, $salmon);
+          background-size: 0% 0.1em;
+          background-position-y: 100%;
+          background-position-x: 0%;
+          background-repeat: no-repeat;
+          transition: background-size 0.2s ease-in-out;
+        }
+
+        h1:hover,
+        h1:focus,
+        h1:active {
+          background-size: 100% 0.1em;
+        }
+      }
+    }
+
     .card {
       position: relative;
       width: 600px;
       height: 450px;
       color: white;
       cursor: pointer;
-      transition: 0.3s ease-in-out;
+      transition: 0.5s ease-in-out;
       transform-style: preserve-3d;
       &:hover {
-        transform: rotateY(0.5turn);
+        // transform: rotateY(0.5turn);
+        opacity: 0.5 !important;
       }
 
       .card__face {
@@ -183,22 +221,6 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
-        }
-
-        &--back {
-          transform: rotateY(0.5turn);
-          /* From https://css.glass */
-          background: rgba(255, 255, 255, 0.2);
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-          backdrop-filter: blur(20px);
-          -webkit-backdrop-filter: blur(20px);
-          border: 1px solid rgba(255, 255, 255, 0.3);
-
-          .project-title {
-            letter-spacing: 2px;
-            color: $salmon !important;
-            font-size: 36px;
-          }
         }
       }
     }
@@ -287,7 +309,7 @@
     font-size: 26px !important;
   }
   .scene {
-    left: 17% !important;
+    left: 10% !important;
   }
 
   .card {

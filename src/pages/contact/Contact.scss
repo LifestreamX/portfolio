@@ -54,7 +54,7 @@
 
 .container .inner .panel.panel-right {
   margin-right: -10%;
-  background: #1b1b1b;
+  background: #060E1E;
 }
 
 .container .inner .panel.panel-right .panel-content .form {
@@ -235,17 +235,18 @@ button {
   font-size: 20px;
   background: #3e1d60;
   color: white;
-  padding: 0.7em 1em;
-  padding-left: 0.9em;
+  padding: 0em 2em;
+  padding-left: .9em;
   display: flex;
   align-items: center;
   border: none;
-  border-radius: 16px;
+  border-radius: 4px;
   overflow: hidden;
   transition: all 0.2s;
   cursor: pointer;
   margin-top: 100px;
   display: flex;
+  letter-spacing: 1px;
 }
 
 button span {

@@ -11,8 +11,9 @@ import Alert from '@mui/material/Alert';
 import { useSpring, animated, config } from 'react-spring';
 
 const calc = (x, y) => [
-  -(y - window.innerHeight / 2) / 20,
-  (x - window.innerWidth / 2) / 20,
+  // Turned off by switching  from /2 to /0
+  -(y - window.innerHeight / 0) / 20,
+  (x - window.innerWidth / 0) / 20,
   1,
 ];
 const trans = (x, y, s) =>
@@ -28,6 +29,8 @@ const Contact = () => {
     config: config.default,
   }));
 
+
+  
   // Gsap
   useEffect(() => {
     // Left side logo
@@ -106,7 +109,7 @@ const Contact = () => {
           onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
           onMouseLeave={() => set({ xys: [0, 0, 1] })}
           style={{
-            transform: props.xys.interpolate(trans),
+            transform: props.xys.to(trans),
           }}
         >
           <FontAwesomeIcon icon='envelope' className=' contact-page-logo ' />
