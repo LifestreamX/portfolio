@@ -54,7 +54,7 @@
 
 .container .inner .panel.panel-right {
   margin-right: -10%;
-  background: #060E1E;
+  background: #060e1e;
 }
 
 .container .inner .panel.panel-right .panel-content .form {
@@ -236,7 +236,7 @@ button {
   background: #3e1d60;
   color: white;
   padding: 0em 2em;
-  padding-left: .9em;
+  padding-left: 0.9em;
   display: flex;
   align-items: center;
   border: none;
@@ -335,6 +335,11 @@ button:active {
 }
 
 @media screen and (max-width: 768px) {
+  .inner {
+    position: relative;
+    left: 100px !important;
+  }
+
   h1 {
     font-size: 20px !important;
     margin-left: 0px;
@@ -357,12 +362,29 @@ button:active {
   .panel-content {
     left: -25% !important;
   }
+  .animation-wrapper {
+    display: none !important;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  h1 {
-    font-size: 20px !important;
-    margin-left: 25px;
+  .inner {
+    position: relative;
+    left: 70px !important;
+    bottom: 60px !important;
+
+    h1 {
+      position: relative;
+      top: 40px !important;
+      left: 20px !important;
+    }
+
+    button {
+      // padding-bottom: 20px;
+      position: relative;
+      left: 15px;
+      bottom: 35px;
+    }
   }
 
   .animation-wrapper {

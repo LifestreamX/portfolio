@@ -59,7 +59,7 @@ const About = () => {
       className='container about-page'
       initial={{ width: 0 }}
       animate={{ width: '100%' }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.7 } }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
       {/* Left section */}
       <div className='text-zone'>

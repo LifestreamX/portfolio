@@ -85,14 +85,25 @@
 }
 
 @media screen and (max-width: 768px) {
+  .about-page {
+    height: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    transform: translateY(-38%) !important;
+  }
+
   .text-zone {
-    position: relative;
-    left: 38% !important;
-    bottom: 45% !important;
+    position: absolute !important;
+    left: 33% !important;
+    top: 0 !important;
+    height: 100% !important;
+    width: 60% !important;
   }
 
   .text-zone h1 {
     font-size: 25px !important;
+    top: 0 !important;
   }
 
   .text-zone p {
@@ -101,27 +112,26 @@
 
   .right-side {
     position: relative;
-    left: -15% !important;
-    top: -25% !important;
+    display: none;
+  }
+
+  p {
+    transform: translateY(-15%) !important;
   }
 }
 
 @media screen and (max-width: 480px) {
   .text-zone {
-    position: relative;
-    left: 38% !important;
-    bottom: 80% !important;
+    // position: relative;
+    // left: 38% !important;
+    // bottom: 80% !important;
   }
 
   .text-zone h1 {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 
   .text-zone p {
     font-size: 11px !important;
-  }
-
-  .right-side {
-    display: none;
   }
 }

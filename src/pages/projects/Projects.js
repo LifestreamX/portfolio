@@ -33,7 +33,7 @@ const Projects = () => {
         className='container projects-page '
         initial={{ width: 0 }}
         animate={{ width: '100%' }}
-        exit={{ x: window.innerWidth, transition: { duration: 0.7 } }}
+        exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
       >
         <h1 className='project__title'>
           {' '}
@@ -370,7 +370,6 @@ const Projects = () => {
                   <div className='card__face card__face--front'>
                     <img src={PersonalTraining} alt='Personal Training' />
                   </div>
-                 
                 </div>
               </a>
             </div>
@@ -394,7 +393,6 @@ const Projects = () => {
                   <div className='card__face card__face--front'>
                     <img src={TheCoziCorgi} alt='The Cozi Corgi' />
                   </div>
-                 
                 </div>
               </a>
             </div>
@@ -418,7 +416,6 @@ const Projects = () => {
                   <div className='card__face card__face--front'>
                     <img src={ContactManager} alt='Contact Manager' />
                   </div>
-                
                 </div>
               </a>
             </div>
@@ -442,7 +439,6 @@ const Projects = () => {
                   <div className='card__face card__face--front'>
                     <img src={ClickAMole} alt='Click A Mole' />
                   </div>
-                 
                 </div>
               </a>
             </div>

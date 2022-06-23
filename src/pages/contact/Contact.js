@@ -29,8 +29,6 @@ const Contact = () => {
     config: config.default,
   }));
 
-
-  
   // Gsap
   useEffect(() => {
     // Left side logo
@@ -49,17 +47,21 @@ const Contact = () => {
     );
 
     // Form section
-    gsap.fromTo('h1', { x: '1000%' }, { stagger: 0.3, duration: 1.5, x: '0' });
+    gsap.fromTo(
+      'h1',
+      { x: '1000%' },
+      { stagger: 0.3, duration: 1, x: '0', delay: 0 }
+    );
 
     gsap.fromTo(
       '.group',
       { x: '1000%' },
-      { stagger: 0.3, duration: 1, delay: 0.7, x: '0' }
+      { stagger: 0.3, duration: 1.0, delay: 0.5, x: '0' }
     );
     gsap.fromTo(
       'button',
       { opacity: 0 },
-      { stagger: 0.3, duration: 1.4, delay: 3, opacity: 1 }
+      { stagger: 0.3, duration: 1.4, delay: 2.3, opacity: 1 }
     );
   }, []);
 
@@ -100,7 +102,7 @@ const Contact = () => {
       className='container'
       initial={{ width: 0 }}
       animate={{ width: '100%' }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.7 } }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
       <main className='container'>
         {/* Left side animation logo */}

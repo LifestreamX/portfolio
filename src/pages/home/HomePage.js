@@ -83,7 +83,7 @@ const HomePage = () => {
       className='container home-page'
       initial={{ width: 0 }}
       animate={{ width: '100%' }}
-      exit={{ x: window.innerWidth, transition: { duration: 0.7 } }}
+      exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
       {/* Top section */}
       <div className='typing-text'>

@@ -271,29 +271,58 @@
     grid-gap: 5% !important;
   }
 
-  .card {
-    width: 400px !important;
-    height: 300px !important;
-  }
+  // .card {
+  //   width: 100px !important;
+  //   height: 100px !important;
+  // }
 }
 
 @media screen and (max-width: 1024px) {
-  .scene {
-    left: 9% !important;
+  .project__title {
+    left: 31.5% !important;
+    top: -6% !important;
+    font-size: 40px !important;
+    letter-spacing: 3px !important;
   }
+
+  .scene {
+    margin-top: -50px !important;
+    left: 11% !important;
+    width: 100% !important;
+  }
+
   .card {
     width: 300px !important;
     height: 250px !important;
   }
 
+  .card-wrapper {
+    margin-top: 0px !important;
+
+    h1 {
+      right: 30px !important;
+      margin-bottom: 60px !important;
+      font-size: 18px !important;
+    }
+  }
+
   .project-title {
     font-size: 20px !important;
+    margin-bottom: 40px !important;
   }
 }
 
 @media screen and (max-width: 768px) {
+  .project__title {
+    left: 40% !important;
+    top: -10px !important;
+    font-size: 26px !important;
+    letter-spacing: 3px !important;
+  }
+
   .scene {
-    left: 25% !important;
+    left: 1% !important;
+    top: 20% !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -301,22 +330,42 @@
   .cards {
     grid-template-columns: repeat(1, 1fr) !important;
   }
+
+  .card-wrapper {
+    margin-top: -80px !important;
+
+    h1 {
+      margin-top: 20px;
+      right: 10px;
+    }
+  }
+
+  .card {
+    width: 220px !important;
+    height: 190px !important;
+  }
+  .project-title {
+    font-size: 18px !important;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .project__title {
-    left: 43% !important;
+    left: 33% !important;
     font-size: 26px !important;
-  }
-  .scene {
-    left: 10% !important;
+    letter-spacing: 3px !important;
+    top: -50px !important;
   }
 
-  .card {
-    width: 250px !important;
-    height: 200px !important;
-  }
-  .project-title {
-    font-size: 18px !important;
+  .scene {
+    left: 10% !important;
+    top: 20% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+    h1 {
+      left: -17px !important;
+    }
   }
 }
