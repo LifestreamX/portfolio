@@ -38,7 +38,7 @@ const Contact = () => {
         x: '-500%',
       },
       {
-        duration: 3,
+        duration: 1,
         delay: 1,
 
         x: '0%',

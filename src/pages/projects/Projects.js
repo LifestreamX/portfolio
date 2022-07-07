@@ -12,6 +12,7 @@ import CorgiLand from '../../assets/project-images/corgi-land.png';
 import NameUsername from '../../assets/project-images/name-username.png';
 import RockPaperScissors from '../../assets/project-images/rock-paper-scissors.png';
 import GroceryList from '../../assets/project-images/grocery-list.png';
+import TvMovieVideoGame from '../../assets/project-images/tv-movie-videogame.png';
 
 const Projects = () => {
   const [letterClass] = useState('text-animate');
@@ -535,6 +536,31 @@ const Projects = () => {
               </a>
             </div>
             {/* Project 9 */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/tv-movie-video-game-manager-app'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <h1 className='project-title'>
+                  TV-Movie-VideoGame-Manager-App
+                </h1>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/tv-movie-video-game-manager-app'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={TvMovieVideoGame} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+
             <div></div>
             <div className='bottom'></div>
           </div>
