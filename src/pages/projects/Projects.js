@@ -13,6 +13,7 @@ import NameUsername from '../../assets/project-images/name-username.png';
 import RockPaperScissors from '../../assets/project-images/rock-paper-scissors.png';
 import GroceryList from '../../assets/project-images/grocery-list.png';
 import TvMovieVideoGame from '../../assets/project-images/tv-movie-videogame.png';
+import FakeStore from '../../assets/project-images/fake-store.png';
 
 const Projects = () => {
   const [letterClass] = useState('text-animate');
@@ -424,25 +425,26 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/click-a-mole'
+                href='https://github.com/LifestreamX/fake-store-typescript'
                 target='_blank'
                 rel='noreferrer'
               >
-                <h1 className='project-title'>Click A Mole</h1>{' '}
+                <h1 className='project-title'>Fake Store </h1>{' '}
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/click-a-mole'
+                href='https://github.com/LifestreamX/fake-store-typescript'
                 target='_blank'
                 rel='noreferrer'
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
-                    <img src={ClickAMole} alt='Click A Mole' />
+                    <img src={FakeStore} alt='Fake Store ' />
                   </div>
                 </div>
               </a>
             </div>
+
             {/* Project 5 */}
             <div className='card-wrapper'>
               {/* Title */}
@@ -556,6 +558,30 @@ const Projects = () => {
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={TvMovieVideoGame} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            {/* Project 10 */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/click-a-mole'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <h1 className='project-title'>Click A Mole</h1>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/click-a-mole'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={ClickAMole} alt='Click A Mole' />
                   </div>
                 </div>
               </a>
