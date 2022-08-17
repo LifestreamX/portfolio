@@ -13,7 +13,7 @@ Portfolio
 
 ## Screenshots
 
-![](screenshots/portfilio1.png)
+![](screenshots/portfolio1.png)
 ![](screenshots/portfolio2.png)
 
 
