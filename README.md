@@ -1,13 +1,3 @@
-TODO:
-
-- Take a look at responsiveness on phone and tablet
-- User test
-
-
-
-
-
-
 
 
 
