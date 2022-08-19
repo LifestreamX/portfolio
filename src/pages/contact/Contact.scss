@@ -300,17 +300,22 @@ button:active {
     font-size: 300px !important;
   }
 
-  h1 {
-    font-size: 18px !important;
-    margin-left: 120px;
+  form {
+    h1 {
+      font-size: 18px !important;
+      margin-left: 120px;
+    }
   }
 }
 
 @media screen and (max-width: 1024px) {
-  h1 {
-    font-size: 20px !important;
-    margin-left: 60px;
+  form {
+    h1 {
+      font-size: 20px !important;
+      margin-left: 60px;
+    }
   }
+
   .contact-page-logo {
     font-size: 200px !important;
   }
@@ -373,10 +378,12 @@ button:active {
     left: 70px !important;
     bottom: 60px !important;
 
-    h1 {
-      position: relative;
-      top: 40px !important;
-      left: 20px !important;
+    form {
+      h1 {
+        position: relative;
+        top: 40px !important;
+        left: 20px !important;
+      }
     }
 
     button {

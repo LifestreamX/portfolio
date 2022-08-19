@@ -1,19 +1,30 @@
 @import '../../App.scss';
 
 .projects-page {
-  overflow: scroll !important;
+  // overflow: scroll !important;
 }
 
 // Title
-.project__title {
-  position: absolute;
-  left: 45.6%;
-  font-size: 50px;
-  top: -80px;
+
+.project__title__wrapper {
+  width: calc(100% - 90px);
   z-index: 1;
-  margin-top: 40px;
+  position: absolute !important;
+}
+
+.project__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
   letter-spacing: 2px;
   color: $salmon !important;
+  position: relative;
+  top: -100px;
+
+  h1 {
+    width: 100%;
+  }
 }
 
 .card__face h1 {
@@ -22,12 +33,14 @@
 
 // Star animation background
 .background {
+  justify-content: center;
+  align-content: center;
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   object-fit: cover;
-  width: 100%;
+  width: calc(100% - 200px);
   height: 100%;
   z-index: -1;
 
@@ -134,12 +147,12 @@
 // Cards
 .projects-page {
   .scene {
-    width: 96%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 11%;
-    left: 4%;
     z-index: 1;
 
     .cards {
@@ -249,76 +262,47 @@
 
 @media screen and (max-width: 1250px) {
   .project__title {
-    left: 45.6%;
+    left: 0;
+    top: -65px;
+    position: relative;
     font-size: 35px !important;
-    top: -50px !important;
-    margin-top: 40px;
   }
 
-  .project-title {
-    font-size: 28px !important;
-  }
-
-  .scene {
-    left: 6% !important;
-  }
-
-  .cards {
-    // border: 1px solid red;
-
-    display: grid;
-    width: 80%;
-    grid-gap: 5% !important;
-  }
-
-  // .card {
-  //   width: 100px !important;
-  //   height: 100px !important;
-  // }
-}
-
-@media screen and (max-width: 1024px) {
-  .project__title {
-    left: 31.5% !important;
-    top: -6% !important;
-    font-size: 40px !important;
-    letter-spacing: 3px !important;
-  }
-
-  .scene {
-    margin-top: -50px !important;
-    left: 11% !important;
-    width: 100% !important;
-  }
-
-  .card {
-    width: 300px !important;
-    height: 250px !important;
-  }
-
-  .card-wrapper {
-    margin-top: 0px !important;
+  .project-title-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     h1 {
-      right: 30px !important;
-      margin-bottom: 60px !important;
-      font-size: 18px !important;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin-right: 0;
+      margin-left: 0;
     }
   }
 
   .project-title {
-    font-size: 20px !important;
-    margin-bottom: 40px !important;
+    font-size: 28px !important;
+    display: flex;
+  }
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr) !important;
+    display: grid;
+    width: 80%;
+    grid-gap: 5% !important;
+    display: flex;
   }
 }
 
 @media screen and (max-width: 768px) {
+
   .project__title {
-    left: 40% !important;
     top: -10px !important;
-    font-size: 26px !important;
-    letter-spacing: 3px !important;
   }
+
 
   .scene {
     left: 1% !important;
@@ -333,16 +317,11 @@
 
   .card-wrapper {
     margin-top: -80px !important;
-
-    h1 {
-      margin-top: 20px;
-      right: 10px;
-    }
   }
 
   .card {
-    width: 220px !important;
-    height: 190px !important;
+    width: 320px !important;
+    height: 290px !important;
   }
   .project-title {
     font-size: 18px !important;
@@ -351,21 +330,15 @@
 
 @media screen and (max-width: 480px) {
   .project__title {
-    left: 33% !important;
-    font-size: 26px !important;
-    letter-spacing: 3px !important;
-    top: -50px !important;
+    left: 10% !important;
+  }
+
+  .card {
+    width: 220px !important;
+    height: 190px !important;
   }
 
   .scene {
-    left: 10% !important;
-    top: 20% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-
-    h1 {
-      left: -17px !important;
-    }
+    left: 5% !important;
   }
 }
