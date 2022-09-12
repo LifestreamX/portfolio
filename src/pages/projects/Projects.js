@@ -14,6 +14,7 @@ import RockPaperScissors from '../../assets/project-images/rock-paper-scissors.p
 import GroceryList from '../../assets/project-images/grocery-list.png';
 import TvMovieVideoGame from '../../assets/project-images/tv-movie-videogame.png';
 import FakeStore from '../../assets/project-images/fake-store.png';
+import PupperNewsfeed from '../../assets/project-images/pupper-newsfeed.png';
 
 const Projects = () => {
   const [letterClass] = useState('text-animate');
@@ -603,6 +604,31 @@ const Projects = () => {
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={GroceryList} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* Project 11 */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://github.com/LifestreamX/grocery-list'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title-wrapper'>
+                  <h1 className='project-title'>Pupper Newsfeed</h1>{' '}
+                </div>
+              </a>
+              {/* Image */}
+              <a
+                href='https://github.com/LifestreamX/full-stack-CRUD-post-app'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={PupperNewsfeed} alt='Grocery List ' />
                   </div>
                 </div>
               </a>
