@@ -79,10 +79,17 @@
   nav {
     top: 24% !important;
   }
-  
+
   .nav-2-icons {
     font-size: 28px !important
     ;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .links-wrapper-2 {
+    position: absolute;
+    bottom: -35px !important;
   }
 }
 

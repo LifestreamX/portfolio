@@ -20,7 +20,7 @@ const About = () => {
     gsap.fromTo(
       'p',
       { opacity: 0 },
-      { stagger: 0.5, opacity: 1, duration: .5, delay: 0 }
+      { stagger: 0.5, opacity: 1, duration: 0.5, delay: 0 }
     );
   }, []);
   // React-logo
@@ -63,7 +63,7 @@ const About = () => {
     >
       {/* Left section */}
       <div className='text-zone'>
-        <h1>
+        <h1 className='about-me-title'>
           {' '}
           <LetterAnimations
             letterClass={letterClass}
@@ -72,18 +72,18 @@ const About = () => {
           />
         </h1>
 
-        <p>
+        <p className='about-me-text'>
           I'm a very passionate self-taught front-end developer looking forward
           to being part of a team creating and maintaining web applications. I'm
           ambitious and believe in continuous learning, always discovering new
           tools to increase my skills.
         </p>
-        <p>
+        <p className='about-me-text'>
           I am easy to work with, collaborative, and always open to learning new
           things to further my knowledge. I always try to keep up to date with
           new technologies as the development field is always changing.
         </p>
-        <p>
+        <p className='about-me-text'>
           When I'm not on the computer, I like to stay active and help others
           stay active through being a personal trainer. I also love animals and
           own two corgis that you can see featured in some of my projects.

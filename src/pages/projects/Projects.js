@@ -438,8 +438,8 @@ const Projects = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <div className='project-title-wrapper'>
-                  <h1 className='project-title'>
+                <div className='project-title-wrapper long'>
+                  <h1 className='project-title '>
                     TV-Movie-VideoGame-Manager-App
                   </h1>{' '}
                 </div>

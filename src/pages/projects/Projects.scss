@@ -298,11 +298,9 @@
 }
 
 @media screen and (max-width: 768px) {
-
   .project__title {
     top: -10px !important;
   }
-
 
   .scene {
     left: 1% !important;
@@ -340,5 +338,26 @@
 
   .scene {
     left: 5% !important;
+  }
+  .long {
+    position: relative;
+    left: 35px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .project__title_wrapper {
+    position: relative;
+    bottom: 35px !important;
+  }
+
+  .cards {
+    position: relative;
+    left: 15px;
+  }
+
+  .long {
+    position: relative;
+    left: 20px;
   }
 }
