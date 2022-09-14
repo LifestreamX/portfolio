@@ -140,19 +140,19 @@ const Contact = () => {
                 <div className='group input-2'>
                   <input type='text' required name='name' />
                   <span className='highlight'></span>
-                  <label>Name</label>
+                  <label className='labels'>Name</label>
                 </div>
                 {/* Email input */}
                 <div className='group input-3'>
                   <input type='email' required name='email' />
                   <span className='highlight'></span>
-                  <label for='email'>Email</label>
+                  <label for='email' className='labels'>Email</label>
                 </div>
                 {/* Subject input */}
                 <div className='group input-4'>
                   <input type='text' required name='subject' />
                   <span className='highlight'></span>
-                  <label>Subject</label>
+                  <label className='labels'>Subject</label>
                 </div>
                 {/* Message input */}
                 <div className='group message-wrapper input-5'>
