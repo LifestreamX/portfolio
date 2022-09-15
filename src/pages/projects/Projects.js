@@ -359,7 +359,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/personal-training'
+                href='https://fitforall.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -369,7 +369,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/personal-training'
+                href='https://fitforall.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -384,7 +384,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/the-cozi-corgi'
+                href='https://thecozicorgi.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -394,7 +394,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/the-cozi-corgi'
+                href='https://thecozicorgi.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -434,7 +434,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/tv-movie-video-game-manager-app'
+                href='https://mediamanager.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -446,7 +446,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/tv-movie-video-game-manager-app'
+                href='https://mediamanager.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -461,7 +461,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/fake-store-typescript'
+                href='https://fakestore.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -471,7 +471,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/fake-store-typescript'
+                href='https://fakestore.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -487,7 +487,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/corgi-land-merch'
+                href='https://corgiland.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -497,7 +497,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/corgi-land-merch'
+                href='https://corgiland.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
