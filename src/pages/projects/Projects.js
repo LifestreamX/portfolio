@@ -409,7 +409,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/contact-manager'
+                href='https://contact-manager-site.herokuapp.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -419,7 +419,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/contact-manager'
+                href='https://contact-manager-site.herokuapp.com/'
                 target='_blank'
                 rel='noreferrer'
               >
