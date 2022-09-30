@@ -4,7 +4,7 @@
   .text-zone {
     position: absolute;
     left: 10%;
-    top: -10%;
+    top: -13%;
     transform: translateY(50%);
     width: 45%;
     vertical-align: middle;
@@ -44,7 +44,7 @@
   .skills-right-side {
     position: absolute;
     left: 20%;
-    top: 35%;
+    top: 23%;
     display: grid;
     grid-template-columns: repeat(6, 150px);
     grid-gap: 100px;
@@ -164,5 +164,3 @@
     width: 100%;
   }
 }
-
-

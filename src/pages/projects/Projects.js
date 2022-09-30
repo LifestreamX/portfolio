@@ -487,6 +487,32 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
+                href='https://pupper-newsfeed-front.onrender.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title-wrapper'>
+                  <h1 className='project-title'>Pupper Newsfeed</h1>{' '}
+                </div>
+              </a>
+              {/* Image */}
+              <a
+                href='https://pupper-newsfeed-front.onrender.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={PupperNewsfeed} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            {/* Project 7 */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
                 href='https://corgiland.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
@@ -508,11 +534,11 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 7 */}
+            {/* Project 8 */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/name-username-app'
+                href='https://nameandusername.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -522,7 +548,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/name-username-app'
+                href='https://nameandusername.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -533,11 +559,11 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 8 */}
+            {/* Project 9 */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/rock-paper-scissors'
+                href='https://rockpaperscissors.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -547,7 +573,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/rock-paper-scissors'
+                href='https://rockpaperscissors.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -558,11 +584,11 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 9 */}
+            {/* Project 10 */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='click-a-mole.firebaseapp.com'
+                href='https://click-a-mole.firebaseapp.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -572,7 +598,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/click-a-mole'
+                href='https://click-a-mole.firebaseapp.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -583,11 +609,11 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 10 */}
+            {/* Project 11 */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/grocery-list'
+                href='https://grocerylist.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -597,38 +623,13 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/grocery-list'
+                href='https://grocerylist.tyler-allen.com'
                 target='_blank'
                 rel='noreferrer'
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={GroceryList} alt='Grocery List ' />
-                  </div>
-                </div>
-              </a>
-            </div>
-            {/* Project 11 */}
-            <div className='card-wrapper'>
-              {/* Title */}
-              <a
-                href='https://pupper-newsfeed-front.onrender.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='project-title-wrapper'>
-                  <h1 className='project-title'>Pupper Newsfeed</h1>{' '}
-                </div>
-              </a>
-              {/* Image */}
-              <a
-                href='https://pupper-newsfeed-front.onrender.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='card'>
-                  <div className='card__face card__face--front'>
-                    <img src={PupperNewsfeed} alt='Grocery List ' />
                   </div>
                 </div>
               </a>
