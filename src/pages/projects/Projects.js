@@ -409,7 +409,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://contact-manager-site.herokuapp.com/'
+                href='https://contact-manager-front.onrender.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -419,7 +419,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://contact-manager-site.herokuapp.com/'
+                href='https://contact-manager-front.onrender.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -562,7 +562,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/click-a-mole'
+                href='click-a-mole.firebaseapp.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -612,7 +612,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://github.com/LifestreamX/grocery-list'
+                href='https://pupper-newsfeed-front.onrender.com'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -622,7 +622,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://github.com/LifestreamX/full-stack-CRUD-post-app'
+                href='https://pupper-newsfeed-front.onrender.com'
                 target='_blank'
                 rel='noreferrer'
               >
