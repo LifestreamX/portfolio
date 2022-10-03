@@ -306,6 +306,7 @@
   .project__title {
     top: -10px !important;
     text-align: center !important;
+    margin-right: 30px !important;
   }
 
   .scene {
@@ -325,10 +326,11 @@
     height: 290px !important;
   }
 
-  .project-title-wrapper{
+  .project-title-wrapper {
     text-align: center;
     position: relative;
-    top: 30px;
+    top: 0px;
+    right: 15px;
   }
 
   .project-title {

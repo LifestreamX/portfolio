@@ -19,11 +19,12 @@ const Layout = () => {
   // create an event listener
   useEffect(() => {
     window.addEventListener('resize', handleResize);
-  });
+  }, []);
 
   return (
     <div>
-      {isMobile ? <MobileNav /> : <Sidebar />}
+      {window.innerWidth < 769 && <MobileNav />}
+      {window.innerWidth > 769 && <Sidebar />}
 
       <div className='page'>
         <Outlet />
