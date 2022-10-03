@@ -133,9 +133,16 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .skills-page{
+    right: 35px;
+  }
+
+
   .text-zone {
+    display: none;
     position: absolute !important;
-    top: -820px !important;
+    top: -840px !important;
     h1 {
       font-size: 20px !important;
       right: 20px;
@@ -150,6 +157,7 @@
   .skills-right-side {
     grid-template-columns: repeat(2, 100%) !important;
     top: 0% !important;
+    right: 10% !important;
     margin-right: 300px !important;
     padding: -100px;
   }

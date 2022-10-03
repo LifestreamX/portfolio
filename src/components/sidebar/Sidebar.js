@@ -40,7 +40,6 @@ const Sidebar = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className='navigation-wrapper'>
-
         {/* Page links */}
         <nav>
           {/* Home icon link */}

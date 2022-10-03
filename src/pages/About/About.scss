@@ -60,10 +60,6 @@
     position: relative;
     // bottom: 800px !important;
     left: 200px !important;
-
-    h1 {
-      // right: 120px;
-    }
   }
 
   .text-zone p {
@@ -99,31 +95,41 @@
 @media screen and (max-width: 768px) {
   .about-page {
     top: 70%;
-    left: -100px;
+    left: -140px;
 
     h1 {
-      left: 0px;
+      left: 50px;
     }
   }
 
   .text-zone {
-    padding: 60px;
+    padding: 5px;
+    width: 200px;
+    width: 200px;
   }
 }
 
 @media screen and (max-height: 700px) {
   .text-zone {
     width: 100%;
+
+    padding: 20px;
+  }
+
+  h1 {
+    left: -10px !important;
   }
 
   .about-me-title {
     width: 100%;
+    position: relative;
+    margin-bottom: 70px !important;
   }
 
   .about-me-text {
     position: relative;
     right: 30px;
-    width: 200px;
+    width: 270px;
   }
 
   .about-page {

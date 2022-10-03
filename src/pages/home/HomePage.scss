@@ -101,7 +101,6 @@
   }
 }
 
-
 @media screen and (max-width: 1024px) {
   .text h1 {
     font-size: 20px !important;
@@ -113,12 +112,22 @@
   }
 }
 
-
-
 @media screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+
   .portfolio-title {
     font-size: 26px !important;
-    right: 60px !important;
+    right: 85px !important;
+  }
+
+  .t-animation-wrapper {
+    left: 65px !important;
+    top: 20% !important;
   }
 
   .text {
@@ -134,22 +143,28 @@
   .text > h1 {
     font-size: 16px !important;
     position: relative;
-    top: 5px !important;
-    right: 20px;
+    top: 50px !important;
+    width: 100%;
+    text-align: center;
+    right: 60px;
   }
   .text > h2 {
     font-size: 20px !important;
-    width: 50% !important;
+    width: 100% !important;
     position: relative;
-    left: 20px !important;
+    letter-spacing: 0px;
+    right: 20px;
   }
 
   .flat-button {
     font-size: 10px !important;
     width: 25% !important;
-    right: 25px;
     line-height: 1.4375;
     padding: 0.7em;
+    justify-content: center;
+    align-items: center;
+    right: 50px;
+    top: 30px;
   }
 }
 

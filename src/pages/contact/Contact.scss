@@ -348,13 +348,14 @@ button:active {
 @media screen and (max-width: 768px) {
   .inner {
     position: relative;
-    left: 100px !important;
+    left: 30px !important;
+    bottom: 30px;
   }
 
   h1 {
     font-size: 20px !important;
     margin-left: 10px !important;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   .animation-wrapper {
@@ -379,29 +380,42 @@ button:active {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .inner {
+@media screen and (max-height: 700px) {
+  h1 {
     position: relative;
-    left: 70px !important;
-    bottom: 60px !important;
-
-    form {
-      h1 {
-        position: relative;
-        top: 40px !important;
-        left: 20px !important;
-      }
-    }
-
-    button {
-      // padding-bottom: 20px;
-      position: relative;
-      left: 15px;
-      bottom: 35px;
-    }
+    top: 55px;
+    left: 20px !important;
+    margin-bottom: 60px;
   }
 
-  .animation-wrapper {
-    display: none !important;
+  .inner {
+    bottom: 90px;
   }
 }
+
+// @media screen and (max-width: 480px) {
+//   .inner {
+//     position: relative;
+//     left: 70px !important;
+//     bottom: 60px !important;
+
+//     form {
+//       h1 {
+//         position: relative;
+//         top: 40px !important;
+//         left: 20px !important;
+//       }
+//     }
+
+//     button {
+//       // padding-bottom: 20px;
+//       position: relative;
+//       left: 15px;
+//       bottom: 35px;
+//     }
+//   }
+
+//   .animation-wrapper {
+//     display: none !important;
+//   }
+// }
