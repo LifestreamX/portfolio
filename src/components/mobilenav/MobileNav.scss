@@ -1,23 +1,127 @@
-.mobile-nav-wrapper {
-  color: white;
-  overflow: hidden;
+@import '../../App.scss';
+
+// .mobile-nav-wrapper {
+//   color: white;
+//   overflow: hidden;
+//   position: absolute;
+//   right: 30px;
+//   top: 20px;
+//   z-index: 999;
+// }
+
+// #icons {
+//   font-size: 48px;
+//   text-decoration: none;
+//   color: white;
+
+//   #icons:hover {
+//     color: white;
+//   }
+// }
+
+// .mobile-links {
+//   color: black;
+//   text-decoration: none;
+// }
+
+// EXPERIEMENTAL NAVVVVVV
+
+// .nav-menu {
+//   display: grid;
+//   grid-template-columns: repeat(4, auto);
+//   grid-gap: 10px;
+//   list-style: none;
+//   text-align: center;
+//   width: 60vw;
+//   justify-content: end;
+//   margin-right: 2rem;
+// }
+
+.navbar {
+  position: relative;
+  
+}
+
+.nav-item {
+  height: 80px;
+  position: relative;
+  right: 20px;
+}
+
+.NavbarItems {
+  position: relative;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  height: 90vh;
   position: absolute;
-  right: 30px;
-  top: 20px;
-  z-index: 999;
+  top: 80px;
+  left: -100%;
+  opacity: 1;
+  transition: all 0.5s ease;
 }
 
-#icons {
-  font-size: 48px;
-  text-decoration: none;
-  color: white;
-
-  #icons:hover {
-    color: white;
-  }
+.nav-menu.active {
+  background: #fefdfd;
+  left: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+  z-index: 99;
+  display: flex;
 }
 
-.mobile-links {
-  color: black;
+.nav-links {
+  height: 100%;
+  text-align: center;
+  padding: 1.4rem;
+  width: 100%;
+  display: table;
   text-decoration: none;
+  font-size: 1rem;
+  font-family: $secondary-font;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-icons{
+  font-size: 30px;
+}
+
+
+
+.menu-icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 60%);
+  cursor: pointer;
+  z-index: 299;
+}
+
+.fa-times {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.nav-links-mobile {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+  border-radius: 4px;
+  width: 80%;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: #021027;
+  padding: 14px 20px;
+  border: 1px solid #fff;
+  transition: all 0.3s ease-out;
 }
