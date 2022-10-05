@@ -5,9 +5,9 @@ class SidebarText extends React.Component {
   render() {
     return (
       <Typical
-        steps={[' ', 1000, 'Welcome ', 2000, 'To My', 1000, 'Portfolio!', 1000]}
+        steps={[' ',  500, 'Welcome ', 1000, 'To My', 1000, 'Portfolio!', 500]}
         loop={1}
-        wrapper='h1'
+        wrapper='h5'
       />
     );
   }

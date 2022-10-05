@@ -1,224 +1,209 @@
 @import '../../App.scss';
 
+// STYLES FOR MOBILE
+
 .home-page {
-  // overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
 
   .typing-text {
-    // position: absolute;
-    // left: 1000px;
-    position: absolute;
-    left: 42%;
-    width: 100%;
-
     .portfolio-title {
-      position: relative;
-      // right: 110px;
+      width: 100%;
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.4rem;
+    }
+  }
 
-      right: 5%;
-      z-index: 1;
-      text-transform: uppercase;
+  // T animation section
+  .t-animation-wrapper {
+    height: 0;
+    margin-bottom: 250px;
+  }
+
+  // White text section text
+  .text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 60px;
+    div {
+      color: $soft-peach;
+      font-family: $primary-font;
+      margin-bottom: 10px;
     }
   }
 
   .text {
-    position: absolute;
-    left: 15%;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40%;
-    max-height: 90%;
-  }
-
-  h1 {
-    color: $soft-peach;
-    font-family: $primary-font;
-    font-size: 50px;
-    font-weight: 400;
-  }
-
-  h2 {
-    color: $salmon;
-    font-family: $secondary-font;
-    font-size: 30px;
-    letter-spacing: 3px;
-    animation: fadeIn 1s 1.8s backwards;
-  }
-
-  a {
-    color: $soft-peach;
-    text-decoration: none;
-    margin-top: 20px;
-    z-index: 10;
-    position: relative;
-    display: inline-block;
-    padding: 0 1em;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 12px;
-    font-size: 0.8rem;
-    line-height: 1.91667;
-    color: #2e1e43;
-    background-color: #ff8c67;
-    letter-spacing: 0.2em;
-    font-weight: 600;
-    font-family: $secondary-font;
-    width: 40%;
-    font-size: 16px;
-    font-size: 1.06667rem;
-    line-height: 1.4375;
-    padding: 0.7em;
-    margin-bottom: 1.5em;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -ms-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    animation: fadeIn 1s 1.8s backwards;
-  }
-
-  a:hover {
-    background-color: $soft-peach;
-    color: $background;
-  }
-
-  .t-animation-wrapper {
-    position: absolute;
-    left: 40%;
-    top: 10%;
-  }
-}
-
-//  Responsive
-
-@media screen and (max-width: 1200px) {
-  h1 {
-    font-size: 32px !important;
-  }
-
-  .t-animation-wrapper {
-    right: 400px;
-    width: 20px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .text h1 {
-    font-size: 20px !important;
-  }
-
-  .t-animation-wrapper {
-    left: 25% !important;
-    top: 20% !important;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 100%;
-  }
-
-  .portfolio-title {
-    font-size: 26px !important;
-    right: 85px !important;
-  }
-
-  .t-animation-wrapper {
-    left: 50px !important;
-    top: 20% !important;
-  }
-
-  .text {
-    position: relative;
-    top: 60% !important;
-    width: 100% !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .text > h1 {
-    font-size: 16px !important;
-    position: relative;
-    top: 50px !important;
     width: 100%;
     text-align: center;
-    right: 60px;
-  }
-  .text > h2 {
-    font-size: 20px !important;
-    width: 100% !important;
-    position: relative;
-    letter-spacing: 0px;
-    right: 20px;
-  }
+    margin-top: 50px;
 
-  .flat-button {
-    font-size: 10px !important;
-    width: 25% !important;
-    line-height: 1.4375;
-    padding: 0.7em;
-    justify-content: center;
-    align-items: center;
-    right: 50px;
-    top: 30px;
+    // Orange text
+    .frontend-react-dev {
+      color: $salmon;
+      font-family: $secondary-font;
+      letter-spacing: 3px;
+      animation: fadeIn 1s 1.8s backwards;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+
+    // Contact me button
+    a {
+      color: $soft-peach;
+      text-decoration: none;
+      margin-top: 20px;
+      z-index: 10;
+      position: relative;
+      display: inline-block;
+      padding: 0 1em;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 12px;
+      font-size: 0.8rem;
+      line-height: 1.91667;
+      color: #2e1e43;
+      background-color: #ff8c67;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      font-family: $secondary-font;
+      width: 40%;
+      font-size: 16px;
+      line-height: 1.4375;
+      padding: 0.7em;
+      margin-bottom: 1.5em;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      animation: fadeIn 1s 1.8s backwards;
+      width: 200px;
+    }
+
+    a:hover {
+      background-color: $soft-peach;
+      color: $background;
+    }
   }
 }
 
-@media screen and (max-height: 700px) {
+// STYLES FOR TABLETS
+
+@media screen and (min-width: 768px) {
   .home-page {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .typing-text {
-    top: -30px;
-    position: absolute;
-    left: 40px !important;
-  }
+    .typing-text {
+      .portfolio-title {
+        font-size: 2.4rem;
+      }
+    }
 
-  .t-animation-wrapper {
-    left: 50px !important;
-    top: 23% !important;
-  }
+    // T animation section
+    .t-animation-wrapper {
+      margin-bottom: 500px;
+    }
 
-  .text > h1 {
-    left: -55px !important;
-  }
+    // White text section text
+    .text {
+      bottom: 140px;
+      div {
+        color: $soft-peach;
+        font-family: $primary-font;
+        margin-bottom: 10px;
+        font-size: 2rem;
+      }
+    }
 
-  .text > h2 {
-    font-size: 16px !important;
-    width: 100% !important;
-    left: -10px;
-  
-  }
+    .text {
+      width: 100%;
+      text-align: center;
+      margin-top: 50px;
 
+      // Orange text
+      .frontend-react-dev {
+        color: $salmon;
+        font-family: $secondary-font;
+        letter-spacing: 3px;
+        animation: fadeIn 1s 1.8s backwards;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      // Contact me button
+      a {
+        color: $soft-peach;
+        text-decoration: none;
+        margin-top: 20px;
+        z-index: 10;
+        position: relative;
+        display: inline-block;
+        padding: 0 1em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 12px;
+        font-size: 0.8rem;
+        line-height: 1.91667;
+        color: #2e1e43;
+        background-color: #ff8c67;
+        letter-spacing: 0.2em;
+        font-weight: 600;
+        font-family: $secondary-font;
+        width: 40%;
+        font-size: 16px;
+        line-height: 1.4375;
+        padding: 0.7em;
+        margin-bottom: 1.5em;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+        animation: fadeIn 1s 1.8s backwards;
+        width: 200px;
+      }
+
+      a:hover {
+        background-color: $soft-peach;
+        color: $background;
+      }
+    }
+  }
 }
 
+@media screen and (min-width: 1025px) {
+  .home-page {
+    // T animation section
+    .t-animation-wrapper {
+      position: relative;
+      left: 450px;
+    }
 
-@media screen and (max-height: 600px) {
-  .typing-text {
-    top: -30px;
-    position: absolute;
-    left: 15px !important;
-  }
+    .text {
+      bottom: 350px;
+      left: 300px;
+      // right: 250px;
+      text-align: start;
+      display: flex;
+      justify-content: start;
+      align-items: start;
 
-  .t-animation-wrapper {
-    left: 25px !important;
-    top: 24% !important;
-  }
+      div {
+        text-align: start;
+      }
 
-
-}
-
-
-@media screen and (max-width: 480px) {
-  .portfolio-title {
-    font-size: 20px !important;
+      
+      // Orange text
+     
+    }
   }
 }

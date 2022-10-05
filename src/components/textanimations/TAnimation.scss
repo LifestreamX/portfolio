@@ -3,7 +3,7 @@
 // T Animations
 .t {
   svg {
-    width: 1000px;
+    width: 200px;
     animation: svg-fill 3000ms ease-in-out 2500ms both;
     .t-start-c2,
     .t-follow-c2 {
@@ -165,35 +165,55 @@
   }
 }
 
+// TABLETS SIZE
+@media screen and(min-width: 768px) {
+  .t {
+    svg {
+      width: 400px;
+    }
+  }
+}
+
+
+// DESKTOP SIZE
+@media screen and (min-width: 1025px) {
+  .t {
+    svg {
+      width: 800px;
+    }
+  }
+}
+
+
 // Responsiveness
-@media screen and (max-width: 480px) {
-  .t svg {
-    width: 200px !important;
-    height: 200px !important;
-    position: relative;
-    right: 200px !important;
-  }
-}
+// @media screen and (max-width: 480px) {
+//   .t svg {
+//     width: 200px !important;
+//     height: 200px !important;
+//     position: relative;
+//     right: 200px !important;
+//   }
+// }
 
-@media screen and (max-width: 768px) {
-  .t svg {
-    width: 200px !important;
-    height: 200px !important;
-    position: relative;
-    right: 270px !important;
-    bottom: 80px;
-  }
-}
+// @media screen and (max-width: 768px) {
+//   .t svg {
+//     width: 200px !important;
+//     height: 200px !important;
+//     position: relative;
+//     right: 270px !important;
+//     bottom: 80px;
+//   }
+// }
 
-@media screen and (max-width: 1024px) {
-  .t svg {
-    width: 600px !important;
-    height: 600px;
-  }
-}
+// @media screen and (max-width: 1024px) {
+//   .t svg {
+//     width: 600px !important;
+//     height: 600px;
+//   }
+// }
 
-@media screen and (max-width: 1200px) {
-  .t svg {
-    width: 800px !important;
-  }
-}
+// @media screen and (max-width: 1200px) {
+//   .t svg {
+//     width: 800px !important;
+//   }
+// }

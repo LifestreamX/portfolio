@@ -88,22 +88,29 @@ const HomePage = () => {
       {/* Top section */}
       <div className='typing-text'>
         {timer === false ? (
-          <SidebarText />
+          <div className='portfolio-title'>
+            <SidebarText className='portfolio-title' />
+          </div>
         ) : (
-          <h1 className='portfolio-title'>
+          <div className='portfolio-title'>
             {' '}
             <LetterAnimations
               letterClass={letterClass}
               strArray={titleSection}
               idx={35}
             />
-          </h1>
+          </div>
         )}
+      </div>
+
+      {/* T Animation */}
+      <div className='t-animation-wrapper'>
+        <TAnimation />
       </div>
 
       {/* Left section */}
       <div className='text'>
-        <h1>
+        <div>
           <LetterAnimations
             letterClass={letterClass}
             strArray={firstLine}
@@ -121,18 +128,15 @@ const HomePage = () => {
             strArray={thirdLine}
             idx={53}
           />
-        </h1>
+        </div>
 
-        <h2>Frontend React Developer</h2>
+        <div className='frontend-react-dev'>Frontend React Developer</div>
         <Link to='/contact' className='flat-button'>
           CONTACT ME
         </Link>
       </div>
 
       {/* Right section */}
-      <div className='t-animation-wrapper'>
-        <TAnimation />
-      </div>
     </motion.div>
   );
 };
