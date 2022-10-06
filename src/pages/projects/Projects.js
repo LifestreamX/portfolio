@@ -38,16 +38,14 @@ const Projects = () => {
         animate={{ width: '100%' }}
         exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
       >
-        <div className='project__title_wrapper'>
-          <h1 className='project__title'>
+          <div className='project-page-title'>
             {' '}
             <LetterAnimations
               letterClass={letterClass}
               strArray={projectTitle}
               idx={20}
             />
-          </h1>
-        </div>
+          </div>
 
         <div class='container'>
           <div class='circle-container'>
@@ -363,9 +361,7 @@ const Projects = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <div className='project-title-wrapper'>
-                  <h1 className='project-title'>Personal Training</h1>{' '}
-                </div>
+                <div className='project-title'>Personal Training</div>{' '}
               </a>
               {/* Image */}
               <a
@@ -389,7 +385,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper'>
-                  <h1 className='project-title'>The Cozi Corgi</h1>{' '}
+                  <div className='project-title'>The Cozi Corgi</div>{' '}
                 </div>
               </a>
               {/* Image */}
@@ -414,7 +410,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper'>
-                  <h1 className='project-title'>Contact Manager</h1>{' '}
+                  <div className='project-title'>Contact Manager</div>{' '}
                 </div>
               </a>
               {/* Image */}
@@ -439,9 +435,9 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper long'>
-                  <h1 className='project-title '>
-                    TV-Movie-VideoGame-Manager-App
-                  </h1>{' '}
+                  <div className='project-title '>
+                    TV-Movie-VideoGame-Manager
+                  </div>{' '}
                 </div>
               </a>
               {/* Image */}
@@ -466,7 +462,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper'>
-                  <h1 className='project-title'>Fake Store </h1>{' '}
+                  <div className='project-title'>Fake Store </div>{' '}
                 </div>
               </a>
               {/* Image */}
@@ -492,7 +488,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper'>
-                  <h1 className='project-title'>Pupper Newsfeed</h1>{' '}
+                  <div className='project-title'>Pupper Newsfeed</div>{' '}
                 </div>
               </a>
               {/* Image */}
@@ -518,7 +514,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper'>
-                  <h1 className='project-title'>Corgi Land</h1>{' '}
+                  <div className='project-title'>Corgi Land</div>{' '}
                 </div>
               </a>
               {/* Image */}
@@ -543,7 +539,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper'>
-                  <h1 className='project-title'>Name and Username</h1>{' '}
+                  <div className='project-title'>Name and Username</div>{' '}
                 </div>
               </a>
               {/* Image */}
@@ -568,7 +564,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper'>
-                  <h1 className='project-title'>Rock Paper Scissors</h1>{' '}
+                  <div className='project-title'>Rock Paper Scissors</div>{' '}
                 </div>
               </a>
               {/* Image */}
@@ -593,7 +589,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper'>
-                  <h1 className='project-title'>Click A Mole</h1>{' '}
+                  <div className='project-title'>Click A Mole</div>{' '}
                 </div>
               </a>
               {/* Image */}
@@ -618,7 +614,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper'>
-                  <h1 className='project-title'>Grocery List</h1>{' '}
+                  <div className='project-title'>Grocery List</div>{' '}
                 </div>
               </a>
               {/* Image */}
