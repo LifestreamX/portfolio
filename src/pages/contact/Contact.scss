@@ -1,86 +1,52 @@
 @import '../../App.scss';
 
-// Left side
-.animation-wrapper {
-  position: absolute;
-  left: 20%;
-  top: 20%;
-  z-index: 1;
-}
-.contact-page-logo {
-  font-size: 400px !important;
-  color: $salmon;
-}
-
-.container {
+.contact-page {
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  transition: all 0.3s ease;
-  font-family: $primary-font;
-}
-
-.container .inner {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.container .inner .panel {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  box-sizing: border-box;
-  height: 100%;
-  width: 60%;
-  float: left;
-  transform: skew(-20deg);
+  top: 0;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+  // Title
+  h1 {
+    margin-top: 2rem;
+    font-family: $primary-font;
+  }
+
+  // Logo
+  .contact-page-logo {
+    font-size: 100px ;
+    color: $salmon;
+    margin-bottom: 40px;
+  }
+
+  // Form
+
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    position: relative;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100%;
+    // background-color: rebeccapurple;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 }
 
-.container .inner .panel.panel-left {
-  margin-left: -10%;
-}
-
-.container .inner .panel .panel-content {
-  position: absolute;
+.form-wrapper {
   width: 100%;
-  height: 100%;
-  left: 30%;
-  top: 20%;
-  transform: translateX(-50%) translateY(-50%) skew(20deg);
-}
-
-.container .inner .panel.panel-right {
-  margin-right: -10%;
-  background: #060e1e;
-}
-
-.container .inner .panel.panel-right .panel-content .form {
-  display: block;
-  position: absolute;
-  margin: 0 auto;
-  width: 300px;
-  min-height: 400px;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-25%);
-}
-
-.container .inner .panel.panel-right .panel-content .form {
-  display: block;
-  margin: 0 0 45px 0;
-  color: #b1b1b1;
-  font-weight: 200;
-  font-size: 18px;
-}
-
-// Contact title
-h1 {
-  color: white !important;
-  font-size: 24px;
-  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .labels {
@@ -90,19 +56,18 @@ h1 {
 .group {
   position: relative;
   margin-bottom: 25px;
+  width: 90%;
 }
 
 .message-wrapper {
-  flex-direction: column;
 }
 
 .message-box {
-  margin-left: 100px;
   height: 150px;
   width: 100%;
   position: relative;
   top: 55px;
-  right: 95px;
+  margin-bottom: 30px;
 }
 
 textarea {
@@ -118,7 +83,6 @@ input {
   height: 25px;
   padding: 10px 10px 10px 5px;
   display: block;
-  width: 300px;
   border: none;
   outline: none;
   border-bottom: 1px solid #b1b1b1;
@@ -127,6 +91,7 @@ input {
   opacity: 0.5;
   transition: 0.2s ease;
   background: none;
+  width: 100%;
 }
 
 input:focus {
@@ -234,13 +199,14 @@ input:focus ~ .highlight {
 }
 
 // Send button
+
 button {
   font-family: inherit;
   font-size: 20px;
   background: #3e1d60;
   color: white;
-  padding: 0em 2em;
-  padding-left: 0.9em;
+  // padding: 0em 2em;
+  // padding-left: 0.9em;
   display: flex;
   align-items: center;
   border: none;
@@ -248,11 +214,13 @@ button {
   overflow: hidden;
   transition: all 0.2s;
   cursor: pointer;
-  margin-top: 100px;
   display: flex;
   letter-spacing: 1px;
   padding-top: 10px;
   padding-bottom: 10px;
+  width: 90%;
+  margin-top: 50px !important;
+  margin-bottom: 30px;
 }
 
 button span {
@@ -261,10 +229,19 @@ button span {
   transition: all 0.3s ease-in-out;
 }
 
+.svg-wrapper-1 {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
 button svg {
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-in-out;
+  text-align: center;
 }
 
 button:hover .svg-wrapper {
@@ -299,123 +276,52 @@ button:active {
   }
 }
 
-// Responsiveness
+// TABLETS
 
-@media screen and (max-width: 1200px) {
-  .contact-page-logo {
-    font-size: 300px !important;
+@media screen and (min-width: 768px) {
+  .form-wrapper {
+    width: 75%;
   }
 
-  form {
-    h1 {
-      font-size: 18px !important;
-      margin-left: 120px;
-    }
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  form {
-    h1 {
-      font-size: 20px !important;
-      margin-left: 60px;
-    }
-  }
-
+  
   .contact-page-logo {
     font-size: 200px !important;
+ 
   }
 
-  .panel-content {
-    left: 40% !important;
+  .group {
+    width: 100%;
   }
 
-  input {
-    width: 170px !important;
-  }
-
-  textarea {
-    width: 170px !important;
-  }
-
-  input:focus {
-    outline: none;
-    opacity: 1;
-    font-family: 'Roboto', sans-serif;
+  button {
+    width: 100%;
+    padding: 1rem;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .inner {
-    position: relative;
-    left: 30px !important;
-    bottom: 30px;
-  }
-
+// DESKTOPS
+@media screen and (min-width: 1025px) {
   h1 {
-    font-size: 20px !important;
-    margin-left: 10px !important;
-    margin-bottom: 50px;
-  }
-
-  .animation-wrapper {
-    position: absolute;
-    left: 30%;
-    top: -8%;
-  }
-
-  .container .inner .panel.panel-right {
-    background: $background !important;
+    font-size: 4rem;
   }
 
   .contact-page-logo {
-    font-size: 150px !important;
+    font-size: 300px !important;
+   
   }
 
-  .panel-content {
-    left: -25% !important;
-  }
-  .animation-wrapper {
-    display: none !important;
-  }
-}
 
-@media screen and (max-height: 700px) {
-  h1 {
-    position: relative;
-    top: 55px;
-    left: 20px !important;
-    margin-bottom: 60px;
+
+  .form-wrapper {
+    width: 60%;
   }
 
-  .inner {
-    bottom: 90px;
+  .group {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    padding: 1rem;
   }
 }
-
-// @media screen and (max-width: 480px) {
-//   .inner {
-//     position: relative;
-//     left: 70px !important;
-//     bottom: 60px !important;
-
-//     form {
-//       h1 {
-//         position: relative;
-//         top: 40px !important;
-//         left: 20px !important;
-//       }
-//     }
-
-//     button {
-//       // padding-bottom: 20px;
-//       position: relative;
-//       left: 15px;
-//       bottom: 35px;
-//     }
-//   }
-
-//   .animation-wrapper {
-//     display: none !important;
-//   }
-// }
