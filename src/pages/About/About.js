@@ -61,18 +61,23 @@ const About = () => {
       animate={{ width: '100%' }}
       exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
+      {/* Right sections with animation */}
+      <section className='right-side'>
+        <ReactLogo className='react-logo' />
+      </section>
+
       {/* Left section */}
-      <div className='text-zone'>
-        <h1 className='about-me-title'>
+      <div className='text-zone-about'>
+        <span className='about-me-title'>
           {' '}
           <LetterAnimations
             letterClass={letterClass}
             strArray={aboutTitle}
             idx={20}
           />
-        </h1>
+        </span>
 
-        <p className='about-me-text'>
+        <p className='about-me-text text-top'>
           I'm a very passionate self-taught front-end developer looking forward
           to being part of a team creating and maintaining web applications. I'm
           ambitious and believe in continuous learning, always discovering new
@@ -89,11 +94,6 @@ const About = () => {
           own two corgis that you can see featured in some of my projects.
         </p>
       </div>
-
-      {/* Right sections with animation */}
-      <section className='right-side'>
-        <ReactLogo className='react-logo' />
-      </section>
     </motion.main>
   );
 };

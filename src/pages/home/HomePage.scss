@@ -124,59 +124,6 @@
       }
     }
 
-    .text {
-      width: 100%;
-      text-align: center;
-      margin-top: 50px;
-
-      // Orange text
-      .frontend-react-dev {
-        color: $salmon;
-        font-family: $secondary-font;
-        letter-spacing: 3px;
-        animation: fadeIn 1s 1.8s backwards;
-        margin-bottom: 20px;
-        margin-top: 20px;
-      }
-
-      // Contact me button
-      a {
-        color: $soft-peach;
-        text-decoration: none;
-        margin-top: 20px;
-        z-index: 10;
-        position: relative;
-        display: inline-block;
-        padding: 0 1em;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 12px;
-        font-size: 0.8rem;
-        line-height: 1.91667;
-        color: #2e1e43;
-        background-color: #ff8c67;
-        letter-spacing: 0.2em;
-        font-weight: 600;
-        font-family: $secondary-font;
-        width: 40%;
-        font-size: 16px;
-        line-height: 1.4375;
-        padding: 0.7em;
-        margin-bottom: 1.5em;
-        -webkit-transition: all 0.2s ease-out;
-        -moz-transition: all 0.2s ease-out;
-        -ms-transition: all 0.2s ease-out;
-        -o-transition: all 0.2s ease-out;
-        transition: all 0.2s ease-out;
-        animation: fadeIn 1s 1.8s backwards;
-        width: 200px;
-      }
-
-      a:hover {
-        background-color: $soft-peach;
-        color: $background;
-      }
-    }
   }
 }
 
