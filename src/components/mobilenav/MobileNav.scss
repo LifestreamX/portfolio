@@ -37,9 +37,8 @@
 //   margin-right: 2rem;
 // }
 
-.navbar {
+.navbar-mobile-wrapper {
   position: relative;
-  
 }
 
 .nav-item {
@@ -90,15 +89,13 @@ a {
   text-decoration: none;
 }
 
-.nav-icons{
+.nav-icons {
   font-size: 30px;
 }
 
-
-
 .menu-icon {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transform: translate(-100%, 60%);

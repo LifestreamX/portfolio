@@ -1,172 +1,256 @@
 @import '../../App.scss';
 
+// MOBILE
 .skills-page {
-  .text-zone {
-    position: absolute;
-    left: 10%;
-    top: -13%;
-    transform: translateY(50%);
-    width: 45%;
-    vertical-align: middle;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
-    h1 {
-      font-size: 50px;
-      font-family: $primary-font;
-      margin-top: 0;
-      position: relative;
-      margin-bottom: 40px;
-      color: $salmon !important;
-      letter-spacing: 2px;
-    }
-
-    .sentence {
-      font-family: $secondary-font;
-      font-size: 36px;
-    }
-
-    p {
-      font-family: 'Roboto', sans-serif;
-      line-height: 35px;
-      font-size: 25px;
-    }
-  }
-
-  .text-animate-hover {
-    &:hover {
-      color: $soft-peach;
-    }
-  }
-
-  .skills-right-side {
-    position: absolute;
-    left: 20%;
-    top: 23%;
-    display: grid;
-    grid-template-columns: repeat(6, 150px);
-    grid-gap: 100px;
-    transition: 2s;
-
-    .skills-icons {
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
-    .skills-icons:hover {
-      transform: scale(1.23);
-    }
-  }
-  .individual-project-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    p {
-      font-size: 20px;
-      font-family: $secondary-font;
-      margin-top: 30px;
-    }
-  }
-}
-
-// Responsiveness
-
-@media screen and (max-width: 1800px) {
-  .skills-right-side {
-    // overflow: scroll !important;
-    grid-template-columns: repeat(5, 150px) !important;
-    top: 26% !important;
-  }
-  .text-zone {
-    position: relative;
-    top: -15% !important;
-  }
-}
-
-@media screen and (max-width: 1600px) {
-  .text-zone {
-    h1 {
-      font-size: 40px !important;
-    }
-
-    .sentence {
-      font-size: 30px !important;
-    }
-  }
-
-  .skills-right-side {
-    left: 10% !important;
-    grid-gap: 50px !important;
-
-    .individual-project-wrapper svg {
-      width: 100px !important;
-    }
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .text-zone {
-    position: absolute;
-    top: -10% !important;
-    h1 {
-      font-size: 30px !important;
-    }
-
-    .sentence {
-      font-size: 20px !important;
-    }
-  }
-
-  .skills-right-side {
-    grid-template-columns: repeat(4, 150px) !important;
-
-    left: 10% !important;
-    grid-gap: 25px !important;
-
-    .individual-project-wrapper svg {
-      width: 100px !important;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .skills-page {
-    right: 35px;
-  }
-
-  .text-zone {
-    display: none;
-    position: absolute !important;
-    top: -840px !important;
-    h1 {
-      font-size: 20px !important;
-      right: 20px;
-    }
-
-    .sentence {
-      font-size: 14px !important;
-      margin-top: -25px !important;
-    }
-  }
-
-  .skills-right-side {
-    grid-template-columns: repeat(2, 100%) !important;
-    top: 0% !important;
-    right: 10% !important;
-    margin-right: 300px !important;
-    padding: -100px;
-  }
-}
-
-@media screen and (max-width: 570px) {
-  .skills-right-side {
-    grid-template-columns: repeat(1, 100%) !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .text-zone-skills {
+    // margin-top: 5000px;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+
+    .skills-title {
+      span {
+        font-size: 2rem !important;
+        font-family: $primary-font;
+        color: $salmon;
+      }
+    }
+
+    .sentence {
+      font-family: $secondary-font;
+      font-size: 1.5rem;
+      margin-bottom: -20px;
+    }
+  }
+
+  .skills-right-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .individual-project-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50vw;
+      margin-top: 40px;
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
   }
 }
+
+// TABLETS
+
+@media screen and (min-width: 768px) {
+ 
+  
+
+  .skills-page {
+    .skills-right-side {
+      display: grid;
+      grid-template-columns: 25vw 25vw;
+      grid-gap: 100px;
+
+      .individual-project-wrapper {
+        width: 25vw;
+      }
+    }
+  }
+}
+
+// DESKTOPS
+@media screen and (min-width: 1025px) {
+  .skills-right-side {
+    grid-template-columns: 10vw 10vw 10vw 10vw 10vw !important;
+
+    .individual-project-wrapper {
+      width: 150px !important;
+    }
+  }
+}
+
+// .skills-page {
+//   .text-zone {
+//     position: absolute;
+//     left: 10%;
+//     top: -13%;
+//     transform: translateY(50%);
+//     width: 45%;
+//     vertical-align: middle;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+
+//     h1 {
+//       font-size: 50px;
+//       font-family: $primary-font;
+//       margin-top: 0;
+//       position: relative;
+//       margin-bottom: 40px;
+//       color: $salmon !important;
+//       letter-spacing: 2px;
+//     }
+
+//     .sentence {
+//       font-family: $secondary-font;
+//       font-size: 36px;
+//     }
+
+//     p {
+//       font-family: 'Roboto', sans-serif;
+//       line-height: 35px;
+//       font-size: 25px;
+//     }
+//   }
+
+//   .text-animate-hover {
+//     &:hover {
+//       color: $soft-peach;
+//     }
+//   }
+
+//   .skills-right-side {
+//     position: absolute;
+//     left: 20%;
+//     top: 23%;
+//     display: grid;
+//     grid-template-columns: repeat(6, 150px);
+//     grid-gap: 100px;
+//     transition: 2s;
+
+//     .skills-icons {
+//       transition: transform 0.8s;
+//       transform-style: preserve-3d;
+//     }
+//     .skills-icons:hover {
+//       transform: scale(1.23);
+//     }
+//   }
+//   .individual-project-wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+
+//     p {
+//       font-size: 20px;
+//       font-family: $secondary-font;
+//       margin-top: 30px;
+//     }
+//   }
+// }
+
+// // Responsiveness
+
+// @media screen and (max-width: 1800px) {
+//   .skills-right-side {
+//     // overflow: scroll !important;
+//     grid-template-columns: repeat(5, 150px) !important;
+//     top: 26% !important;
+//   }
+//   .text-zone {
+//     position: relative;
+//     top: -15% !important;
+//   }
+// }
+
+// @media screen and (max-width: 1600px) {
+//   .text-zone {
+//     h1 {
+//       font-size: 40px !important;
+//     }
+
+//     .sentence {
+//       font-size: 30px !important;
+//     }
+//   }
+
+//   .skills-right-side {
+//     left: 10% !important;
+//     grid-gap: 50px !important;
+
+//     .individual-project-wrapper svg {
+//       width: 100px !important;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 1024px) {
+//   .text-zone {
+//     position: absolute;
+//     top: -10% !important;
+//     h1 {
+//       font-size: 30px !important;
+//     }
+
+//     .sentence {
+//       font-size: 20px !important;
+//     }
+//   }
+
+//   .skills-right-side {
+//     grid-template-columns: repeat(4, 150px) !important;
+
+//     left: 10% !important;
+//     grid-gap: 25px !important;
+
+//     .individual-project-wrapper svg {
+//       width: 100px !important;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 768px) {
+//   .skills-page {
+//     right: 35px;
+//   }
+
+//   .text-zone {
+//     display: none;
+//     position: absolute !important;
+//     top: -840px !important;
+//     h1 {
+//       font-size: 20px !important;
+//       right: 20px;
+//     }
+
+//     .sentence {
+//       font-size: 14px !important;
+//       margin-top: -25px !important;
+//     }
+//   }
+
+//   .skills-right-side {
+//     grid-template-columns: repeat(2, 100%) !important;
+//     top: 0% !important;
+//     right: 10% !important;
+//     margin-right: 300px !important;
+//     padding: -100px;
+//   }
+// }
+
+// @media screen and (max-width: 570px) {
+//   .skills-right-side {
+//     grid-template-columns: repeat(1, 100%) !important;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+//   }
+// }

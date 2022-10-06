@@ -41,15 +41,15 @@ const Skills = () => {
       {/* Binary animation */}
 
       {/* Left section */}
-      <div className='text-zone'>
-        <h1>
+      <div className='text-zone-skills'>
+        <span className='skills-title'>
           {' '}
           <LetterAnimations
             letterClass={letterClass}
             strArray={aboutTitle}
             idx={20}
           />
-        </h1>
+        </span>
 
         <h2 className='sentence'>
           These are the technologies that i've worked with

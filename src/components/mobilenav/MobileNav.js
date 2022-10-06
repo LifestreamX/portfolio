@@ -20,7 +20,7 @@ const MobileNav = () => {
 
   return (
     <>
-      <nav className='navbar'>
+      <nav className='navbar-mobile-wrapper'>
         <div className='menu-icon' onClick={handleClick}>
           {click ? (
             <CloseIcon sx={{ fontSize: 30 }} />
