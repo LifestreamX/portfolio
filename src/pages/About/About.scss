@@ -69,6 +69,7 @@
     }
 
     .text-zone-about {
+      font-size: 1.6rem;
       .about-me-text {
         margin-top: 10px;
       }
@@ -82,19 +83,23 @@
 
 @media screen and (min-width: 1025px) {
   .about-page {
+    position: relative;
+    right: 100px !important;
 
     .right-side {
       position: relative;
-      margin-left: 1000px;
+      margin-left: 1400px;
+      margin-top: 500px;
     }
 
     .text-zone-about {
       position: absolute;
-      width: 40% !important;
+      width: 35% !important;
       justify-content: start !important;
       align-items: flex-start;
       margin-top: 200px !important;
       margin-right: 400px;
+      font-size: 2rem;
 
       .about-me-title {
         font-size: 3rem !important;

@@ -16,8 +16,10 @@
       width: 100%;
       font-size: 1rem;
       text-align: center;
-      margin-top: 40px;
+      margin-top: 85px;
       font-size: 1.4rem;
+      text-transform: capitalize;
+      font-family: $primary-font;
     }
   }
 
@@ -123,13 +125,21 @@
         font-size: 2rem;
       }
     }
-
   }
 }
 
+// DESKTOPS
+
 @media screen and (min-width: 1025px) {
   .home-page {
+    .typing-text {
+      .portfolio-title {
+        font-size: 4rem;
+      }
+    }
+
     // T animation section
+
     .t-animation-wrapper {
       position: relative;
       left: 450px;
@@ -137,7 +147,7 @@
 
     .text {
       bottom: 350px;
-      left: 300px;
+      left: 400px;
       // right: 250px;
       text-align: start;
       display: flex;
@@ -148,9 +158,7 @@
         text-align: start;
       }
 
-      
       // Orange text
-     
     }
   }
 }

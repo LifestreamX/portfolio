@@ -23,83 +23,61 @@ const MobileNav = () => {
       <nav className='navbar-mobile-wrapper'>
         <div className='menu-icon' onClick={handleClick}>
           {click ? (
-            <CloseIcon sx={{ fontSize: 30 }} />
+            <CloseIcon sx={{ fontSize: 40 }} className='close' />
           ) : (
-            <MenuIcon sx={{ fontSize: 30 }} />
+            <MenuIcon sx={{ fontSize: 40 }} />
           )}
         </div>
 
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           {/* Home */}
-          <li className='nav-item'>
-            <NavLink to='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
-            </NavLink>
-          </li>
+          <NavLink to='/' className='nav-links' onClick={closeMobileMenu}>
+            <li className='nav-item'>Home</li>
+          </NavLink>
           {/* About */}
-          <li className='nav-item'>
-            <NavLink
-              to='/about'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              About
-            </NavLink>
-          </li>
+          <NavLink to='/about' className='nav-links' onClick={closeMobileMenu}>
+            <li className='nav-item'>About</li>
+          </NavLink>
           {/* Experience */}
-          <li className='nav-item'>
-            <NavLink
-              to='/skills'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Experience
-            </NavLink>
-          </li>
+          <NavLink to='/skills' className='nav-links' onClick={closeMobileMenu}>
+            <li className='nav-item'>Experience</li>
+          </NavLink>
           {/* Projects */}
-          <li className='nav-item'>
-            <NavLink
-              to='/projects'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Projects
-            </NavLink>
-          </li>
+          <NavLink
+            to='/projects'
+            className='nav-links'
+            onClick={closeMobileMenu}
+          >
+            <li className='nav-item'>Projects</li>
+          </NavLink>
           {/* Contact */}
-          <li className='nav-item'>
-            <NavLink
-              to='/contact'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Contact
-            </NavLink>
-          </li>
+          <NavLink
+            to='/contact'
+            className='nav-links'
+            onClick={closeMobileMenu}
+          >
+            <li className='nav-item'>Contact</li>
+          </NavLink>
 
           {/* Contact */}
-          <li className='nav-item'>
-            <a
-              href='https://github.com/LifestreamX'
-              target='_blank'
-              rel='noreferrer'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Github
-            </a>
-          </li>
-          <li className='nav-item'>
-            <a
-              href='https://www.linkedin.com/in/tylerallen1/'
-              target='_blank'
-              rel='noreferrer'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Linkedin
-            </a>
-          </li>
+          <a
+            href='https://github.com/LifestreamX'
+            target='_blank'
+            rel='noreferrer'
+            className='nav-links'
+            onClick={closeMobileMenu}
+          >
+            <li className='nav-item'>Github</li>
+          </a>
+          <a
+            href='https://www.linkedin.com/in/tylerallen1/'
+            target='_blank'
+            rel='noreferrer'
+            className='nav-links'
+            onClick={closeMobileMenu}
+          >
+            <li className='nav-item'>Linkedin</li>
+          </a>
         </ul>
         {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
       </nav>
