@@ -90,6 +90,7 @@
   }
 }
 
+// TABLETS
 @media screen and (min-width: 768px) {
   .projects-page {
     .project-page-title {
@@ -124,8 +125,10 @@
   }
 }
 
+// DESKTOPS
 @media screen and (min-width: 1025px) {
   .projects-page {
+
     .project-page-title {
       font-size: 3rem !important;
     }
@@ -134,14 +137,14 @@
 
     .cards {
       display: grid;
-      grid-template-columns: 25% 25% 25%;
-      grid-gap: 80px;
+      grid-template-columns: 25% 25%;
+      grid-gap: 200px;
 
       .card-wrapper {
         a {
           div {
             font-family: $secondary-font;
-            font-size: 28px;
+            font-size: 24px;
             letter-spacing: 1px;
             text-decoration: none;
             background-image: linear-gradient($salmon, $salmon);
@@ -159,11 +162,43 @@
           }
 
           .project-title {
-            font-size: 32px !important;
+            font-size: 22px !important;
             text-align: center;
             width: 100%;
             margin-bottom: 2rem;
           }
+        }
+
+        .card {
+          position: relative;
+          width: 400px;
+          height: 300px;
+        }
+      }
+    }
+  }
+}
+
+// LARGE SCREEN DESKTOPS
+@media screen and (min-width: 1800px) {
+  .projects-page {
+    .project-page-title {
+      font-size: 3rem !important;
+    }
+
+    // Projects bottom section
+
+    .cards {
+      display: grid;
+      grid-template-columns: 25% 25% 25%;
+      grid-gap: 80px;
+
+      .card-wrapper {
+        .project-title {
+          font-size: 28px !important;
+          text-align: center;
+          width: 100%;
+          margin-bottom: 2rem;
         }
 
         .card {
@@ -287,30 +322,4 @@
       }
     }
   }
-}
-
-// Cards
-
-.card-wrapper {
-  // a {
-  //   text-decoration: none;
-  //   h1 {
-  //     font-family: $secondary-font;
-  //     font-size: 28px;
-  //     letter-spacing: 1px;
-  //     text-decoration: none;
-  //     background-image: linear-gradient($salmon, $salmon);
-  //     background-size: 0% 0.1em;
-  //     background-position-y: 100%;
-  //     background-position-x: 0%;
-  //     background-repeat: no-repeat;
-  //     transition: background-size 0.2s ease-in-out;
-  //   }
-
-  //   h1:hover,
-  //   h1:focus,
-  //   h1:active {
-  //     background-size: 100% 0.1em;
-  //   }
-  // }
 }

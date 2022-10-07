@@ -219,7 +219,6 @@ button {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 90%;
-  margin-top: 50px !important;
   margin-bottom: 30px;
 }
 
@@ -280,12 +279,12 @@ button:active {
 
 @media screen and (min-width: 768px) {
   .form-wrapper {
-    width: 75%;
+    width: 60%;
   }
 
   
   .contact-page-logo {
-    font-size: 200px !important;
+    font-size: 150px !important;
  
   }
 
@@ -306,14 +305,14 @@ button:active {
   }
 
   .contact-page-logo {
-    font-size: 300px !important;
+    font-size: 150px !important;
    
   }
 
 
 
   .form-wrapper {
-    width: 60%;
+    width: 25%;
   }
 
   .group {

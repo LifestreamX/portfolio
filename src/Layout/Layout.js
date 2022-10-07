@@ -9,7 +9,7 @@ const Layout = () => {
 
   //choose the screen size
   const handleResize = () => {
-    if (window.innerWidth < 769) {
+    if (window.innerWidth < 1025) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -23,8 +23,8 @@ const Layout = () => {
 
   return (
     <div>
-      {window.innerWidth < 769 && <MobileNav />}
-      {window.innerWidth > 769 && <Sidebar />}
+      {window.innerWidth < 1025 && <MobileNav />}
+      {window.innerWidth > 1025 && <Sidebar />}
 
       <div className='page'>
         <Outlet />

@@ -81,10 +81,43 @@
   }
 }
 
+// DESKTOPS
 @media screen and (min-width: 1025px) {
   .about-page {
     position: relative;
     right: 100px !important;
+    bottom: 200px !important;
+
+    .right-side {
+      position: relative;
+      margin-left: 800px;
+      margin-top: 700px;
+    }
+
+    .text-zone-about {
+      position: absolute;
+      width: 35% !important;
+      justify-content: start !important;
+      align-items: flex-start;
+      margin-top: 300px !important;
+      margin-right: 280px;
+      font-size: 1.7rem;
+
+      .about-me-title {
+        font-size: 3rem !important;
+        text-align: start !important;
+        margin-bottom: -100px !important;
+      }
+    }
+  }
+}
+
+// LARGE SCREEN DESKTOPS
+@media screen and (min-width: 1700px) {
+  .about-page {
+    position: relative;
+    right: 100px !important;
+    margin-top: 200px;
 
     .right-side {
       position: relative;
@@ -109,141 +142,3 @@
     }
   }
 }
-
-// .about-page {
-//   .text-zone {
-//     position: absolute;
-//     left: 10%;
-//     top: 1%;
-//     transform: translateY(30%);
-//     width: 35%;
-//     vertical-align: middle;
-//     display: table-cell;
-//     max-height: 90%;
-
-//     h1 {
-//       font-size: 50px;
-//       font-family: $primary-font;
-//       margin-top: 0;
-//       position: relative;
-//       margin-bottom: 40px;
-//       color: $salmon !important;
-//       letter-spacing: 2px;
-//     }
-
-//     p {
-//       font-family: 'Roboto', sans-serif;
-//       line-height: 35px;
-//       font-size: 25px;
-//     }
-//   }
-
-//   .text-animate-hover {
-//     &:hover {
-//       color: $soft-peach;
-//     }
-//   }
-
-//   .right-side {
-//     position: absolute;
-//     left: 55%;
-//     top: 20%;
-//   }
-// }
-
-// // Responsiveness
-
-// @media screen and (max-width: 1600px) {
-//   .text-zone {
-//     top: -300px !important;
-//   }
-
-//   .right-side {
-//     position: absolute;
-//     left: 45% !important;
-//     top: 5% !important;
-//   }
-// }
-
-// @media screen and (max-width: 1350px) {
-//   .text-zone {
-//     position: relative;
-//     // bottom: 800px !important;
-//     left: 200px !important;
-//   }
-
-//   .text-zone p {
-//     font-size: 20px !important;
-//   }
-
-//   .right-side {
-//     position: absolute;
-//     left: 45% !important;
-//     top: 5% !important;
-//   }
-// }
-
-// @media screen and (max-width: 1024px) {
-//   .text-zone {
-//     position: relative;
-//     width: 70% !important;
-
-//     h1 {
-//       left: -60px;
-//     }
-//   }
-
-//   .text-zone p {
-//     font-size: 18px !important;
-//   }
-
-//   .right-side {
-//     display: none;
-//   }
-// }
-
-// @media screen and (max-width: 768px) {
-//   .about-page {
-//     top: 90%;
-//     left: -140px;
-
-//     h1 {
-//       left: 40px;
-//       margin-bottom: 60px !important;
-//     }
-//   }
-
-//   .text-zone {
-//     padding: 5px;
-//     width: 200px;
-//     width: 200px;
-//   }
-// }
-
-// @media screen and (max-height: 700px) {
-//   .text-zone {
-//     width: 100%;
-
-//     padding: 20px;
-//   }
-
-//   h1 {
-//     left: -10px !important;
-//   }
-
-//   .about-me-title {
-//     width: 100%;
-//     position: relative;
-//     margin-bottom: 70px !important;
-//   }
-
-//   .about-me-text {
-//     position: relative;
-//     right: 30px;
-//     width: 270px;
-//   }
-
-//   .about-page {
-//     top: 600px !important;
-//   }
-// }
