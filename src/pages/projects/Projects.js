@@ -15,6 +15,7 @@ import GroceryList from '../../assets/project-images/grocery-list.png';
 import TvMovieVideoGame from '../../assets/project-images/tv-movie-videogame.png';
 import FakeStore from '../../assets/project-images/fake-store.png';
 import PupperNewsfeed from '../../assets/project-images/pupper-newsfeed.png';
+import NBA from '../../assets/project-images/nba.png';
 
 const Projects = () => {
   const [letterClass] = useState('text-animate');
@@ -28,6 +29,11 @@ const Projects = () => {
       { opacity: 0 },
       { stagger: 0.2, opacity: 1, duration: 1, delay: 0.5 }
     );
+    gsap.fromTo(
+      '.project-title',
+      { opacity: 0 },
+      { stagger: 0.2, opacity: 1, duration: 1, delay: 0.5 }
+    );
   }, []);
 
   return (
@@ -38,14 +44,14 @@ const Projects = () => {
         animate={{ width: '100%' }}
         exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
       >
-          <div className='project-page-title'>
-            {' '}
-            <LetterAnimations
-              letterClass={letterClass}
-              strArray={projectTitle}
-              idx={20}
-            />
-          </div>
+        <div className='project-page-title'>
+          {' '}
+          <LetterAnimations
+            letterClass={letterClass}
+            strArray={projectTitle}
+            idx={20}
+          />
+        </div>
 
         <div class='container'>
           <div class='circle-container'>
@@ -626,6 +632,31 @@ const Projects = () => {
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={GroceryList} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* Project 12 */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://nbaplayerdatabase.tyler-allen.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title-wrapper'>
+                  <div className='project-title'>NBA Player Database</div>{' '}
+                </div>
+              </a>
+              {/* Image */}
+              <a
+                href='https://nbaplayerdatabase.tyler-allen.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={NBA} alt='Grocery List ' />
                   </div>
                 </div>
               </a>
