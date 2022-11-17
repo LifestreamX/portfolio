@@ -43,7 +43,7 @@
   height: 90vh;
   position: absolute;
   top: 80px;
-  left: -100%;
+  left: 100%;
   opacity: 1;
   transition: all 0.5s ease;
   height: 100% !important;
@@ -112,9 +112,7 @@ a {
     bottom: 300px !important;
   }
 
-
   .nav-links {
     font-size: 3rem;
-   
   }
 }
