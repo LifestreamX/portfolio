@@ -12,24 +12,23 @@ import CloseIcon from '@mui/icons-material/Close';
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const MobileNav = () => {
-  const [click, setClick] = useState(false);
+const MobileNav = ({click, setClick}) => {
+  // const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = useState(false);
 
   return (
-    <>
-      <nav className='navbar-mobile-wrapper'>
-        <div className='menu-icon' onClick={handleClick}>
-          {click ? (
-            <CloseIcon sx={{ fontSize: 40 }} className='close' />
-          ) : (
-            <MenuIcon sx={{ fontSize: 40 }} />
-          )}
-        </div>
-
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+    <main className='entire-wrapper'>
+      <div className='menu-icon' onClick={handleClick}>
+        {click ? (
+          <CloseIcon sx={{ fontSize: 30 }} className='close' />
+        ) : (
+          <MenuIcon sx={{ fontSize: 30 }} />
+        )}
+      </div>
+      <nav className={click ? 'active' : 'nav-menu'}>
+        <ul>
           {/* Home */}
           <NavLink to='/' className='nav-links' onClick={closeMobileMenu}>
             <li className='nav-item'>Home</li>
@@ -56,7 +55,7 @@ const MobileNav = () => {
             className='nav-links'
             onClick={closeMobileMenu}
           >
-            <li className='nav-item'>Contact</li>
+            <li className='nav-item '>Contact</li>
           </NavLink>
 
           {/* Contact */}
@@ -67,7 +66,7 @@ const MobileNav = () => {
             className='nav-links'
             onClick={closeMobileMenu}
           >
-            <li className='nav-item'>Github</li>
+            <li className='nav-item nav-2'>Github</li>
           </a>
           <a
             href='https://www.linkedin.com/in/tylerallen1/'
@@ -76,12 +75,13 @@ const MobileNav = () => {
             className='nav-links'
             onClick={closeMobileMenu}
           >
-            <li className='nav-item'>Linkedin</li>
+            <li className='nav-item nav-2'>Linkedin</li>
           </a>
         </ul>
+
         {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
       </nav>
-    </>
+    </main>
   );
 };
 

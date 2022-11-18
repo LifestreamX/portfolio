@@ -1,3 +1,7 @@
+ TODO:
+ - mobile nav animation
+ - fix window size function 
+ 
 
 
 # Project Title

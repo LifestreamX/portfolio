@@ -7,6 +7,8 @@ import './Layout.scss';
 const Layout = () => {
   const [isMobile, setIsMobile] = useState(false);
 
+  const [click, setClick] = useState(false);
+
   //choose the screen size
   const handleResize = () => {
     if (window.innerWidth < 1025) {
@@ -21,12 +23,16 @@ const Layout = () => {
     window.addEventListener('resize', handleResize);
   }, []);
 
+
+
   return (
     <div>
-      {window.innerWidth < 1025 && <MobileNav />}
+      {window.innerWidth < 1025 && (
+        <MobileNav click={click} setClick={setClick} />
+      )}
       {window.innerWidth > 1025 && <Sidebar />}
 
-      <div className='page'>
+      <div className='page' id={click && 'hide-background'}>
         <Outlet />
       </div>
     </div>
