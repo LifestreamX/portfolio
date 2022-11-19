@@ -1,6 +1,5 @@
 @import '../../App.scss';
 
-
 .text-animate {
   display: inline-block;
   font-family: $primary-font;
@@ -25,6 +24,6 @@
 
 @for $i from 1 through 70 {
   .text-animate._#{$i} {
-    animation-delay: #{$i / 20}s;
+    animation-delay: #{$i / 80}s;
   }
 }

@@ -24,16 +24,16 @@ const Projects = () => {
 
   // Project cards
   useEffect(() => {
-    gsap.fromTo(
-      '.card',
-      { opacity: 0 },
-      { stagger: 0.2, opacity: 1, duration: 1, delay: 0.5 }
-    );
-    gsap.fromTo(
-      '.project-title',
-      { opacity: 0 },
-      { stagger: 0.2, opacity: 1, duration: 1, delay: 0.5 }
-    );
+    // gsap.fromTo(
+    //   '.card',
+    //   { opacity: 0 },
+    //   { stagger: 0.2, opacity: 1, duration: 1, delay: 0.5 }
+    // );
+    // gsap.fromTo(
+    //   '.project-title',
+    //   { opacity: 0 },
+    //   { stagger: 0.2, opacity: 1, duration: 1, delay: 0.5 }
+    // );
   }, []);
 
   return (
