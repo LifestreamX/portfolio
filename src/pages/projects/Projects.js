@@ -359,7 +359,7 @@ const Projects = () => {
         {/* Cards */}
         <div className='scene'>
           <div className='cards'>
-            {/* Project 1 */}
+            {/* Project : Personal Training */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
@@ -382,7 +382,32 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 2 */}
+            {/* Project: Pupper Newsfeed */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://pupper-newsfeed-front.onrender.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title-wrapper'>
+                  <div className='project-title'>Pupper Newsfeed</div>{' '}
+                </div>
+              </a>
+              {/* Image */}
+              <a
+                href='https://pupper-newsfeed-front.onrender.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={PupperNewsfeed} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* Project: The Cozi Corgi*/}
             <div className='card-wrapper'>
               {/* Title */}
               <a
@@ -407,7 +432,7 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 3 */}
+            {/* Project: Contact Manager */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
@@ -432,7 +457,84 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 4 */}
+
+            {/* Project: Fake Store */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://fakestore.tyler-allen.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title-wrapper'>
+                  <div className='project-title'>Fake Store </div>{' '}
+                </div>
+              </a>
+              {/* Image */}
+              <a
+                href='https://fakestore.tyler-allen.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={FakeStore} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            {/* Project: Corgi Land */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://corgiland.tyler-allen.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title-wrapper'>
+                  <div className='project-title'>Corgi Land</div>{' '}
+                </div>
+              </a>
+              {/* Image */}
+              <a
+                href='https://corgiland.tyler-allen.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={CorgiLand} alt='Corgi Land' />
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* Project: Nba Player Database */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://nbaplayerdatabase.tyler-allen.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title-wrapper'>
+                  <div className='project-title'>NBA Player Database</div>{' '}
+                </div>
+              </a>
+              {/* Image */}
+              <a
+                href='https://nbaplayerdatabase.tyler-allen.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={NBA} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* Project: Tv-Movie-Videogame-Manager */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
@@ -459,84 +561,7 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 5 */}
-            <div className='card-wrapper'>
-              {/* Title */}
-              <a
-                href='https://fakestore.tyler-allen.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='project-title-wrapper'>
-                  <div className='project-title'>Fake Store </div>{' '}
-                </div>
-              </a>
-              {/* Image */}
-              <a
-                href='https://fakestore.tyler-allen.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='card'>
-                  <div className='card__face card__face--front'>
-                    <img src={FakeStore} alt='Grocery List ' />
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            {/* Project 6 */}
-            <div className='card-wrapper'>
-              {/* Title */}
-              <a
-                href='https://pupper-newsfeed-front.onrender.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='project-title-wrapper'>
-                  <div className='project-title'>Pupper Newsfeed</div>{' '}
-                </div>
-              </a>
-              {/* Image */}
-              <a
-                href='https://pupper-newsfeed-front.onrender.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='card'>
-                  <div className='card__face card__face--front'>
-                    <img src={PupperNewsfeed} alt='Grocery List ' />
-                  </div>
-                </div>
-              </a>
-            </div>
-
-            {/* Project 7 */}
-            <div className='card-wrapper'>
-              {/* Title */}
-              <a
-                href='https://corgiland.tyler-allen.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='project-title-wrapper'>
-                  <div className='project-title'>Corgi Land</div>{' '}
-                </div>
-              </a>
-              {/* Image */}
-              <a
-                href='https://corgiland.tyler-allen.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='card'>
-                  <div className='card__face card__face--front'>
-                    <img src={CorgiLand} alt='Corgi Land' />
-                  </div>
-                </div>
-              </a>
-            </div>
-            {/* Project 8 */}
+            {/* Project: Name and Username */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
@@ -561,7 +586,7 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 9 */}
+            {/* Project: Rock Paper Scissors */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
@@ -586,7 +611,7 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 10 */}
+            {/* Project: Click A Mole */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
@@ -611,7 +636,7 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project 11 */}
+            {/* Project: Grocery List */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
@@ -632,31 +657,6 @@ const Projects = () => {
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={GroceryList} alt='Grocery List ' />
-                  </div>
-                </div>
-              </a>
-            </div>
-            {/* Project 12 */}
-            <div className='card-wrapper'>
-              {/* Title */}
-              <a
-                href='https://nbaplayerdatabase.tyler-allen.com/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='project-title-wrapper'>
-                  <div className='project-title'>NBA Player Database</div>{' '}
-                </div>
-              </a>
-              {/* Image */}
-              <a
-                href='https://nbaplayerdatabase.tyler-allen.com/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='card'>
-                  <div className='card__face card__face--front'>
-                    <img src={NBA} alt='Grocery List ' />
                   </div>
                 </div>
               </a>
