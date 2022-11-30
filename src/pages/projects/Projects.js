@@ -436,7 +436,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://contact-manager-front.onrender.com/'
+                href='https://contactmanager.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -446,7 +446,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://contact-manager-front.onrender.com/'
+                href='https://contactmanager.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
