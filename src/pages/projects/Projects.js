@@ -386,7 +386,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://pupper-newsfeed-front.onrender.com'
+                href='https://puppernewsfeed.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -396,7 +396,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://pupper-newsfeed-front.onrender.com'
+                href='https://puppernewsfeed.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
