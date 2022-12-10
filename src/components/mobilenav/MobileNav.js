@@ -12,7 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
-const MobileNav = ({click, setClick}) => {
+const MobileNav = ({ click, setClick }) => {
   // const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -58,7 +58,18 @@ const MobileNav = ({click, setClick}) => {
             <li className='nav-item '>Contact</li>
           </NavLink>
 
-          {/* Contact */}
+          {/* Resume */}
+          <a
+            href='Resume.pdf'
+            target='_blank'
+            rel='noreferrer'
+            className='nav-links'
+            onClick={closeMobileMenu}
+          >
+            <li className='nav-item nav-2'>Resume</li>
+          </a>
+
+          {/* Github */}
           <a
             href='https://github.com/LifestreamX'
             target='_blank'

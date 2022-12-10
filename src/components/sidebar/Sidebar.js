@@ -10,6 +10,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SettingsIcon from '@mui/icons-material/Settings';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { createTheme, ThemeProvider } from '@mui/material';
+import ArticleIcon from '@mui/icons-material/Article';
 
 const Sidebar = () => {
   const theme = createTheme({
@@ -125,8 +126,21 @@ const Sidebar = () => {
             </Tooltip>
           </NavLink>
         </nav>
-        {/* Links for Github and Linkedin */}
+
+        {/* Links for Resume, Github and Linkedin */}
         <div className='links-wrapper-2'>
+          <li>
+            <a
+              href='Resume.pdf'
+              target='_blank'
+              rel='noreferrer'
+              className='nav-links-2'
+            >
+              <Tooltip title='Resume' placement='right' arrow>
+                <ArticleIcon className='nav-2-icons' />
+              </Tooltip>
+            </a>
+          </li>
           <li>
             <a
               href='https://github.com/LifestreamX'
