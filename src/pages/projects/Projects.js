@@ -367,7 +367,7 @@ const Projects = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <div className='project-title'>Personal Training</div>{' '}
+                <div className='project-title'>FitForAll</div>{' '}
               </a>
               {/* Image */}
               <a
