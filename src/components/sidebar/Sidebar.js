@@ -42,7 +42,7 @@ const Sidebar = () => {
     <ThemeProvider theme={theme}>
       <div className='navigation-wrapper'>
         {/* Page links */}
-        <nav>
+        <nav className='nav-links-1-wrapper'>
           {/* Home icon link */}
           <NavLink
             to='/'
