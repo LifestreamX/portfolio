@@ -561,31 +561,7 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project: Name and Username */}
-            <div className='card-wrapper'>
-              {/* Title */}
-              <a
-                href='https://nameandusername.tyler-allen.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='project-title-wrapper'>
-                  <div className='project-title'>Name and Username</div>{' '}
-                </div>
-              </a>
-              {/* Image */}
-              <a
-                href='https://nameandusername.tyler-allen.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='card'>
-                  <div className='card__face card__face--front'>
-                    <img src={NameUsername} alt='Name and Username' />
-                  </div>
-                </div>
-              </a>
-            </div>
+
             {/* Project: Rock Paper Scissors */}
             <div className='card-wrapper'>
               {/* Title */}
