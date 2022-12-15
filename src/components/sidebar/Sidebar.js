@@ -125,11 +125,9 @@ const Sidebar = () => {
               />
             </Tooltip>
           </NavLink>
-        </nav>
 
-        {/* Links for Resume, Github and Linkedin */}
-        <div className='links-wrapper-2'>
-          <li>
+          {/* Links for Resume, Github and Linkedin */}
+          <li className='about-nav-link'>
             <a
               href='Resume.pdf'
               target='_blank'
@@ -137,7 +135,7 @@ const Sidebar = () => {
               className='nav-links-2'
             >
               <Tooltip title='Resume' placement='right' arrow>
-                <ArticleIcon className='nav-2-icons' />
+                <ArticleIcon className='nav-2-icons' id='icons2' />
               </Tooltip>
             </a>
           </li>
@@ -149,7 +147,7 @@ const Sidebar = () => {
               className='nav-links-2'
             >
               <Tooltip title='Github' placement='right' arrow>
-                <GitHubIcon className='nav-2-icons' />
+                <GitHubIcon className='nav-2-icons' id='icons2' />
               </Tooltip>
             </a>
           </li>
@@ -161,11 +159,11 @@ const Sidebar = () => {
               className='nav-links-2'
             >
               <Tooltip title='Linkedin' placement='right' arrow>
-                <LinkedInIcon className='nav-2-icons' />
+                <LinkedInIcon className='nav-2-icons' id='icons2' />
               </Tooltip>
             </a>
           </li>
-        </div>
+        </nav>
       </div>
     </ThemeProvider>
   );
