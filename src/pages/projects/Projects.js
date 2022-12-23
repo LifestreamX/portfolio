@@ -493,7 +493,7 @@ const Projects = () => {
                 rel='noreferrer'
               >
                 <div className='project-title-wrapper'>
-                  <div className='project-title'>NBA Player Database</div>{' '}
+                  <div className='project-title'>NBA Database</div>{' '}
                 </div>
               </a>
               {/* Image */}
