@@ -28,7 +28,7 @@
 @media screen and (min-width: 1025px) {
   .navigation-wrapper {
     background: $black;
-    position: absolute;
+    position: fixed;
     display: block;
     width: 100px;
     height: 100%;
@@ -88,4 +88,3 @@
     color: salmon !important;
   }
 }
-
