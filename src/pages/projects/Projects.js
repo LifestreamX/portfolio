@@ -9,13 +9,13 @@ import ClickAMole from '../../assets/project-images/click-a-mole.png';
 import TheCoziCorgi from '../../assets/project-images/the-cozi-corgi.png';
 import ContactManager from '../../assets/project-images/contact-manager.png';
 import CorgiLand from '../../assets/project-images/corgi-land.png';
-import NameUsername from '../../assets/project-images/name-username.png';
 import RockPaperScissors from '../../assets/project-images/rock-paper-scissors.png';
 import GroceryList from '../../assets/project-images/grocery-list.png';
 import TvMovieVideoGame from '../../assets/project-images/tv-movie-videogame.png';
 import FakeStore from '../../assets/project-images/fake-store.png';
 import PupperNewsfeed from '../../assets/project-images/pupper-newsfeed.png';
 import NBA from '../../assets/project-images/nba.png';
+import NBA2 from '../../assets/project-images/nba2.png';
 
 const Projects = () => {
   const [letterClass] = useState('text-animate');
@@ -484,6 +484,32 @@ const Projects = () => {
               </a>
             </div>
 
+            {/* Project: Nba Player Database */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://nbaplayerdatabase.tyler-allen.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title-wrapper'>
+                  <div className='project-title'>NBA Player Database</div>{' '}
+                </div>
+              </a>
+              {/* Image */}
+              <a
+                href='https://nbaplayerdatabase.tyler-allen.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={NBA2} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+
             {/* Project: Corgi Land */}
             <div className='card-wrapper'>
               {/* Title */}
@@ -505,31 +531,6 @@ const Projects = () => {
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={CorgiLand} alt='Corgi Land' />
-                  </div>
-                </div>
-              </a>
-            </div>
-            {/* Project: Nba Player Database */}
-            <div className='card-wrapper'>
-              {/* Title */}
-              <a
-                href='https://nbaplayerdatabase.tyler-allen.com/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='project-title-wrapper'>
-                  <div className='project-title'>NBA Player Database</div>{' '}
-                </div>
-              </a>
-              {/* Image */}
-              <a
-                href='https://nbaplayerdatabase.tyler-allen.com/'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='card'>
-                  <div className='card__face card__face--front'>
-                    <img src={NBA} alt='Grocery List ' />
                   </div>
                 </div>
               </a>
