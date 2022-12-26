@@ -104,39 +104,40 @@ const HomePage = () => {
       </div>
 
       {/* T Animation */}
-      <div className='t-animation-wrapper'>
-        <TAnimation />
-      </div>
 
-      {/* Left section */}
-      <div className='text'>
-        <div>
-          <LetterAnimations
-            letterClass={letterClass}
-            strArray={firstLine}
-            idx={21}
-          />{' '}
-          <br />{' '}
-          <LetterAnimations
-            letterClass={letterClass}
-            strArray={secondLine}
-            idx={35}
-          />
-          <br />{' '}
-          <LetterAnimations
-            letterClass={letterClass}
-            strArray={thirdLine}
-            idx={53}
-          />
+      <div className='left-right-wrapper'>
+        <div className='t-animation-wrapper'>
+          <TAnimation />
         </div>
 
-        <div className='frontend-react-dev'>Frontend React Developer</div>
-        <Link to='/contact' className='flat-button'>
-          CONTACT ME
-        </Link>
-      </div>
+        {/* Left section */}
+        <div className='text'>
+          <div>
+            <LetterAnimations
+              letterClass={letterClass}
+              strArray={firstLine}
+              idx={21}
+            />{' '}
+            <br />{' '}
+            <LetterAnimations
+              letterClass={letterClass}
+              strArray={secondLine}
+              idx={35}
+            />
+            <br />{' '}
+            <LetterAnimations
+              letterClass={letterClass}
+              strArray={thirdLine}
+              idx={53}
+            />
+          </div>
 
-      {/* Right section */}
+          <div className='frontend-react-dev'>Frontend React Developer</div>
+          <Link to='/contact' className='flat-button'>
+            CONTACT ME
+          </Link>
+        </div>
+      </div>
     </motion.div>
   );
 };

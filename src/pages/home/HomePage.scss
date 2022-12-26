@@ -12,6 +12,8 @@
   overflow-x: hidden;
 
   .typing-text {
+    width: 100%;
+    position: absolute;
     .portfolio-title {
       width: 100%;
       font-size: 1rem;
@@ -23,10 +25,19 @@
     }
   }
 
+  .left-right-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
   // T animation section
   .t-animation-wrapper {
     height: 0;
-    margin-bottom: 250px;
+    margin-top: 150px;
+    margin-bottom: 140px;
   }
 
   // White text section text
@@ -37,11 +48,11 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 60px;
+    // bottom: 60px;
     div {
       color: $soft-peach;
       font-family: $primary-font;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
     }
   }
 
@@ -133,21 +144,22 @@
   .home-page {
     .typing-text {
       .portfolio-title {
-        font-size: 4rem;
+        font-size: 40px;
       }
     }
 
-    // T animation section
+    .left-right-wrapper {
+      flex-direction: row;
+    }
 
     .t-animation-wrapper {
       position: relative;
-      left: 350px;
+      left: 750px;
     }
 
     .text {
-      bottom: 350px;
-      left: 200px;
-      // right: 250px;
+      right: 600px;
+      margin-top: 500px;
       text-align: start;
       display: flex;
       justify-content: start;
@@ -165,19 +177,15 @@
 // LARGE SCREEN DESKTOPS
 @media screen and (min-width: 1600px) {
   .home-page {
-   
     // T animation section
 
     .t-animation-wrapper {
-      left: 500px;
+      // left: 500px;
     }
 
     .text {
-      bottom: 350px;
-      left: 400px;
-   
-      
-    
+      // bottom: 350px;
+      // left: 400px;
 
       // Orange text
     }
