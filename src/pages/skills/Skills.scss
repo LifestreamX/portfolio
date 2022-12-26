@@ -79,7 +79,7 @@
     grid-template-columns: 10vw 10vw 10vw 10vw  !important;
 
     .individual-project-wrapper {
-      width: 150px !important;
+      width: 100px !important;
     }
   }
 }
@@ -87,7 +87,7 @@
 
 
 // LARGE SCREEN DESKTOPS
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1600px) {
   .skills-right-side {
     grid-template-columns: 10vw 10vw 10vw 10vw 10vw !important;
 
