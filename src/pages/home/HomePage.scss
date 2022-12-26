@@ -133,15 +133,13 @@
   .home-page {
     .typing-text {
       .portfolio-title {
-        font-size: 40px;
+        font-size: 32px !important;
       }
     }
 
     .left-right-wrapper {
       flex-direction: row;
-      margin-top: 200px;
       margin-left: 200px;
-      margin-right: 200px;
     }
 
     .t-animation-wrapper {
@@ -158,13 +156,14 @@
 
       div {
         text-align: start;
+        font-size: 28px ;
       }
     }
   }
 }
 
 // LARGE SCREEN DESKTOPS
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1600px) {
   .home-page {
     .typing-text {
       .portfolio-title {
