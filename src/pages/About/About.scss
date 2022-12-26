@@ -12,7 +12,7 @@
   // overflow-y: hidden;
   // overflow-x: hidden;
 
-  .right-side {
+  .right-side-about {
     height: 0;
     width: 0;
     position: absolute;
@@ -109,10 +109,9 @@
 }
 
 // TAbLETS
-
 @media screen and (min-width: 768px) {
   .about-page {
-    .right-side {
+    .right-side-about {
       height: 0;
       width: 0;
       position: absolute;
@@ -142,7 +141,7 @@
     right: 100px !important;
     bottom: 200px !important;
 
-    .right-side {
+    .right-side-about {
       position: relative;
       margin-left: 800px;
       margin-top: 700px;
@@ -155,10 +154,11 @@
       align-items: flex-start;
       margin-top: 300px !important;
       margin-right: 280px;
-      font-size: 1.7rem;
+      margin-left: 50px;
+      font-size: 20px;
 
       .about-me-title {
-        font-size: 3rem !important;
+        font-size: 24px !important;
         text-align: start !important;
         margin-bottom: -100px !important;
       }
@@ -173,7 +173,7 @@
     right: 100px !important;
     margin-top: 200px;
 
-    .right-side {
+    .right-side-about {
       position: relative;
       margin-left: 1400px;
       margin-top: 500px;
@@ -185,7 +185,7 @@
       justify-content: start !important;
       align-items: flex-start;
       margin-top: 200px !important;
-      margin-right: 400px;
+      margin-right: 600px;
       font-size: 2rem;
 
       .about-me-title {

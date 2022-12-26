@@ -64,7 +64,7 @@ const About = () => {
       exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
       {/* Right sections with animation */}
-      <section className='right-side'>
+      <section className='right-side-about'>
         <ReactLogo className='react-logo' />
       </section>
 
