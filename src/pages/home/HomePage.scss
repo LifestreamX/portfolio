@@ -139,12 +139,14 @@
 
     .left-right-wrapper {
       flex-direction: row;
+      position: relative;
       margin-left: 200px;
+      bottom: 100px;
     }
 
     .t-animation-wrapper {
       position: relative;
-      top: 50px;
+      top: 100px;
     }
 
     .text {
@@ -156,7 +158,7 @@
 
       div {
         text-align: start;
-        font-size: 28px ;
+        font-size: 28px;
       }
     }
   }
