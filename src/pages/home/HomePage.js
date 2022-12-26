@@ -103,12 +103,8 @@ const HomePage = () => {
         )}
       </div>
 
-      {/* T Animation */}
-
       <div className='left-right-wrapper'>
-        <div className='t-animation-wrapper'>
-          <TAnimation />
-        </div>
+       
 
         {/* Left section */}
         <div className='text'>
@@ -132,10 +128,17 @@ const HomePage = () => {
             />
           </div>
 
+
+
           <div className='frontend-react-dev'>Frontend React Developer</div>
           <Link to='/contact' className='flat-button'>
             CONTACT ME
           </Link>
+        </div>
+
+         {/* T Animation */}
+         <div className='t-animation-wrapper'>
+          <TAnimation />
         </div>
       </div>
     </motion.div>

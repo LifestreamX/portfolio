@@ -12,7 +12,6 @@
   overflow-x: hidden;
 
   .typing-text {
-    width: 100%;
     position: absolute;
     .portfolio-title {
       width: 100%;
@@ -30,29 +29,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    margin-top: 160px;
   }
 
   // T animation section
   .t-animation-wrapper {
-    height: 0;
-    margin-top: 150px;
-    margin-bottom: 140px;
   }
 
   // White text section text
   .text {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    // bottom: 60px;
     div {
       color: $soft-peach;
       font-family: $primary-font;
-      // margin-bottom: 10px;
+      margin-bottom: 10px;
     }
   }
 
@@ -150,44 +139,49 @@
 
     .left-right-wrapper {
       flex-direction: row;
+      margin-top: 200px;
+      margin-left: 200px;
+      margin-right: 200px;
     }
 
     .t-animation-wrapper {
       position: relative;
-      left: 750px;
+      top: 50px;
     }
 
     .text {
-      right: 600px;
-      margin-top: 500px;
-      text-align: start;
       display: flex;
+      flex-direction: column;
       justify-content: start;
-      align-items: start;
+      align-items: flex-start;
+      position: relative;
 
       div {
         text-align: start;
       }
-
-      // Orange text
     }
   }
 }
 
 // LARGE SCREEN DESKTOPS
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1400px) {
   .home-page {
-    // T animation section
+    .typing-text {
+      .portfolio-title {
+        font-size: 52px;
+      }
+    }
+
+    .left-right-wrapper {
+    }
 
     .t-animation-wrapper {
-      // left: 500px;
     }
 
     .text {
-      // bottom: 350px;
-      // left: 400px;
-
-      // Orange text
+      div {
+        font-size: 48px;
+      }
     }
   }
 }
