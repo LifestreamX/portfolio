@@ -79,7 +79,7 @@ const About = () => {
           />
         </span>
         <p className='about-me-text-1 text-top'>
-          I'm a very passionate self-taught front-end developer looking forward
+          I'm a very passionate front-end developer looking forward
           to being part of a team creating and maintaining web applications. I'm
           ambitious and believe in continuous learning, always discovering new
           tools to increase my skills.

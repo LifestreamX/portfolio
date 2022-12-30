@@ -129,7 +129,7 @@ const Sidebar = () => {
           {/* Links for Resume, Github and Linkedin */}
           <li className='about-nav-link'>
             <a
-              href='Resume.pdf'
+              href='TylerAllenResume.pdf'
               target='_blank'
               rel='noreferrer'
               className='nav-links-2'

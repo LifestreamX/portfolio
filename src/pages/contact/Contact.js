@@ -66,7 +66,6 @@ const Contact = () => {
   }, []);
 
   // Email
-
   const form = useRef();
 
   const sendEmail = (e) => {
