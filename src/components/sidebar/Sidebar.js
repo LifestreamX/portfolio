@@ -109,7 +109,7 @@ const Sidebar = () => {
             </Tooltip>
           </NavLink>
 
-          {/* Contact icon link */}
+          {/* Contact  link */}
           <NavLink
             to='/contact'
             className='contact-nav-link'
