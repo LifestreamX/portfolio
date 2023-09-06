@@ -16,6 +16,7 @@ import FakeStore from '../../assets/project-images/fake-store.png';
 import PupperNewsfeed from '../../assets/project-images/pupper-newsfeed.png';
 import NBA from '../../assets/project-images/nba.png';
 import NBA2 from '../../assets/project-images/nba2.png';
+import NutritionTracker from '../../assets/project-images/nutritiontracker.png';
 
 const Projects = () => {
   const [letterClass] = useState('text-animate');
@@ -359,29 +360,30 @@ const Projects = () => {
         {/* Cards */}
         <div className='scene'>
           <div className='cards'>
-            {/* Project : Personal Training */}
+            {/* Project : Nutrition Tracker */}
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://fitforall.tyler-allen.com/'
+                href='https://nutrition-tracker-psi.vercel.app/'
                 target='_blank'
                 rel='noreferrer'
               >
-                <div className='project-title'>FitForAll</div>{' '}
+                <div className='project-title'>nutritiontracker</div>{' '}
               </a>
               {/* Image */}
               <a
-                href='https://fitforall.tyler-allen.com/'
+                href='https://nutrition-tracker-psi.vercel.app/'
                 target='_blank'
                 rel='noreferrer'
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
-                    <img src={PersonalTraining} alt='Personal Training' />
+                    <img src={NutritionTracker} alt='Personal Training' />
                   </div>
                 </div>
               </a>
             </div>
+            
             {/* Project: Pupper Newsfeed */}
             <div className='card-wrapper'>
               {/* Title */}
@@ -403,6 +405,29 @@ const Projects = () => {
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={PupperNewsfeed} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* Project : Personal Training */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://fitforall.tyler-allen.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title'>FitForAll</div>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://fitforall.tyler-allen.com/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={PersonalTraining} alt='Personal Training' />
                   </div>
                 </div>
               </a>
