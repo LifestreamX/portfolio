@@ -364,7 +364,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://nutrition-tracker-psi.vercel.app/'
+                href='https://nutritiontracker.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -372,7 +372,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://nutrition-tracker-psi.vercel.app/'
+                href='https://nutritiontracker.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
