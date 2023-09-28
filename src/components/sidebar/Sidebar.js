@@ -31,6 +31,10 @@ const Sidebar = () => {
     },
   });
 
+  
+
+
+
   // Button icon color change on active link
   let activeStyle = {
     color: '#fc8a68',
