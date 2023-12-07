@@ -104,8 +104,6 @@ const HomePage = () => {
       </div>
 
       <div className='left-right-wrapper'>
-       
-
         {/* Left section */}
         <div className='text'>
           <div>
@@ -128,16 +126,14 @@ const HomePage = () => {
             />
           </div>
 
-
-
-          <div className='frontend-react-dev'>Frontend React Developer</div>
+          <div className='frontend-react-dev'>Frontend Developer</div>
           <Link to='/contact' className='flat-button'>
             CONTACT ME
           </Link>
         </div>
 
-         {/* T Animation */}
-         <div className='t-animation-wrapper'>
+        {/* T Animation */}
+        <div className='t-animation-wrapper'>
           <TAnimation />
         </div>
       </div>
