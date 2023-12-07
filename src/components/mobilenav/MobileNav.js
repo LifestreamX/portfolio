@@ -1,20 +1,12 @@
 import './MobileNav.scss';
-// import React from 'react';
-// import Menu from '@mui/material/Menu';
-// import Button from '@mui/material/Button';
-// import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
-// import { NavLink } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 
 // 2nd nav
-
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const MobileNav = ({ click, setClick }) => {
-  // const [click, setClick] = useState(false);
-
   const handleClick = () => setClick(!click);
   const closeMobileMenu = useState(false);
 

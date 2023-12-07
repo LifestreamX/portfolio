@@ -12,6 +12,7 @@ const Layout = () => {
   return (
     <div>
       <MobileNav click={click} setClick={setClick} />
+
       <Sidebar />
 
       <div className='page' id={click && 'hide-background'}>
