@@ -510,8 +510,8 @@ const Projects = () => {
             </div>
 
             {/* Project: Nba Player Database */}
-            <div className='card-wrapper'>
-              {/* Title */}
+            {/* <div className='card-wrapper'>
+              
               <a
                 href='https://nbaplayerdatabase.tyler-allen.com/'
                 target='_blank'
@@ -521,7 +521,7 @@ const Projects = () => {
                   <div className='project-title'>NBA Database</div>{' '}
                 </div>
               </a>
-              {/* Image */}
+             
               <a
                 href='https://nbaplayerdatabase.tyler-allen.com/'
                 target='_blank'
@@ -533,7 +533,7 @@ const Projects = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> */}
 
             {/* Project: Corgi Land */}
             <div className='card-wrapper'>
