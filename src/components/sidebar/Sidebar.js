@@ -31,10 +31,6 @@ const Sidebar = () => {
     },
   });
 
-  
-
-
-
   // Button icon color change on active link
   let activeStyle = {
     color: '#fc8a68',
@@ -133,7 +129,7 @@ const Sidebar = () => {
           {/* Links for Resume, Github and Linkedin */}
           <li className='about-nav-link'>
             <a
-              href='TylerAllenResume.pdf'
+              href='Resume.pdf'
               target='_blank'
               rel='noreferrer'
               className='nav-links-2'

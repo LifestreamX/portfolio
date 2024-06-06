@@ -52,7 +52,7 @@ const MobileNav = ({ click, setClick }) => {
 
           {/* Resume */}
           <a
-            href='TylerAllenResume.pdf'
+            href='Resume.pdf'
             target='_blank'
             rel='noreferrer'
             className='nav-links'
