@@ -50,26 +50,26 @@ const HomePage = () => {
     'n ',
   ];
 
-  const thirdLine = [
-    "i'",
-    'm',
-    ' ',
-    'a',
-    ' ',
-    'w',
-    'e',
-    'b',
-    ' ',
-    'd',
-    'e',
-    'v',
-    'e',
-    'l',
-    'o',
-    'p',
-    'e',
-    'r',
-  ];
+  // const thirdLine = [
+  //   "i'",
+  //   'm',
+  //   ' ',
+  //   'a',
+  //   ' ',
+  //   'w',
+  //   'e',
+  //   'b',
+  //   ' ',
+  //   'd',
+  //   'e',
+  //   'v',
+  //   'e',
+  //   'l',
+  //   'o',
+  //   'p',
+  //   'e',
+  //   'r',
+  // ];
 
   useEffect(() => {
     setTimeout(() => {
@@ -118,15 +118,14 @@ const HomePage = () => {
               strArray={secondLine}
               idx={35}
             />
-            <br />{' '}
-            <LetterAnimations
-              letterClass={letterClass}
-              strArray={thirdLine}
-              idx={53}
-            />
+            <br /> {/* <LetterAnimations */}
+            {/* letterClass={letterClass} */}
+            {/* strArray={thirdLine} */}
+            {/* idx={53} */}
+            {/* /> */}
           </div>
 
-          <div className='frontend-react-dev'>Frontend Developer</div>
+          <div className='frontend-react-dev'>Web Developer</div>
           <Link to='/contact' className='flat-button'>
             CONTACT ME
           </Link>
