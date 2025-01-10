@@ -79,22 +79,17 @@ const About = () => {
           />
         </span>
         <p className='about-me-text-1 text-top'>
-          I'm a passionate web developer looking forward to being part of a team
-          creating and maintaining web applications. I'm ambitious and believe
-          in continuous learning, always discovering new tools to increase my
-          skills.
+          I’m a dedicated web developer with a passion for creating and
+          maintaining web applications. I thrive in collaborative environments,
+          where I can contribute to innovative projects and continue to expand
+          my skill set.
         </p>
 
         <p className='about-me-text-2'>
-          I am easy to work with, collaborative, and always open to learning new
-          things to further my knowledge. I always try to keep up to date with
-          new technologies as the development field is always changing.
-        </p>
-
-        <p className='about-me-text-3'>
-          When I'm not on the computer, I like to stay active and help others
-          stay active through being a personal trainer. I also love animals and
-          own two corgis that you can see featured in some of my projects.
+          I am always eager to learn new technologies and techniques to stay
+          ahead in the ever-evolving field of development. Whether tackling
+          front-end challenges or improving user experiences, I enjoy the
+          process of problem-solving and delivering high-quality results.
         </p>
       </div>
     </motion.main>
