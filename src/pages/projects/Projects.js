@@ -17,6 +17,7 @@ import PupperNewsfeed from '../../assets/project-images/pupper-newsfeed.png';
 import NBA from '../../assets/project-images/nba.png';
 import NBA2 from '../../assets/project-images/nba2.png';
 import NutritionTracker from '../../assets/project-images/nutritiontracker.png';
+import LinkRay from '../../assets/project-images/linkray.png';
 
 const Projects = () => {
   const [letterClass] = useState('text-animate');
@@ -360,6 +361,29 @@ const Projects = () => {
         {/* Cards */}
         <div className='scene'>
           <div className='cards'>
+            {/* Project : linkray */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://linkray-analyzer.vercel.app/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title'>LinkRay</div>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://linkray-analyzer.vercel.app/'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={LinkRay} alt='Website Analysis' />
+                  </div>
+                </div>
+              </a>
+            </div>
             {/* Project : Nutrition Tracker */}
             <div className='card-wrapper'>
               {/* Title */}
@@ -368,7 +392,7 @@ const Projects = () => {
                 target='_blank'
                 rel='noreferrer'
               >
-                <div className='project-title'>nutritiontracker</div>{' '}
+                <div className='project-title'>Nutrition Tracker</div>{' '}
               </a>
               {/* Image */}
               <a
@@ -378,7 +402,7 @@ const Projects = () => {
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
-                    <img src={NutritionTracker} alt='Personal Training' />
+                    <img src={NutritionTracker} alt='nutrition stats' />
                   </div>
                 </div>
               </a>
@@ -404,7 +428,7 @@ const Projects = () => {
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
-                    <img src={PupperNewsfeed} alt='Grocery List ' />
+                    <img src={PupperNewsfeed} alt='Pupper Newsfeed' />
                   </div>
                 </div>
               </a>
