@@ -684,7 +684,7 @@ const Skills = () => {
         </div>
 
         {/* Supabase */}
-        <div className='individual-project-wrapper'>
+        {/* <div className='individual-project-wrapper'>
           <svg
             role='img'
             viewBox='0 0 24 24'
@@ -697,7 +697,7 @@ const Skills = () => {
             />
           </svg>
           <p>Supabase</p>
-        </div>
+        </div> */}
 
         {/* WordPress */}
         <div className='individual-project-wrapper'>
