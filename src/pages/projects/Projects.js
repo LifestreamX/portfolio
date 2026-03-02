@@ -365,7 +365,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://linkray-analyzer.tyler-allen.com/'
+                href='https://linkray.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -373,7 +373,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://linkray-analyzer.tyler-allen.com/'
+                href='https://linkray.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
