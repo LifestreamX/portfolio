@@ -365,7 +365,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://linkray-analyzer.tyler-allen.app/'
+                href='https://linkray-analyzer.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -373,7 +373,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://linkray-analyzer.tyler-allen.app/'
+                href='https://linkray-analyzer.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -388,7 +388,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://nutritiontracker.tyler-allen.app/'
+                href='https://nutritiontracker.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
@@ -396,7 +396,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://nutritiontracker.tyler-allen.app/'
+                href='https://nutritiontracker.tyler-allen.com/'
                 target='_blank'
                 rel='noreferrer'
               >
