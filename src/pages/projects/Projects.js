@@ -608,33 +608,6 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project: Tv-Movie-Videogame-Manager */}
-            <div className='card-wrapper'>
-              {/* Title */}
-              <a
-                href='https://mediamanager.tyler-allen.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='project-title-wrapper long'>
-                  <div className='project-title '>
-                    TV-Movie-VideoGame-Manager
-                  </div>{' '}
-                </div>
-              </a>
-              {/* Image */}
-              <a
-                href='https://mediamanager.tyler-allen.com'
-                target='_blank'
-                rel='noreferrer'
-              >
-                <div className='card'>
-                  <div className='card__face card__face--front'>
-                    <img src={TvMovieVideoGame} alt='Grocery List ' />
-                  </div>
-                </div>
-              </a>
-            </div>
 
             {/* Project: Rock Paper Scissors */}
             <div className='card-wrapper'>
@@ -686,9 +659,37 @@ const Projects = () => {
                 </div>
               </a>
             </div>
-            {/* Project: Grocery List */}
+
+            {/* Project: Tv-Movie-Videogame-Manager */}
             <div className='card-wrapper'>
               {/* Title */}
+              <a
+                href='https://mediamanager.tyler-allen.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title-wrapper long'>
+                  <div className='project-title '>
+                    TV-Movie-VideoGame-Manager
+                  </div>{' '}
+                </div>
+              </a>
+              {/* Image */}
+              <a
+                href='https://mediamanager.tyler-allen.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={TvMovieVideoGame} alt='Grocery List ' />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            {/* Project: Grocery List */}
+            {/* <div className='card-wrapper'>
               <a
                 href='https://grocerylist.tyler-allen.com'
                 target='_blank'
@@ -698,7 +699,6 @@ const Projects = () => {
                   <div className='project-title'>Grocery List</div>{' '}
                 </div>
               </a>
-              {/* Image */}
               <a
                 href='https://grocerylist.tyler-allen.com'
                 target='_blank'
@@ -710,7 +710,7 @@ const Projects = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> */}
 
             <div></div>
             <div className='bottom'></div>
