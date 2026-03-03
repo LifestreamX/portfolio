@@ -9,7 +9,7 @@ import gsap from 'gsap';
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
-  const aboutTitle = ['a', 'b', 'o', 'u', 't', ' ', 'm', 'e'];
+  const aboutTitle = ['A', 'b', 'o', 'u', 't', ' ', 'M', 'e'];
 
   useEffect(() => {
     setTimeout(() => {
@@ -36,7 +36,7 @@ const About = () => {
           duration: 10,
           opacity: 1,
           ease: 'power2.out',
-        }
+        },
       )
       .fromTo(
         '.right-side',
@@ -49,7 +49,7 @@ const About = () => {
           repeat: -1,
           ease: 'linear',
         },
-        0
+        0,
       )
       .timeScale(1);
   }, []);

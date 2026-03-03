@@ -108,6 +108,18 @@
 }
 
 // TAbLETS
+// MOBILE ONLY: Center and push down text
+@media screen and (max-width: 767px) {
+  .about-page {
+    .text-zone-about {
+      top: 60px; // Push content down on mobile
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      text-align: center;
+    }
+  }
+}
 @media screen and (min-width: 768px) {
   .about-page {
     .right-side-about {
