@@ -18,6 +18,7 @@ import NBA from '../../assets/project-images/nba.png';
 import NBA2 from '../../assets/project-images/nba2.png';
 import NutritionTracker from '../../assets/project-images/nutritiontracker.png';
 import LinkRay from '../../assets/project-images/linkray.png';
+import HolidayHub from '../../assets/project-images/holiday-hub.png';
 
 const Projects = () => {
   const [letterClass] = useState('text-animate');
@@ -380,6 +381,29 @@ const Projects = () => {
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={LinkRay} alt='Website Analysis' />
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/* Project : Holiday Hub */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <a
+                href='https://holiday-hub.tyler-allen.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='project-title'>Holiday Hub</div>{' '}
+              </a>
+              {/* Image */}
+              <a
+                href='https://holiday-hub.tyler-allen.com'
+                target='_blank'
+                rel='noreferrer'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={HolidayHub} alt='Website Analysis' />
                   </div>
                 </div>
               </a>
