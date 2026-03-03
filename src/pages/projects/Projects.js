@@ -55,7 +55,7 @@ const Projects = () => {
             idx={20}
           />
         </div>
-
+{/* 
         <div class='container'>
           <div class='circle-container'>
             <div class='circle'></div>
@@ -357,7 +357,7 @@ const Projects = () => {
           <div class='circle-container'>
             <div class='circle'></div>
           </div>
-        </div>
+        </div> */}
 
         {/* Cards */}
         <div className='scene'>

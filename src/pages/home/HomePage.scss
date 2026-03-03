@@ -20,7 +20,10 @@
       margin-top: 85px;
       font-size: 1.4rem;
       text-transform: capitalize;
-      font-family: $primary-font;
+      font-family: $secondary-font !important;
+    }
+    .portfolio-title span {
+      font-family: $secondary-font !important;
     }
   }
 
@@ -40,7 +43,7 @@
   .text {
     div {
       color: $soft-peach;
-      font-family: $primary-font;
+      font-family: $secondary-font;
       margin-bottom: 10px;
     }
   }

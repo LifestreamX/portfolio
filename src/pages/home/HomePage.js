@@ -31,23 +31,23 @@ const HomePage = () => {
     'o',
   ];
 
-  const firstLine = ['h', 'e', 'l', 'l', 'o', ','];
+  const firstLine = ['H', 'e', 'l', 'l', 'o', ','];
 
   const secondLine = [
-    "i'",
+    "I'",
     'm',
     ' ',
-    't',
+    'T',
     'y',
     'l',
     'e',
     'r',
     ' ',
-    'a',
+    'A',
     'l',
     'l',
     'e',
-    'n ',
+    'n',
   ];
 
   // const thirdLine = [

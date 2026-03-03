@@ -1,7 +1,7 @@
 @import 'animate.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -17,12 +17,12 @@ $copper-rust: #964b48;
 $button-hover: #5f2e8e;
 
 // Fonts
-$primary-font: 'Bungee', cursive;
-$secondary-font: 'Audiowide', cursive;
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: $soft-peach;
   background-color: #021027;
   // overflow: hidden;
@@ -30,7 +30,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 // Scrollbar
