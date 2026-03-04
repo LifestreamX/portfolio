@@ -38,6 +38,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: left;
 
     .about-me-title {
       width: 100%;
@@ -116,7 +117,7 @@
       left: 50%;
       transform: translateX(-50%);
       width: 90%;
-      text-align: center;
+      text-align: left;
     }
   }
 }
