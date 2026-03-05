@@ -129,10 +129,15 @@ const Sidebar = () => {
           {/* Links for Resume, Github and Linkedin */}
           <li className='about-nav-link'>
             <a
-              href='Resume.pdf'
+              href={
+                'Resume.pdf?utm_source=portfolio&utm_medium=site&utm_campaign=resume_download'
+              }
               target='_blank'
               rel='noreferrer'
               className='nav-links-2'
+              data-ga-category='Portfolio'
+              data-ga-action='download'
+              data-ga-label='Resume'
             >
               <Tooltip title='Resume' placement='right' arrow>
                 <ArticleIcon className='nav-2-icons' id='icons2' />
@@ -141,10 +146,15 @@ const Sidebar = () => {
           </li>
           <li>
             <a
-              href='https://github.com/LifestreamX'
+              href={
+                'https://github.com/LifestreamX?utm_source=portfolio&utm_medium=social&utm_campaign=github_profile'
+              }
               target='_blank'
               rel='noreferrer'
               className='nav-links-2'
+              data-ga-category='Social'
+              data-ga-action='click'
+              data-ga-label='Github'
             >
               <Tooltip title='Github' placement='right' arrow>
                 <GitHubIcon className='nav-2-icons' id='icons2' />
@@ -153,10 +163,15 @@ const Sidebar = () => {
           </li>
           <li>
             <a
-              href='https://www.linkedin.com/in/tylerallen1/'
+              href={
+                'https://www.linkedin.com/in/tylerallen1/?utm_source=portfolio&utm_medium=social&utm_campaign=linkedin_profile'
+              }
               target='_blank'
               rel='noreferrer'
               className='nav-links-2'
+              data-ga-category='Social'
+              data-ga-action='click'
+              data-ga-label='LinkedIn'
             >
               <Tooltip title='Linkedin' placement='right' arrow>
                 <LinkedInIcon className='nav-2-icons' id='icons2' />

@@ -126,7 +126,13 @@ const HomePage = () => {
           </div>
 
           <div className='frontend-react-dev'>Web Developer</div>
-          <Link to='/contact' className='flat-button'>
+          <Link
+            to='/contact'
+            className='flat-button'
+            data-ga-category='Portfolio'
+            data-ga-action='cta'
+            data-ga-label='Contact Me'
+          >
             CONTACT ME
           </Link>
         </div>

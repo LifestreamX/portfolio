@@ -21,6 +21,12 @@ import LinkRay from '../../assets/project-images/linkray.png';
 import HolidayHub from '../../assets/project-images/holiday-hub.png';
 
 const Projects = () => {
+  const utm = (url, campaign) =>
+    `${url}${
+      url.includes('?') ? '&' : '?'
+    }utm_source=portfolio&utm_medium=projects&utm_campaign=${encodeURIComponent(
+      campaign,
+    )}`;
   const [letterClass] = useState('text-animate');
 
   const projectTitle = ['P', 'r', 'o', 'j', 'e', 'c', 't', 's'];
@@ -55,7 +61,7 @@ const Projects = () => {
             idx={20}
           />
         </div>
-{/* 
+        {/* 
         <div class='container'>
           <div class='circle-container'>
             <div class='circle'></div>
@@ -366,17 +372,23 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://linkray.tyler-allen.com/'
+                href={utm('https://linkray.tyler-allen.com/', 'linkray')}
                 target='_blank'
                 rel='noreferrer'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='LinkRay'
               >
                 <div className='project-title'>LinkRay</div>{' '}
               </a>
               {/* Image */}
               <a
-                href='https://linkray.tyler-allen.com/'
+                href={utm('https://linkray.tyler-allen.com/', 'linkray')}
                 target='_blank'
                 rel='noreferrer'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='LinkRay Image'
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
@@ -389,17 +401,23 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://holiday-hub.tyler-allen.com'
+                href={utm('https://holiday-hub.tyler-allen.com', 'holiday_hub')}
                 target='_blank'
                 rel='noreferrer'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='Holiday Hub'
               >
                 <div className='project-title'>Holiday Hub</div>{' '}
               </a>
               {/* Image */}
               <a
-                href='https://holiday-hub.tyler-allen.com'
+                href={utm('https://holiday-hub.tyler-allen.com', 'holiday_hub')}
                 target='_blank'
                 rel='noreferrer'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='Holiday Hub Image'
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
@@ -412,17 +430,29 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://nutritiontracker.tyler-allen.com/'
+                href={utm(
+                  'https://nutritiontracker.tyler-allen.com/',
+                  'nutrition_tracker',
+                )}
                 target='_blank'
                 rel='noreferrer'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='Nutrition Tracker'
               >
                 <div className='project-title'>Nutrition Tracker</div>{' '}
               </a>
               {/* Image */}
               <a
-                href='https://nutritiontracker.tyler-allen.com/'
+                href={utm(
+                  'https://nutritiontracker.tyler-allen.com/',
+                  'nutrition_tracker',
+                )}
                 target='_blank'
                 rel='noreferrer'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='Nutrition Tracker Image'
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
@@ -436,7 +466,10 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://puppernewsfeed.tyler-allen.com/'
+                href={utm(
+                  'https://puppernewsfeed.tyler-allen.com/',
+                  'pupper_newsfeed',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -446,7 +479,10 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://puppernewsfeed.tyler-allen.com/'
+                href={utm(
+                  'https://puppernewsfeed.tyler-allen.com/',
+                  'pupper_newsfeed',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -461,7 +497,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://fitforall.tyler-allen.com/'
+                href={utm('https://fitforall.tyler-allen.com/', 'fitforall')}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -469,7 +505,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://fitforall.tyler-allen.com/'
+                href={utm('https://fitforall.tyler-allen.com/', 'fitforall')}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -484,7 +520,10 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://thecozicorgi.tyler-allen.com'
+                href={utm(
+                  'https://thecozicorgi.tyler-allen.com',
+                  'the_cozi_corgi',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -494,7 +533,10 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://thecozicorgi.tyler-allen.com/'
+                href={utm(
+                  'https://thecozicorgi.tyler-allen.com/',
+                  'the_cozi_corgi',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -509,7 +551,10 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://contactmanager.tyler-allen.com/'
+                href={utm(
+                  'https://contactmanager.tyler-allen.com/',
+                  'contact_manager',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -519,7 +564,10 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://contactmanager.tyler-allen.com/'
+                href={utm(
+                  'https://contactmanager.tyler-allen.com/',
+                  'contact_manager',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -535,7 +583,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://fakestore.tyler-allen.com'
+                href={utm('https://fakestore.tyler-allen.com', 'fake_store')}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -545,7 +593,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://fakestore.tyler-allen.com'
+                href={utm('https://fakestore.tyler-allen.com', 'fake_store')}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -587,7 +635,7 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://corgiland.tyler-allen.com'
+                href={utm('https://corgiland.tyler-allen.com', 'corgi_land')}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -597,7 +645,7 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://corgiland.tyler-allen.com'
+                href={utm('https://corgiland.tyler-allen.com', 'corgi_land')}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -613,7 +661,10 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://rockpaperscissors.tyler-allen.com'
+                href={utm(
+                  'https://rockpaperscissors.tyler-allen.com',
+                  'rock_paper_scissors',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -623,7 +674,10 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://rockpaperscissors.tyler-allen.com'
+                href={utm(
+                  'https://rockpaperscissors.tyler-allen.com',
+                  'rock_paper_scissors',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -638,7 +692,10 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://click-a-mole.firebaseapp.com/'
+                href={utm(
+                  'https://click-a-mole.firebaseapp.com/',
+                  'click_a_mole',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -648,7 +705,10 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://click-a-mole.firebaseapp.com/'
+                href={utm(
+                  'https://click-a-mole.firebaseapp.com/',
+                  'click_a_mole',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -664,7 +724,10 @@ const Projects = () => {
             <div className='card-wrapper'>
               {/* Title */}
               <a
-                href='https://mediamanager.tyler-allen.com'
+                href={utm(
+                  'https://mediamanager.tyler-allen.com',
+                  'media_manager',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >
@@ -676,7 +739,10 @@ const Projects = () => {
               </a>
               {/* Image */}
               <a
-                href='https://mediamanager.tyler-allen.com'
+                href={utm(
+                  'https://mediamanager.tyler-allen.com',
+                  'media_manager',
+                )}
                 target='_blank'
                 rel='noreferrer'
               >

@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import gsap from 'gsap';
 import emailjs from '@emailjs/browser';
 import Alert from '@mui/material/Alert';
+import analytics from '../../analytics';
 import { useSpring, animated, config } from 'react-spring';
 
 const calc = (x, y) => [
@@ -43,25 +44,25 @@ const Contact = () => {
 
         x: '0%',
         ease: 'back',
-      }
+      },
     );
 
     // Form section
     gsap.fromTo(
       'h1',
       { x: '1000%' },
-      { stagger: 0.3, duration: 1, x: '0', delay: 0 }
+      { stagger: 0.3, duration: 1, x: '0', delay: 0 },
     );
 
     gsap.fromTo(
       '.group',
       { x: '1000%' },
-      { stagger: 0.3, duration: 1.0, delay: 0.5, x: '0' }
+      { stagger: 0.3, duration: 1.0, delay: 0.5, x: '0' },
     );
     gsap.fromTo(
       'button',
       { opacity: 0 },
-      { stagger: 0.3, duration: 1.4, delay: 2.3, opacity: 1 }
+      { stagger: 0.3, duration: 1.4, delay: 2.3, opacity: 1 },
     );
   }, []);
 
@@ -76,7 +77,7 @@ const Contact = () => {
         'service_n9kx9lu',
         'template_95sbm8s',
         form.current,
-        'VGREUHM3uBzR_I_AT'
+        'VGREUHM3uBzR_I_AT',
       )
       .then(
         (result) => {
@@ -84,9 +85,16 @@ const Contact = () => {
         },
         (error) => {
           console.log(error.text);
-        }
+        },
       );
     setSent(true);
+    try {
+      analytics.trackEvent({
+        category: 'Contact',
+        action: 'submit',
+        label: 'Contact Form',
+      });
+    } catch (e) {}
     e.target.reset();
 
     setTimeout(() => {
@@ -153,7 +161,12 @@ const Contact = () => {
             <label>Message</label>
           </div>
           {/* Send button  */}
-          <button type='submit'>
+          <button
+            type='submit'
+            data-ga-category='Contact'
+            data-ga-action='click'
+            data-ga-label='Send Button'
+          >
             <div class='svg-wrapper-1'>
               <div class='svg-wrapper'>
                 <svg

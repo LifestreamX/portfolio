@@ -2,15 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import ReactGA from 'react-ga4';
-
-ReactGA.initialize('G-GWQ3VQBNLB');
-
-// Send pageview with a custom path
-
-ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
-
-console.log(window.location.pathname);
+// Analytics initialization is performed when the user accepts the consent banner.
+// Set `REACT_APP_GA_ID` in your environment to your GA4 measurement ID.
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,5 +11,5 @@ root.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
