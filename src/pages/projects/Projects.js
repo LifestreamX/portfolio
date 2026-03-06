@@ -463,8 +463,7 @@ const Projects = () => {
             </div>
 
             {/* Project: Pupper Newsfeed */}
-            <div className='card-wrapper'>
-              {/* Title */}
+            {/* <div className='card-wrapper'>
               <a
                 href={utm(
                   'https://puppernewsfeed.tyler-allen.com/',
@@ -477,7 +476,6 @@ const Projects = () => {
                   <div className='project-title'>Pupper Newsfeed</div>{' '}
                 </div>
               </a>
-              {/* Image */}
               <a
                 href={utm(
                   'https://puppernewsfeed.tyler-allen.com/',
@@ -492,7 +490,7 @@ const Projects = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> */}
             {/* Project : Personal Training */}
             <div className='card-wrapper'>
               {/* Title */}
@@ -517,8 +515,7 @@ const Projects = () => {
               </a>
             </div>
             {/* Project: The Cozi Corgi*/}
-            <div className='card-wrapper'>
-              {/* Title */}
+            {/* <div className='card-wrapper'>
               <a
                 href={utm(
                   'https://thecozicorgi.tyler-allen.com',
@@ -531,7 +528,6 @@ const Projects = () => {
                   <div className='project-title'>The Cozi Corgi</div>{' '}
                 </div>
               </a>
-              {/* Image */}
               <a
                 href={utm(
                   'https://thecozicorgi.tyler-allen.com/',
@@ -546,10 +542,10 @@ const Projects = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> */}
+
             {/* Project: Contact Manager */}
-            <div className='card-wrapper'>
-              {/* Title */}
+            {/* <div className='card-wrapper'>
               <a
                 href={utm(
                   'https://contactmanager.tyler-allen.com/',
@@ -562,7 +558,6 @@ const Projects = () => {
                   <div className='project-title'>Contact Manager</div>{' '}
                 </div>
               </a>
-              {/* Image */}
               <a
                 href={utm(
                   'https://contactmanager.tyler-allen.com/',
@@ -577,11 +572,10 @@ const Projects = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> */}
 
             {/* Project: Fake Store */}
-            <div className='card-wrapper'>
-              {/* Title */}
+            {/* <div className='card-wrapper'>
               <a
                 href={utm('https://fakestore.tyler-allen.com', 'fake_store')}
                 target='_blank'
@@ -591,7 +585,6 @@ const Projects = () => {
                   <div className='project-title'>Fake Store </div>{' '}
                 </div>
               </a>
-              {/* Image */}
               <a
                 href={utm('https://fakestore.tyler-allen.com', 'fake_store')}
                 target='_blank'
@@ -603,7 +596,7 @@ const Projects = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> */}
 
             {/* Project: Nba Player Database */}
             {/* <div className='card-wrapper'>
@@ -632,8 +625,7 @@ const Projects = () => {
             </div> */}
 
             {/* Project: Corgi Land */}
-            <div className='card-wrapper'>
-              {/* Title */}
+            {/* <div className='card-wrapper'>
               <a
                 href={utm('https://corgiland.tyler-allen.com', 'corgi_land')}
                 target='_blank'
@@ -643,7 +635,6 @@ const Projects = () => {
                   <div className='project-title'>Corgi Land</div>{' '}
                 </div>
               </a>
-              {/* Image */}
               <a
                 href={utm('https://corgiland.tyler-allen.com', 'corgi_land')}
                 target='_blank'
@@ -655,7 +646,7 @@ const Projects = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> */}
 
             {/* Project: Rock Paper Scissors */}
             <div className='card-wrapper'>
@@ -721,8 +712,7 @@ const Projects = () => {
             </div>
 
             {/* Project: Tv-Movie-Videogame-Manager */}
-            <div className='card-wrapper'>
-              {/* Title */}
+            {/* <div className='card-wrapper'>
               <a
                 href={utm(
                   'https://mediamanager.tyler-allen.com',
@@ -737,7 +727,6 @@ const Projects = () => {
                   </div>{' '}
                 </div>
               </a>
-              {/* Image */}
               <a
                 href={utm(
                   'https://mediamanager.tyler-allen.com',
@@ -752,7 +741,7 @@ const Projects = () => {
                   </div>
                 </div>
               </a>
-            </div>
+            </div> */}
 
             {/* Project: Grocery List */}
             {/* <div className='card-wrapper'>
