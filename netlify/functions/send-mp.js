@@ -26,6 +26,11 @@ exports.handler = async function(event) {
     process.env.MP_MEASUREMENT_ID || process.env.REACT_APP_GA_ID;
   const apiSecret = process.env.MP_API_SECRET;
 
+  // If MP_DISABLE is set, skip forwarding hits to GA (useful for turning off server-side tracking)
+  if (process.env.MP_DISABLE === 'true') {
+    return { statusCode: 204, body: '' };
+  }
+
   if (!measurementId || !apiSecret) {
     return {
       statusCode: 500,

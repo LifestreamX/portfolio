@@ -14,6 +14,11 @@ const OutboundLink = ({ href, campaign, children, className, ...props }) => {
       page_location: window.location.href,
       client_id: localStorage.getItem('ga_client_id'),
     };
+    // If client-side analytics disabled, skip POST and open directly.
+    if (process.env.REACT_APP_DISABLE_ANALYTICS === 'true') {
+      window.open(href, '_blank');
+      return;
+    }
     try {
       await fetch('/.netlify/functions/send-mp', {
         method: 'POST',

@@ -1,5 +1,7 @@
 import ReactGA from 'react-ga4';
 
+const DISABLED = process.env.REACT_APP_DISABLE_ANALYTICS === 'true';
+
 let initialized = false;
 let queuedEvents = [];
 let measurementIdStored = null;
@@ -12,6 +14,11 @@ function _log(...args) {
 }
 
 export function init(measurementId, options = {}) {
+  if (DISABLED) {
+    debug = !!(process.env.REACT_APP_GA_DEBUG === 'true');
+    _log('analytics disabled via REACT_APP_DISABLE_ANALYTICS');
+    return;
+  }
   // normalize and validate measurement id early to catch Netlify misconfig
   debug = !!(process.env.REACT_APP_GA_DEBUG === 'true');
   let id = measurementId || process.env.REACT_APP_GA_ID;
@@ -121,6 +128,7 @@ export function isInitialized() {
 }
 
 export function sendPageview(path) {
+  if (DISABLED) return;
   if (!initialized) {
     _log('queue pageview', path);
     queuedEvents.push({ type: 'pageview', path });
@@ -151,6 +159,7 @@ export function trackEvent({ category, action, label, value }) {
     queuedEvents.push({ type: 'event', payload });
     return;
   }
+  if (DISABLED) return;
   _log('event', payload);
   try {
     ReactGA.event(payload);
@@ -223,6 +232,7 @@ export function getEventsLog() {
 }
 
 export function trackException(description, file, line) {
+  if (DISABLED) return;
   if (!initialized) return;
   _log('exception', description, file, line);
   try {
