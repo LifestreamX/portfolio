@@ -1,12 +1,8 @@
 import React from 'react';
 
 const OutboundLink = ({ href, campaign, children, className, ...props }) => {
-  const target =
-    href +
-    (href.includes('?') ? '&' : '?') +
-    `utm_source=portfolio&utm_medium=site&utm_campaign=${encodeURIComponent(
-      campaign,
-    )}`;
+  // Keep the visible URL clean; do not append UTM query params to the href.
+  const target = href;
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -27,17 +23,17 @@ const OutboundLink = ({ href, campaign, children, className, ...props }) => {
     } catch (err) {
       // ignore errors
     } finally {
-      window.open(target, '_blank');
+      window.open(href, '_blank');
     }
   };
 
   return (
     <a
-      href={target}
+      href={href}
       onClick={handleClick}
       className={className}
-      target="_blank"
-      rel="noopener noreferrer"
+      target='_blank'
+      rel='noopener noreferrer'
       {...props}
     >
       {children}

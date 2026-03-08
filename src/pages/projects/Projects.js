@@ -22,15 +22,11 @@ import HolidayHub from '../../assets/project-images/holiday-hub.png';
 import MassTransport from '../../assets/project-images/mass-transport.png';
 
 const Projects = () => {
-  const utm = (url, campaign) =>
-    `${url}${
-      url.includes('?') ? '&' : '?'
-    }utm_source=portfolio&utm_medium=projects&utm_campaign=${encodeURIComponent(
-      campaign,
-    )}`;
+  // We will NOT append UTMs to the visible URL; Outbound will POST UTM payloads instead.
+  const utm = (url, campaign) => url;
   // Outbound link helper: POSTs a serverless Measurement Protocol hit, then opens the target.
   const Outbound = ({ href, campaign, children, ...props }) => {
-    const target = utm(href, campaign);
+    const target = href;
     const handleClick = async (e) => {
       e.preventDefault();
       const body = {
@@ -50,13 +46,13 @@ const Projects = () => {
       } catch (err) {
         // fire-and-forget; ignore errors and continue to open the link
       } finally {
-        window.open(target, '_blank');
+        window.open(href, '_blank');
       }
     };
 
     return (
       <a
-        href={target}
+        href={href}
         onClick={handleClick}
         target='_blank'
         rel='noopener noreferrer'
