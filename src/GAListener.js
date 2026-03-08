@@ -57,11 +57,9 @@ export default function GAListener() {
         try {
           const isExternal = anchor.origin !== window.location.origin;
           if (isExternal) {
-            analytics.trackEvent({
-              category: 'Outbound Link',
-              action: 'click',
-              label: anchor.href,
-            });
+            // Do NOT send client-side outbound events here — outbound clicks
+            // are handled by `OutboundLink` / server-side `send-mp` to avoid
+            // duplicate events and exposing campaign info in client hits.
             if (!anchor.target || anchor.target !== '_blank') {
               e.preventDefault();
               setTimeout(() => (window.location.href = anchor.href), 150);
