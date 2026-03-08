@@ -32,7 +32,14 @@ const OutboundLink = ({ href, campaign, children, className, ...props }) => {
   };
 
   return (
-    <a href={target} onClick={handleClick} className={className} {...props}>
+    <a
+      href={target}
+      onClick={handleClick}
+      className={className}
+      target="_blank"
+      rel="noopener noreferrer"
+      {...props}
+    >
       {children}
     </a>
   );

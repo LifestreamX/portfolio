@@ -59,7 +59,7 @@ const Projects = () => {
         href={target}
         onClick={handleClick}
         target='_blank'
-        rel='noreferrer'
+        rel='noopener noreferrer'
         {...props}
       >
         {children}

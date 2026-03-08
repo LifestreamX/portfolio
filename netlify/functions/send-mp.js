@@ -14,6 +14,14 @@ exports.handler = async function(event) {
     return { statusCode: 400, body: 'Invalid JSON' };
   }
 
+  // Basic validation to avoid abuse and extremely large payloads
+  if (data.destination && typeof data.destination !== 'string') {
+    return { statusCode: 400, body: 'Invalid destination' };
+  }
+  if (data.destination && data.destination.length > 2048) {
+    return { statusCode: 400, body: 'Destination too long' };
+  }
+
   const measurementId =
     process.env.MP_MEASUREMENT_ID || process.env.REACT_APP_GA_ID;
   const apiSecret = process.env.MP_API_SECRET;
@@ -54,6 +62,10 @@ exports.handler = async function(event) {
       body: JSON.stringify(payload),
     });
 
+    // GA responds with 204 No Content on success; mirror that to the caller.
+    if (resp.status === 204) {
+      return { statusCode: 204, body: '' };
+    }
     const text = await resp.text();
     return { statusCode: resp.ok ? 200 : 500, body: text || '' };
   } catch (err) {
