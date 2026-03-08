@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 import AnimatedRoutes from './components/AnimatedRoutes';
 import GAListener from './GAListener';
-import DevAnalyticsPanel from './DevAnalyticsPanel';
 import analytics from './analytics';
 
 function App() {
@@ -14,7 +13,7 @@ function App() {
   return (
     <div className='App'>
       <GAListener />
-      {process.env.REACT_APP_GA_DEBUG === 'true' && <DevAnalyticsPanel />}
+      {/* Dev analytics panel removed */}
       <AnimatedRoutes />
     </div>
   );

@@ -6,9 +6,6 @@ let initialized = false;
 let queuedEvents = [];
 let measurementIdStored = null;
 let debug = false;
-let eventsLog = [];
-const MAX_LOG = 200;
-
 function _log(...args) {
   if (debug) console.debug('[analytics]', ...args);
 }
@@ -151,9 +148,7 @@ export function sendPageview(path) {
 
 export function trackEvent({ category, action, label, value }) {
   const payload = { category, action, label, value };
-  // record to local log for debugging
-  eventsLog.push({ t: Date.now(), type: 'event', payload });
-  if (eventsLog.length > MAX_LOG) eventsLog.shift();
+  // no local debug log recorded
   if (!initialized) {
     _log('queue event', payload);
     queuedEvents.push({ type: 'event', payload });
@@ -197,8 +192,7 @@ function trySendMeasurementProtocol({ category, action, label, value }) {
       const blob = new Blob([payload], { type: 'application/json' });
       navigator.sendBeacon(url, blob);
       _log('mp sendBeacon', url, body);
-      eventsLog.push({ t: Date.now(), type: 'mp', body });
-      if (eventsLog.length > MAX_LOG) eventsLog.shift();
+      // no local debug log recorded for MP
       return;
     } catch (e) {
       _log('mp beacon failed', e);
@@ -225,10 +219,6 @@ function getClientId() {
   } catch (e) {}
   // fallback to random
   return `${Math.floor(Math.random() * 1e10)}.${Date.now()}`;
-}
-
-export function getEventsLog() {
-  return eventsLog.slice().reverse();
 }
 
 export function trackException(description, file, line) {
@@ -271,17 +261,12 @@ export function sendPerformanceMetrics() {
   }
 }
 
-export function enableDebug(enabled = true) {
-  debug = enabled;
-}
-
 const Analytics = {
   init,
   sendPageview,
   trackEvent,
   isInitialized,
-  enableDebug,
-  getEventsLog,
+  getEventsLog: undefined,
 };
 
 export default Analytics;
