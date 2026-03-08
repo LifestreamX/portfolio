@@ -24,4 +24,3 @@ Access my site at https://tyler-allen.com
 ## Approach
 
 Built with React and styled with Material UI and multiple other tools for smooth user experience
-
