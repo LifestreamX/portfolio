@@ -109,12 +109,8 @@ export function init(measurementId, options = {}) {
       trackException('unhandledrejection', String(ev.reason));
     });
 
-    // send basic performance metrics after load
-    if (document.readyState === 'complete') {
-      sendPerformanceMetrics();
-    } else {
-      window.addEventListener('load', sendPerformanceMetrics);
-    }
+    // Performance metrics collection disabled to avoid sending extra events.
+    // If you want to re-enable, call `sendPerformanceMetrics()` manually.
   } catch (e) {
     _log('init error', e);
   }

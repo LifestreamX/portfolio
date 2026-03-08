@@ -31,11 +31,8 @@ export default function GAListener() {
           } catch (e) {
             // ignore localStorage failures
           }
-          analytics.trackEvent({
-            category: 'UTM',
-            action: 'landing',
-            label: JSON.stringify(utm),
-          });
+          // Intentionally NOT sending a UTM analytics event to avoid
+          // exposing campaign details as events.
           utmCapturedRef.current = true;
         }
       }
@@ -103,11 +100,7 @@ export default function GAListener() {
         thresholds.forEach((t) => {
           if (pct >= t && !sentScrollDepthRef.current.has(t)) {
             sentScrollDepthRef.current.add(t);
-            analytics.trackEvent({
-              category: 'Scroll Depth',
-              action: `${t}%`,
-              label: window.location.pathname,
-            });
+            // Intentionally not sending scroll depth analytics events.
           }
         });
         ticking = false;
