@@ -35,19 +35,59 @@ export function init(measurementId, options = {}) {
   }
 
   try {
-    ReactGA.initialize(measurementId, options);
-    // configure cookie domain for subdomain tracking if provided
-    const cookieDomain =
-      process.env.REACT_APP_COOKIE_DOMAIN || '.tyler-allen.com';
+    ReactGA.initialize(id, options);
+    // configure cookie domain for subdomain tracking if provided.
+    // Do NOT force cookie_domain on localhost/127.* because that prevents
+    // the `_ga` cookie from being written locally.
+    const cookieDomainEnv = process.env.REACT_APP_COOKIE_DOMAIN;
+    const defaultCookieDomain = '.tyler-allen.com';
+    const cookieDomain = cookieDomainEnv || defaultCookieDomain;
     try {
       if (window && window.gtag) {
-        window.gtag('config', measurementId, { cookie_domain: cookieDomain });
-        _log('gtag config cookie_domain set', cookieDomain);
+        const hostname = window.location && window.location.hostname;
+        const isLocalhost =
+          hostname === 'localhost' || hostname === '127.0.0.1';
+        if (isLocalhost && !cookieDomainEnv) {
+          // on local dev, call config without cookie_domain so cookies work
+          window.gtag('config', id);
+          _log('gtag config set (no cookie_domain) for localhost');
+        } else {
+          window.gtag('config', id, { cookie_domain: cookieDomain });
+          _log('gtag config cookie_domain set', cookieDomain);
+        }
       }
     } catch (e) {
       _log('gtag cookie_domain set failed', e);
     }
     initialized = true;
+    // dev-only analytics exposure removed
+    // attempt to read and persist client_id from gtag so we can use it
+    // even when cookies aren't visible in document.cookie (local dev or
+    // browser privacy settings). store under 'ga_client_id' in localStorage.
+    try {
+      if (window && window.gtag) {
+        try {
+          window.gtag('get', id, 'client_id', function(cid) {
+            try {
+              if (cid) {
+                try {
+                  localStorage.setItem('ga_client_id', cid);
+                } catch (e) {
+                  /* ignore localStorage failures */
+                }
+                _log('gtag client_id', cid);
+              }
+            } catch (e) {
+              _log('store client_id failed', e);
+            }
+          });
+        } catch (e) {
+          _log('gtag get client_id failed', e);
+        }
+      }
+    } catch (e) {
+      /* swallow */
+    }
     _log('initialized', measurementId, options);
 
     // flush queued events
@@ -92,6 +132,17 @@ export function sendPageview(path) {
   }
   _log('pageview', path);
   ReactGA.send({ hitType: 'pageview', page: path });
+  try {
+    if (window && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_location: window.location.href,
+        page_path: path,
+      });
+      _log('gtag page_view sent', window.location.href);
+    }
+  } catch (e) {
+    _log('gtag page_view failed', e);
+  }
 }
 
 export function trackEvent({ category, action, label, value }) {
@@ -224,6 +275,7 @@ const Analytics = {
   trackEvent,
   isInitialized,
   enableDebug,
+  getEventsLog,
 };
 
 export default Analytics;

@@ -5,9 +5,44 @@ import * as analytics from './analytics';
 export default function GAListener() {
   const location = useLocation();
   const sentScrollDepthRef = useRef(new Set());
+  const utmCapturedRef = useRef(false);
 
   useEffect(() => {
     const path = location.pathname + location.search;
+
+    // Capture UTM params on first page load and persist them so redirects
+    // or subsequent navigation won't lose campaign attribution.
+    try {
+      if (!utmCapturedRef.current && location.search) {
+        const params = new URLSearchParams(location.search);
+        const utm = {};
+        [
+          'utm_source',
+          'utm_medium',
+          'utm_campaign',
+          'utm_term',
+          'utm_content',
+        ].forEach((k) => {
+          if (params.has(k)) utm[k] = params.get(k);
+        });
+        if (Object.keys(utm).length) {
+          try {
+            localStorage.setItem('utm_params', JSON.stringify(utm));
+          } catch (e) {
+            // ignore localStorage failures
+          }
+          analytics.trackEvent({
+            category: 'UTM',
+            action: 'landing',
+            label: JSON.stringify(utm),
+          });
+          utmCapturedRef.current = true;
+        }
+      }
+    } catch (e) {
+      // swallow parse errors
+    }
+
     analytics.sendPageview(path);
     // reset per-page scroll depth marks
     sentScrollDepthRef.current = new Set();
