@@ -28,6 +28,44 @@ const Projects = () => {
     }utm_source=portfolio&utm_medium=projects&utm_campaign=${encodeURIComponent(
       campaign,
     )}`;
+  // Outbound link helper: POSTs a serverless Measurement Protocol hit, then opens the target.
+  const Outbound = ({ href, campaign, children, ...props }) => {
+    const target = utm(href, campaign);
+    const handleClick = async (e) => {
+      e.preventDefault();
+      const body = {
+        destination: href,
+        utm_source: 'portfolio',
+        utm_medium: 'projects',
+        utm_campaign: campaign,
+        page_location: window.location.href,
+        client_id: localStorage.getItem('ga_client_id'),
+      };
+      try {
+        await fetch('/.netlify/functions/send-mp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
+      } catch (err) {
+        // fire-and-forget; ignore errors and continue to open the link
+      } finally {
+        window.open(target, '_blank');
+      }
+    };
+
+    return (
+      <a
+        href={target}
+        onClick={handleClick}
+        target='_blank'
+        rel='noreferrer'
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  };
   const [letterClass] = useState('text-animate');
 
   const projectTitle = ['P', 'r', 'o', 'j', 'e', 'c', 't', 's'];
@@ -372,21 +410,19 @@ const Projects = () => {
             {/* Project : linkray */}
             <div className='card-wrapper'>
               {/* Title */}
-              <a
-                href={utm('https://linkray.tyler-allen.com/', 'linkray')}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://linkray.tyler-allen.com/'
+                campaign='linkray'
                 data-ga-category='Project'
                 data-ga-action='click'
                 data-ga-label='LinkRay'
               >
                 <div className='project-title'>LinkRay</div>{' '}
-              </a>
+              </Outbound>
               {/* Image */}
-              <a
-                href={utm('https://linkray.tyler-allen.com/', 'linkray')}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://linkray.tyler-allen.com/'
+                campaign='linkray'
                 data-ga-category='Project'
                 data-ga-action='click'
                 data-ga-label='LinkRay Image'
@@ -396,26 +432,24 @@ const Projects = () => {
                     <img src={LinkRay} alt='Website Analysis' />
                   </div>
                 </div>
-              </a>
+              </Outbound>
             </div>
             {/* Project : Holiday Hub */}
             <div className='card-wrapper'>
               {/* Title */}
-              <a
-                href={utm('https://holiday-hub.tyler-allen.com', 'holiday_hub')}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://holiday-hub.tyler-allen.com'
+                campaign='holiday_hub'
                 data-ga-category='Project'
                 data-ga-action='click'
                 data-ga-label='Holiday Hub'
               >
                 <div className='project-title'>Holiday Hub</div>{' '}
-              </a>
+              </Outbound>
               {/* Image */}
-              <a
-                href={utm('https://holiday-hub.tyler-allen.com', 'holiday_hub')}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://holiday-hub.tyler-allen.com'
+                campaign='holiday_hub'
                 data-ga-category='Project'
                 data-ga-action='click'
                 data-ga-label='Holiday Hub Image'
@@ -425,32 +459,24 @@ const Projects = () => {
                     <img src={HolidayHub} alt='Website Analysis' />
                   </div>
                 </div>
-              </a>
+              </Outbound>
             </div>
             {/* Project : Nutrition Tracker */}
             <div className='card-wrapper'>
               {/* Title */}
-              <a
-                href={utm(
-                  'https://nutritiontracker.tyler-allen.com/',
-                  'nutrition_tracker',
-                )}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://nutritiontracker.tyler-allen.com/'
+                campaign='nutrition_tracker'
                 data-ga-category='Project'
                 data-ga-action='click'
                 data-ga-label='Nutrition Tracker'
               >
                 <div className='project-title'>Nutrition Tracker</div>{' '}
-              </a>
+              </Outbound>
               {/* Image */}
-              <a
-                href={utm(
-                  'https://nutritiontracker.tyler-allen.com/',
-                  'nutrition_tracker',
-                )}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://nutritiontracker.tyler-allen.com/'
+                campaign='nutrition_tracker'
                 data-ga-category='Project'
                 data-ga-action='click'
                 data-ga-label='Nutrition Tracker Image'
@@ -460,94 +486,76 @@ const Projects = () => {
                     <img src={NutritionTracker} alt='nutrition stats' />
                   </div>
                 </div>
-              </a>
+              </Outbound>
             </div>
 
             {/* Project:Mass Transport  */}
             <div className='card-wrapper'>
               {/* Title */}
-              <a
-                href={utm(
-                  'https://massachusetts-transit-optimizer.tyler-allen.com/',
-                  'mass_transport',
-                )}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://massachusetts-transit-optimizer.tyler-allen.com/'
+                campaign='mass_transport'
               >
                 <div className='project-title'>
                   Massachusetts Transit Optimizer
                 </div>{' '}
-              </a>
+              </Outbound>
               {/* Image */}
-              <a
-                href={utm(
-                  'https://massachusetts-transit-optimizer.tyler-allen.com/',
-                  'mass_transport',
-                )}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://massachusetts-transit-optimizer.tyler-allen.com/'
+                campaign='mass_transport'
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={MassTransport} alt='Mass Transport' />
                   </div>
                 </div>
-              </a>
+              </Outbound>
             </div>
             {/* Project : Personal Training */}
             <div className='card-wrapper'>
               {/* Title */}
-              <a
-                href={utm('https://fitforall.tyler-allen.com/', 'fitforall')}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://fitforall.tyler-allen.com/'
+                campaign='fitforall'
               >
                 <div className='project-title'>FitForAll</div>{' '}
-              </a>
+              </Outbound>
               {/* Image */}
-              <a
-                href={utm('https://fitforall.tyler-allen.com/', 'fitforall')}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://fitforall.tyler-allen.com/'
+                campaign='fitforall'
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={PersonalTraining} alt='Personal Training' />
                   </div>
                 </div>
-              </a>
+              </Outbound>
             </div>
 
             {/* Project: Click A Mole */}
             <div className='card-wrapper'>
               {/* Title */}
-              <a
-                href={utm(
-                  'https://click-a-mole.firebaseapp.com/',
-                  'click_a_mole',
-                )}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://click-a-mole.firebaseapp.com/'
+                campaign='click_a_mole'
               >
                 <div className='project-title-wrapper'>
                   <div className='project-title'>Click A Mole</div>{' '}
                 </div>
-              </a>
+              </Outbound>
               {/* Image */}
-              <a
-                href={utm(
-                  'https://click-a-mole.firebaseapp.com/',
-                  'click_a_mole',
-                )}
-                target='_blank'
-                rel='noreferrer'
+              <Outbound
+                href='https://click-a-mole.firebaseapp.com/'
+                campaign='click_a_mole'
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={ClickAMole} alt='Click A Mole' />
                   </div>
                 </div>
-              </a>
+              </Outbound>
             </div>
             {/* Project: Rock Paper Scissors */}
             {/* <div className='card-wrapper'>

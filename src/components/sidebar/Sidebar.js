@@ -11,6 +11,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { createTheme, ThemeProvider } from '@mui/material';
 import ArticleIcon from '@mui/icons-material/Article';
+import OutboundLink from '../OutboundLink';
 
 const Sidebar = () => {
   const theme = createTheme({
@@ -128,12 +129,9 @@ const Sidebar = () => {
 
           {/* Links for Resume, Github and Linkedin */}
           <li className='about-nav-link'>
-            <a
-              href={
-                'Resume.pdf?utm_source=portfolio&utm_medium=site&utm_campaign=resume_download'
-              }
-              target='_blank'
-              rel='noreferrer'
+            <OutboundLink
+              href={'/Resume.pdf'}
+              campaign={'resume_download'}
               className='nav-links-2'
               data-ga-category='Portfolio'
               data-ga-action='download'
@@ -142,15 +140,12 @@ const Sidebar = () => {
               <Tooltip title='Resume' placement='right' arrow>
                 <ArticleIcon className='nav-2-icons' id='icons2' />
               </Tooltip>
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a
-              href={
-                'https://github.com/LifestreamX?utm_source=portfolio&utm_medium=social&utm_campaign=github_profile'
-              }
-              target='_blank'
-              rel='noreferrer'
+            <OutboundLink
+              href={'https://github.com/LifestreamX'}
+              campaign={'github_profile'}
               className='nav-links-2'
               data-ga-category='Social'
               data-ga-action='click'
@@ -159,15 +154,12 @@ const Sidebar = () => {
               <Tooltip title='Github' placement='right' arrow>
                 <GitHubIcon className='nav-2-icons' id='icons2' />
               </Tooltip>
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a
-              href={
-                'https://www.linkedin.com/in/tylerallen1/?utm_source=portfolio&utm_medium=social&utm_campaign=linkedin_profile'
-              }
-              target='_blank'
-              rel='noreferrer'
+            <OutboundLink
+              href={'https://www.linkedin.com/in/tylerallen1/'}
+              campaign={'linkedin_profile'}
               className='nav-links-2'
               data-ga-category='Social'
               data-ga-action='click'
@@ -176,7 +168,7 @@ const Sidebar = () => {
               <Tooltip title='Linkedin' placement='right' arrow>
                 <LinkedInIcon className='nav-2-icons' id='icons2' />
               </Tooltip>
-            </a>
+            </OutboundLink>
           </li>
         </nav>
       </div>

@@ -5,6 +5,7 @@ import CloseIcon from '@mui/icons-material/Close';
 // 2nd nav
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import OutboundLink from '../OutboundLink';
 
 const MobileNav = ({ click, setClick }) => {
   const handleClick = () => setClick(!click);
@@ -51,35 +52,32 @@ const MobileNav = ({ click, setClick }) => {
           </NavLink>
 
           {/* Resume */}
-          <a
-            href='Resume.pdf'
-            target='_blank'
-            rel='noreferrer'
+          <OutboundLink
+            href={'/Resume.pdf'}
+            campaign={'resume_download'}
             className='nav-links'
             onClick={closeMobileMenu}
           >
             <li className='nav-item nav-2'>Resume</li>
-          </a>
+          </OutboundLink>
 
           {/* Github */}
-          <a
-            href='https://github.com/LifestreamX'
-            target='_blank'
-            rel='noreferrer'
+          <OutboundLink
+            href={'https://github.com/LifestreamX'}
+            campaign={'github_profile'}
             className='nav-links'
             onClick={closeMobileMenu}
           >
             <li className='nav-item nav-2'>Github</li>
-          </a>
-          <a
-            href='https://www.linkedin.com/in/tylerallen1/'
-            target='_blank'
-            rel='noreferrer'
+          </OutboundLink>
+          <OutboundLink
+            href={'https://www.linkedin.com/in/tylerallen1/'}
+            campaign={'linkedin_profile'}
             className='nav-links'
             onClick={closeMobileMenu}
           >
             <li className='nav-item nav-2'>Linkedin</li>
-          </a>
+          </OutboundLink>
         </ul>
 
         {/* {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>} */}
