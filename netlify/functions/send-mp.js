@@ -42,6 +42,8 @@ exports.handler = async function(event) {
 
   const payload = {
     client_id,
+    // include user_properties so UTM values are associated with the client
+    user_properties: {},
     events: [
       {
         name: 'outbound_click',
@@ -55,6 +57,17 @@ exports.handler = async function(event) {
       },
     ],
   };
+
+  // populate user_properties if present
+  try {
+    const up = {};
+    if (data.utm_source) up.utm_source = { value: data.utm_source };
+    if (data.utm_medium) up.utm_medium = { value: data.utm_medium };
+    if (data.utm_campaign) up.utm_campaign = { value: data.utm_campaign };
+    if (Object.keys(up).length) payload.user_properties = up;
+  } catch (e) {
+    // ignore
+  }
 
   const url = `https://www.google-analytics.com/mp/collect?measurement_id=${encodeURIComponent(
     measurementId,

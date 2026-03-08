@@ -31,6 +31,30 @@ export default function GAListener() {
           } catch (e) {
             // ignore localStorage failures
           }
+          // Persist as GA4 user_properties so UTM values are available in reports
+          try {
+            if (
+              process.env.REACT_APP_DISABLE_ANALYTICS !== 'true' &&
+              window &&
+              window.gtag
+            ) {
+              const userProps = {};
+              Object.keys(utm).forEach((k) => {
+                // GA4 user_properties expect simple key:value strings
+                const shortKey = k.replace(/^utm_/, '');
+                userProps[shortKey] = utm[k];
+              });
+              if (Object.keys(userProps).length) {
+                try {
+                  window.gtag('set', { user_properties: userProps });
+                } catch (e) {
+                  // ignore gtag failures
+                }
+              }
+            }
+          } catch (e) {
+            // swallow
+          }
           // Intentionally NOT sending a UTM analytics event to avoid
           // exposing campaign details as events.
           utmCapturedRef.current = true;

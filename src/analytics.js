@@ -115,6 +115,12 @@ export function init(measurementId, options = {}) {
 
     // Performance metrics collection disabled to avoid sending extra events.
     // If you want to re-enable, call `sendPerformanceMetrics()` manually.
+    // If we previously captured UTM params, set them as user_properties
+    try {
+      setUserPropertiesFromLocalStorage();
+    } catch (e) {
+      _log('setUserPropertiesFromLocalStorage failed', e);
+    }
   } catch (e) {
     _log('init error', e);
   }
@@ -229,6 +235,29 @@ export function trackException(description, file, line) {
     ReactGA.exception({ description, fatal: false });
   } catch (e) {
     // ignore
+  }
+}
+
+export function setUserPropertiesFromLocalStorage() {
+  if (DISABLED) return;
+  try {
+    const raw = localStorage.getItem('utm_params');
+    if (!raw) return;
+    const utm = JSON.parse(raw || '{}');
+    const userProps = {};
+    ['utm_source', 'utm_medium', 'utm_campaign'].forEach((k) => {
+      if (utm[k]) userProps[k.replace(/^utm_/, '')] = utm[k];
+    });
+    if (Object.keys(userProps).length && window && window.gtag) {
+      try {
+        window.gtag('set', { user_properties: userProps });
+        _log('set user_properties', userProps);
+      } catch (e) {
+        _log('gtag set user_properties failed', e);
+      }
+    }
+  } catch (e) {
+    _log('setUserPropertiesFromLocalStorage error', e);
   }
 }
 
