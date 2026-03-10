@@ -79,17 +79,17 @@ const About = () => {
           />
         </span>
         <p className='about-me-text-1 text-top'>
-          I’m a dedicated web developer with a passion for creating and
-          maintaining web applications. I thrive in collaborative environments,
-          where I can contribute to innovative projects and continue to expand
-          my skill set.
+          I’m a dedicated Full-Stack Developer with a passion for building and
+          maintaining modern web applications. I thrive in collaborative
+          environments where I can contribute to innovative projects while
+          continuing to expand my technical skill set.
         </p>
 
         <p className='about-me-text-2'>
-          I am always eager to learn new technologies and techniques to stay
-          ahead in the ever-evolving field of development. Whether tackling
-          front-end challenges or improving user experiences, I enjoy the
-          process of problem-solving and delivering high-quality results.
+          I’m always eager to learn new technologies and stay ahead in the
+          ever-evolving field of development. Whether solving complex backend
+          challenges or improving front-end user experiences, I enjoy building
+          efficient, scalable solutions that deliver real value.
         </p>
       </div>
     </motion.main>

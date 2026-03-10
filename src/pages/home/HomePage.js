@@ -125,7 +125,7 @@ const HomePage = () => {
             {/* /> */}
           </div>
 
-          <div className='frontend-react-dev'>Web Developer</div>
+          <div className='frontend-react-dev'>Full-Stack Developer</div>
           <Link
             to='/contact'
             className='flat-button'
