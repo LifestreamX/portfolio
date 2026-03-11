@@ -20,6 +20,7 @@ import NutritionTracker from '../../assets/project-images/nutritiontracker.png';
 import LinkRay from '../../assets/project-images/linkray.png';
 import HolidayHub from '../../assets/project-images/holiday-hub.png';
 import MassTransport from '../../assets/project-images/mass-transport.png';
+import MassSafe from '../../assets/project-images/mass-safe.png';
 
 const Projects = () => {
   // We will NOT append UTMs to the visible URL; Outbound will POST UTM payloads instead.
@@ -484,6 +485,27 @@ const Projects = () => {
                 </div>
               </Outbound>
             </div>
+            {/* Project: MassSafe  */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <Outbound
+                href='https://masssafe.tyler-allen.com'
+                campaign='mass_safe'
+              >
+                <div className='project-title'>MassSafe</div>{' '}
+              </Outbound>
+              {/* Image */}
+              <Outbound
+                href='https://masssafe.tyler-allen.com'
+                campaign='mass_safe'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={MassSafe} alt='MassSafe' />
+                  </div>
+                </div>
+              </Outbound>
+            </div>
 
             {/* Project:Mass Transport  */}
             <div className='card-wrapper'>
@@ -531,8 +553,7 @@ const Projects = () => {
             </div>
 
             {/* Project: Click A Mole */}
-            <div className='card-wrapper'>
-              {/* Title */}
+            {/* <div className='card-wrapper'>
               <Outbound
                 href='https://click-a-mole.firebaseapp.com/'
                 campaign='click_a_mole'
@@ -541,7 +562,6 @@ const Projects = () => {
                   <div className='project-title'>Click A Mole</div>{' '}
                 </div>
               </Outbound>
-              {/* Image */}
               <Outbound
                 href='https://click-a-mole.firebaseapp.com/'
                 campaign='click_a_mole'
@@ -552,7 +572,7 @@ const Projects = () => {
                   </div>
                 </div>
               </Outbound>
-            </div>
+            </div> */}
             {/* Project: Rock Paper Scissors */}
             {/* <div className='card-wrapper'>
               <a
