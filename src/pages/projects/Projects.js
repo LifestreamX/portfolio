@@ -21,6 +21,7 @@ import LinkRay from '../../assets/project-images/linkray.png';
 import HolidayHub from '../../assets/project-images/holiday-hub.png';
 import MassTransport from '../../assets/project-images/mass-transport.png';
 import MassSafe from '../../assets/project-images/mass-safe.png';
+import NeoView from '../../assets/project-images/neo-view.png';
 
 const Projects = () => {
   // We will NOT append UTMs to the visible URL; Outbound will POST UTM payloads instead.
@@ -485,6 +486,27 @@ const Projects = () => {
                 </div>
               </Outbound>
             </div>
+            {/* Project: NeoView  */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <Outbound
+                href='https://neoview.tyler-allen.com'
+                campaign='neo_view'
+              >
+                <div className='project-title'>NeoView</div>{' '}
+              </Outbound>
+              {/* Image */}
+              <Outbound
+                href='https://neoview.tyler-allen.com'
+                campaign='neo_view'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={NeoView} alt='NeoView' />
+                  </div>
+                </div>
+              </Outbound>
+            </div>
             {/* Project: MassSafe  */}
             <div className='card-wrapper'>
               {/* Title */}
@@ -531,15 +553,13 @@ const Projects = () => {
               </Outbound>
             </div>
             {/* Project : Personal Training */}
-            <div className='card-wrapper'>
-              {/* Title */}
+            {/* <div className='card-wrapper'>
               <Outbound
                 href='https://fitforall.tyler-allen.com/'
                 campaign='fitforall'
               >
                 <div className='project-title'>FitForAll</div>{' '}
               </Outbound>
-              {/* Image */}
               <Outbound
                 href='https://fitforall.tyler-allen.com/'
                 campaign='fitforall'
@@ -550,7 +570,7 @@ const Projects = () => {
                   </div>
                 </div>
               </Outbound>
-            </div>
+            </div> */}
 
             {/* Project: Click A Mole */}
             {/* <div className='card-wrapper'>
