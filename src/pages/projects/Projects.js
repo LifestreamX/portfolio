@@ -460,7 +460,7 @@ const Projects = () => {
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
-                    <img src={LinkRay} alt='Website Analysis' />
+                    <img src={LinkRay} alt='LinkRay' />
                   </div>
                 </div>
               </Outbound>
@@ -487,7 +487,7 @@ const Projects = () => {
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
-                    <img src={HolidayHub} alt='Website Analysis' />
+                    <img src={HolidayHub} alt='Holiday Hub' />
                   </div>
                 </div>
               </Outbound>
@@ -514,7 +514,7 @@ const Projects = () => {
               >
                 <div className='card'>
                   <div className='card__face card__face--front'>
-                    <img src={NutritionTracker} alt='nutrition stats' />
+                    <img src={NutritionTracker} alt='Nutrition Tracker' />
                   </div>
                 </div>
               </Outbound>
