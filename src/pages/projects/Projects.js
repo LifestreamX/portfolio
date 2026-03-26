@@ -22,6 +22,7 @@ import HolidayHub from '../../assets/project-images/holiday-hub.png';
 import MassTransport from '../../assets/project-images/mass-transport.png';
 import MassSafe from '../../assets/project-images/mass-safe.png';
 import NeoView from '../../assets/project-images/neo-view.png';
+import TylerAllenPersonalTraining from '../../assets/project-images/tyler-allen-personal-training.png';
 
 const Projects = () => {
   // We will NOT append UTMs to the visible URL; Outbound will POST UTM payloads instead.
@@ -405,6 +406,38 @@ const Projects = () => {
         {/* Cards */}
         <div className='scene'>
           <div className='cards'>
+            {/* Project : Tyler Allen Personal Training */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <Outbound
+                href='https://personal-training.tyler-allen.com'
+                campaign='personal_training'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='Tyler Allen Personal Training'
+              >
+                <div className='project-title'>
+                  Tyler Allen Personal Training
+                </div>{' '}
+              </Outbound>
+              {/* Image */}
+              <Outbound
+                href='https://personal-training.tyler-allen.com'
+                campaign='personal_training'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='Tyler Allen Personal Training Image'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img
+                      src={TylerAllenPersonalTraining}
+                      alt='Tyler Allen Personal Training'
+                    />
+                  </div>
+                </div>
+              </Outbound>
+            </div>
             {/* Project : linkray */}
             <div className='card-wrapper'>
               {/* Title */}
