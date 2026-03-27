@@ -58,7 +58,7 @@ const About = () => {
     >
       <div className='about-hero'>
         <img src={TylerPhoto} alt='Tyler Allen' className='about-hero-img' />
-        <p className='about-hero-caption'>Tyler Allen — Full Stack Developer</p>
+        <p className='about-hero-caption'>Tyler Allen — Full-Stack Developer</p>
       </div>
 
       {/* Right sections with animation */}
