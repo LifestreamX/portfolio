@@ -1,16 +1,43 @@
 @import '../../App.scss';
 
-// MOBILE
-
 .about-page {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  // overflow-y: hidden;
-  // overflow-x: hidden;
+  padding-bottom: 50px;
+  min-height: 100vh;
+
+  .about-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+    margin-top: 40px; // Default mobile margin
+    animation: heroPop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+
+    .about-hero-img {
+      width: min(200px, 45vw);
+      height: auto;
+      border-radius: 50%;
+      border: 4px solid $salmon;
+      box-shadow: 0 0 20px rgba($salmon, 0.3);
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .about-hero-caption {
+      color: $soft-peach;
+      font-family: $secondary-font;
+      font-size: 0.9rem;
+      margin: 0;
+      opacity: 0.8;
+      letter-spacing: 1px;
+    }
+  }
 
   .right-side-about {
     height: 0;
@@ -19,8 +46,10 @@
     left: 0;
     top: 0;
     margin: 60px;
+    display: none; // Hidden on mobile by default to avoid clutter with photo
 
     .react-logo {
+      // styles for the logo if needed
     }
   }
 
@@ -31,7 +60,7 @@
   }
 
   .text-zone-about {
-    position: absolute;
+    position: relative;
     top: 0;
     width: 85%;
     display: flex;
@@ -39,11 +68,12 @@
     align-items: center;
     flex-direction: column;
     text-align: left;
+    margin-top: 20px;
 
     .about-me-title {
       width: 100%;
       text-align: center;
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 1.5rem;
       margin-bottom: 20px;
       font-family: $secondary-font;
@@ -52,159 +82,97 @@
       letter-spacing: 2px;
     }
 
-    // #1
+    p {
+      color: $soft-peach;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
     .about-me-text-1 {
-      -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-      -moz-animation: fadein 2s; /* Firefox < 16 */
-      -ms-animation: fadein 2s; /* Internet Explorer */
-      -o-animation: fadein 2s; /* Opera < 12.1 */
-      animation: fadein 2s;
+      animation: fadein 2s forwards;
     }
 
-    @keyframes fadein {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    // #2
     .about-me-text-2 {
-      -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-      -moz-animation: fadein 3s; /* Firefox < 16 */
-      -ms-animation: fadein 3s; /* Internet Explorer */
-      -o-animation: fadein 3s; /* Opera < 12.1 */
-      animation: fadein 3s;
+      animation: fadein 3s forwards;
     }
 
-    @keyframes fadein {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  }
-
-  // #3
-  .about-me-text-3 {
-    -webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 4s; /* Firefox < 16 */
-    -ms-animation: fadein 4s; /* Internet Explorer */
-    -o-animation: fadein 4s; /* Opera < 12.1 */
-    animation: fadein 4s;
-  }
-
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
+    .about-me-text-3 {
+      animation: fadein 4s forwards;
     }
   }
 }
 
-// TAbLETS
-// MOBILE ONLY: Center and push down text
-@media screen and (max-width: 767px) {
-  .about-page {
-    .text-zone-about {
-      top: 60px; // Push content down on mobile
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      text-align: left;
-    }
+@keyframes heroPop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
   }
 }
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// TABLET / SMALL DESKTOP
 @media screen and (min-width: 768px) {
   .about-page {
-    .right-side-about {
-      height: 0;
-      width: 0;
-      position: absolute;
-      left: 0;
-      top: 40px;
-      margin: 60px;
-      margin-left: 180px;
+    .about-hero {
+      margin-top: 80px;
+      .about-hero-img {
+        width: 220px;
+      }
+      .about-hero-caption {
+        font-size: 1rem;
+      }
     }
 
     .text-zone-about {
-      font-size: 1.6rem;
-      .about-me-text {
-        margin-top: 10px;
+      width: 70%;
+      margin-top: 40px;
+
+      .about-me-title {
+        font-size: 2.2rem;
       }
 
-      .text-top {
-        margin-top: 120px;
+      p {
+        font-size: 1.1rem;
       }
+    }
+
+    .right-side-about {
+      display: block; // Show background logo on larger screens
+      opacity: 0.1 !important;
+      pointer-events: none;
     }
   }
 }
 
-// DESKTOPS
+// LARGE DESKTOP
 @media screen and (min-width: 1025px) {
   .about-page {
-    position: relative;
-    right: 100px !important;
-    bottom: 200px !important;
-
-    .right-side-about {
-      position: relative;
-      margin-left: 900px;
-      margin-top: 500px;
+    .about-hero {
+      margin-top: 120px;
+      .about-hero-img {
+        width: 250px;
+      }
     }
 
     .text-zone-about {
-      position: absolute;
-      width: 35% !important;
-      justify-content: start !important;
-      align-items: flex-start;
-      margin-top: 300px !important;
-      margin-right: 280px;
-      margin-left: 50px;
-      font-size: 20px;
-
-      .about-me-title {
-        font-size: 32px !important;
-        text-align: start !important;
-        margin-bottom: -100px !important;
-      }
-    }
-  }
-}
-
-// LARGE SCREEN DESKTOPS
-@media screen and (min-width: 1700px) {
-  .about-page {
-    position: relative;
-    right: 100px !important;
-    margin-top: 200px;
-
-    .right-side-about {
-      position: relative;
-      margin-left: 1400px;
-      margin-top: 500px;
-    }
-
-    .text-zone-about {
-      position: absolute;
-      width: 35% !important;
-      justify-content: start !important;
-      align-items: flex-start;
-      margin-top: 200px !important;
-      margin-right: 600px;
-      font-size: 28px;
-
-      .about-me-title {
-        font-size: 40px !important;
-        text-align: start !important;
-        margin-bottom: -100px !important;
-      }
+      width: 50%;
+      margin-top: 60px;
     }
   }
 }

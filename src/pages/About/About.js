@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './About.scss';
 import '../../App.scss';
+import TylerPhoto from '../../assets/images/tyler.jpeg';
 import LetterAnimations from '../../components/letteranimations/LetterAnimations';
 import ReactLogo from '../../components/reactlogo/ReactLogo';
 import { motion } from 'framer-motion';
@@ -11,51 +12,43 @@ const About = () => {
 
   const aboutTitle = ['A', 'b', 'o', 'u', 't', ' ', 'M', 'e'];
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLetterClass('text-animate-hover');
-    }, '2000');
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setLetterClass('text-animate-hover');
+  //   }, '2000');
 
-    // Text
-    // gsap.fromTo(
-    //   'p',
-    //   { opacity: 0 },
-    //   { stagger: 1, opacity: 1, duration: 0.1, delay: 0.5 }
-    // );
-
-    // React-logo
-    gsap
-      .timeline()
-      .fromTo(
-        '.right-side',
-        {
-          opacity: 1,
-        },
-        {
-          scale: 1,
-          duration: 10,
-          opacity: 1,
-          ease: 'power2.out',
-        },
-      )
-      .fromTo(
-        '.right-side',
-        {
-          rotation: 0,
-        },
-        {
-          rotation: 360,
-          duration: 10,
-          repeat: -1,
-          ease: 'linear',
-        },
-        0,
-      )
-      .timeScale(1);
-  }, []);
+  //   // React-logo
+  //   gsap
+  //     .timeline()
+  //     .fromTo(
+  //       '.right-side',
+  //       {
+  //         opacity: 1,
+  //       },
+  //       {
+  //         scale: 1,
+  //         duration: 10,
+  //         opacity: 1,
+  //         ease: 'power2.out',
+  //       },
+  //     )
+  //     .fromTo(
+  //       '.right-side',
+  //       {
+  //         rotation: 0,
+  //       },
+  //       {
+  //         rotation: 360,
+  //         duration: 10,
+  //         repeat: -1,
+  //         ease: 'linear',
+  //       },
+  //       0,
+  //     )
+  //     .timeScale(1);
+  // }, []);
 
   // About me text
-
   return (
     <motion.main
       className='container about-page'
@@ -63,9 +56,14 @@ const About = () => {
       animate={{ width: '100%' }}
       exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
+      <div className='about-hero'>
+        <img src={TylerPhoto} alt='Tyler Allen' className='about-hero-img' />
+        <p className='about-hero-caption'>Tyler Allen — Full Stack Developer</p>
+      </div>
+
       {/* Right sections with animation */}
       <section className='right-side-about'>
-        <ReactLogo className='react-logo' />
+        {/* <ReactLogo className='react-logo' /> */}
       </section>
 
       {/* Left section */}
