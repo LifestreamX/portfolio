@@ -23,6 +23,7 @@ import MassTransport from '../../assets/project-images/mass-transport.png';
 import MassSafe from '../../assets/project-images/mass-safe.png';
 import NeoView from '../../assets/project-images/neo-view.png';
 import TylerAllenPersonalTraining from '../../assets/project-images/tyler-allen-personal-training.png';
+import FitFunnel from '../../assets/project-images/fit-funnel.png';
 
 const Projects = () => {
   // We will NOT append UTMs to the visible URL; Outbound will POST UTM payloads instead.
@@ -557,6 +558,27 @@ const Projects = () => {
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={MassSafe} alt='MassSafe' />
+                  </div>
+                </div>
+              </Outbound>
+            </div>
+            {/* Project: FitFUnnel  */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <Outbound
+                href='https://fitfunnel.tyler-allen.com'
+                campaign='fit_funnel'
+              >
+                <div className='project-title'>FitFunnel</div>{' '}
+              </Outbound>
+              {/* Image */}
+              <Outbound
+                href='https://fitfunnel.tyler-allen.com'
+                campaign='fit_funnel'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={FitFunnel} alt='FitFunnel' />
                   </div>
                 </div>
               </Outbound>
