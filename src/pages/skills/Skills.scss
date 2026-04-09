@@ -6,16 +6,17 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  padding-bottom: 3rem;
+  overflow-x: hidden;
 
   .text-zone-skills {
-    // margin-top: 5000px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem;
 
     .skills-title {
       span {
@@ -27,44 +28,75 @@
 
     .sentence {
       font-family: $secondary-font;
-      font-size: 1.5rem;
-      margin-bottom: -20px;
+      font-size: 1.2rem;
+      margin-bottom: 0;
     }
   }
 
-  .skills-right-side {
+  .skills-categories {
     width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 1.5rem;
 
-    .individual-project-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: 50vw;
-      margin-top: 40px;
+    .skill-category {
+      .category-title {
+        font-family: $secondary-font;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: $salmon;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid rgba($salmon, 0.3);
+      }
 
-      p {
-        font-size: 1.5rem;
+      .skill-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .skill-badge {
+          display: inline-block;
+          padding: 0.35rem 0.85rem;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 20px;
+          font-family: $secondary-font;
+          font-size: 0.85rem;
+          color: #e0e0e0;
+          background: rgba(255, 255, 255, 0.05);
+          transition: border-color 0.2s, background 0.2s, color 0.2s;
+          white-space: normal;
+          word-break: break-word;
+
+          &:hover {
+            border-color: $salmon;
+            background: rgba($salmon, 0.1);
+            color: #fff;
+          }
+        }
       }
     }
   }
 }
 
 // TABLETS
-
 @media screen and (min-width: 768px) {
   .skills-page {
-    .skills-right-side {
-      display: grid;
-      grid-template-columns: 25vw 25vw;
-      grid-gap: 100px;
+    .skills-categories {
+      padding: 1.5rem 3rem;
 
-      .individual-project-wrapper {
-        width: 25vw;
+      .skill-category {
+        .category-title {
+          font-size: 1.1rem;
+        }
+
+        .skill-badges .skill-badge {
+          font-size: 0.9rem;
+        }
       }
     }
   }
@@ -72,22 +104,32 @@
 
 // DESKTOPS
 @media screen and (min-width: 1025px) {
-  .skills-right-side {
-    grid-template-columns: 10vw 10vw 10vw 10vw !important;
+  .skills-page {
+    .skills-categories {
+      padding: 2rem 4rem;
+      gap: 2.5rem;
 
-    .individual-project-wrapper {
-      width: 100px !important;
+      .skill-category {
+        .category-title {
+          font-size: 1.1rem;
+        }
+
+        .skill-badges .skill-badge {
+          font-size: 0.9rem;
+          padding: 0.4rem 1rem;
+        }
+      }
     }
   }
 }
 
 // LARGE SCREEN DESKTOPS
 @media screen and (min-width: 1600px) {
-  .skills-right-side {
-    grid-template-columns: 10vw 10vw 10vw 10vw 10vw !important;
-
-    .individual-project-wrapper {
-      width: 150px !important;
+  .skills-page {
+    .skills-categories {
+      padding: 2rem 6rem;
+      max-width: 1400px;
+      margin: 0 auto;
     }
   }
 }
