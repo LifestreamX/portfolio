@@ -24,6 +24,7 @@ import MassSafe from '../../assets/project-images/mass-safe.png';
 import NeoView from '../../assets/project-images/neo-view.png';
 import TylerAllenPersonalTraining from '../../assets/project-images/tyler-allen-personal-training.png';
 import FitFunnel from '../../assets/project-images/fit-funnel.png';
+import TylerAllenSolutions from '../../assets/project-images/tyler-allen-solutions.png';
 
 const Projects = () => {
   // We will NOT append UTMs to the visible URL; Outbound will POST UTM payloads instead.
@@ -407,6 +408,36 @@ const Projects = () => {
         {/* Cards */}
         <div className='scene'>
           <div className='cards'>
+            {/* Project : Tyler Allen Solutions */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <Outbound
+                href='https://tyler-allen-solutions.com'
+                campaign='tyler_allen_solutions'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='Tyler Allen Solutions'
+              >
+                <div className='project-title'>Tyler Allen Solutions</div>{' '}
+              </Outbound>
+              {/* Image */}
+              <Outbound
+                href='https://solutions.tyler-allen.com/'
+                campaign='tyler_allen_solutions'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='Tyler Allen Solutions Image'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img
+                      src={TylerAllenSolutions}
+                      alt='Tyler Allen Solutions'
+                    />
+                  </div>
+                </div>
+              </Outbound>
+            </div>
             {/* Project : Tyler Allen Personal Training */}
             <div className='card-wrapper'>
               {/* Title */}
