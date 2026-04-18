@@ -2,8 +2,6 @@ import React from 'react';
 
 const OutboundLink = ({ href, campaign, children, className, ...props }) => {
   // Keep the visible URL clean; do not append UTM query params to the href.
-  const target = href;
-
   const handleClick = async (e) => {
     e.preventDefault();
     const body = {

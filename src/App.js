@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
 import './App.scss';
 import AnimatedRoutes from './components/AnimatedRoutes';
 import GAListener from './GAListener';

@@ -66,40 +66,20 @@
 
     // Contact me button
     a {
-      color: $soft-peach;
-      text-decoration: none;
+      @include primary-cta-control;
       margin-top: 20px;
       z-index: 10;
       position: relative;
-      display: inline-block;
-      padding: 0 1em;
-      text-transform: uppercase;
       text-align: center;
-      font-size: 12px;
-      font-size: 0.8rem;
-      line-height: 1.91667;
-      color: #2e1e43;
-      background-color: #ff8c67;
-      letter-spacing: 0.2em;
-      font-weight: 600;
-      font-family: $secondary-font;
-      width: 40%;
-      font-size: 16px;
-      line-height: 1.4375;
-      padding: 0.7em;
+      line-height: 1.2;
+      min-width: 200px;
+      padding: 0.95rem 1.4rem;
       margin-bottom: 1.5em;
-      -webkit-transition: all 0.2s ease-out;
-      -moz-transition: all 0.2s ease-out;
-      -ms-transition: all 0.2s ease-out;
-      -o-transition: all 0.2s ease-out;
-      transition: all 0.2s ease-out;
       animation: fadeIn 1s 1.8s backwards;
-      width: 200px;
     }
 
     a:hover {
-      background-color: $soft-peach;
-      color: $background;
+      @include primary-cta-control-hover;
     }
   }
 }
@@ -156,7 +136,7 @@
     .text {
       display: flex;
       flex-direction: column;
-      justify-content: start;
+      justify-content: flex-start;
       align-items: flex-start;
       position: relative;
 

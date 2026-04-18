@@ -15,22 +15,62 @@ $soft-peach: #fefdfd;
 $amethyst-smoke: #a095af;
 $copper-rust: #964b48;
 $button-hover: #5f2e8e;
+$primary-control-radius: 18px;
 
 // Fonts
 $primary-font: 'Open Sans', sans-serif;
 $secondary-font: 'Open Sans', sans-serif;
 
+@mixin primary-cta-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: 0;
+  border-radius: $primary-control-radius;
+  background: linear-gradient(135deg, $salmon 0%, #ff6b5d 100%);
+  color: #1a1327;
+  text-decoration: none;
+  font-family: $secondary-font;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 16px 32px rgba($salmon, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease,
+    background-color 0.2s ease, color 0.2s ease;
+}
+
+@mixin primary-cta-control-hover {
+  transform: translateY(-1px);
+  box-shadow: 0 20px 38px rgba($salmon, 0.28);
+  filter: brightness(1.02);
+}
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   color: $soft-peach;
-  background-color: #021027;
-  // overflow: hidden;
+  background: radial-gradient(
+      circle at top,
+      rgba($salmon, 0.14),
+      transparent 28%
+    ),
+    linear-gradient(180deg, #07192f 0%, #041224 48%, #020913 100%);
   display: block;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
 }
 
 // Scrollbar

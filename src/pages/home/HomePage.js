@@ -72,10 +72,12 @@ const HomePage = () => {
   // ];
 
   useEffect(() => {
-    setTimeout(() => {
-      setTimer(!timer);
+    const titleTimer = window.setTimeout(() => {
+      setTimer(true);
       setLetterClass('text-animate-hover');
-    }, '10000');
+    }, 10000);
+
+    return () => window.clearTimeout(titleTimer);
   }, []);
 
   return (

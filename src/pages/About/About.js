@@ -3,52 +3,21 @@ import './About.scss';
 import '../../App.scss';
 import TylerPhoto from '../../assets/images/tyler.jpeg';
 import LetterAnimations from '../../components/letteranimations/LetterAnimations';
-import ReactLogo from '../../components/reactlogo/ReactLogo';
 import { motion } from 'framer-motion';
-import gsap from 'gsap';
 
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate');
 
   const aboutTitle = ['A', 'b', 'o', 'u', 't', ' ', 'M', 'e'];
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setLetterClass('text-animate-hover');
-  //   }, '2000');
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setLetterClass('text-animate-hover');
+    }, 3000);
 
-  //   // React-logo
-  //   gsap
-  //     .timeline()
-  //     .fromTo(
-  //       '.right-side',
-  //       {
-  //         opacity: 1,
-  //       },
-  //       {
-  //         scale: 1,
-  //         duration: 10,
-  //         opacity: 1,
-  //         ease: 'power2.out',
-  //       },
-  //     )
-  //     .fromTo(
-  //       '.right-side',
-  //       {
-  //         rotation: 0,
-  //       },
-  //       {
-  //         rotation: 360,
-  //         duration: 10,
-  //         repeat: -1,
-  //         ease: 'linear',
-  //       },
-  //       0,
-  //     )
-  //     .timeScale(1);
-  // }, []);
+    return () => window.clearTimeout(timer);
+  }, []);
 
-  // About me text
   return (
     <motion.main
       className='container about-page'
@@ -60,13 +29,6 @@ const About = () => {
         <img src={TylerPhoto} alt='Tyler Allen' className='about-hero-img' />
         <p className='about-hero-caption'>Tyler Allen — Full-Stack Developer</p>
       </div>
-
-      {/* Right sections with animation */}
-      <section className='right-side-about'>
-        {/* <ReactLogo className='react-logo' /> */}
-      </section>
-
-      {/* Left section */}
       <div className='text-zone-about'>
         <span className='about-me-title'>
           {' '}

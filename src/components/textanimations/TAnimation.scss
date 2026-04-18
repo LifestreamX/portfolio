@@ -3,7 +3,7 @@
 // T Animations
 .t {
   svg {
-    width: 200px;
+    width: clamp(200px, 56vw, 320px);
     animation: svg-fill 3000ms ease-in-out 2500ms both;
     .t-start-c2,
     .t-follow-c2 {
@@ -166,7 +166,7 @@
 }
 
 // TABLETS SIZE
-@media screen and(min-width: 768px) {
+@media screen and (min-width: 768px) {
   .t {
     svg {
       width: 400px;
@@ -178,14 +178,14 @@
 @media screen and (min-width: 1025px) {
   .t {
     svg {
-      width: 500px;
+      width: 460px;
     }
   }
 }
 @media screen and (min-width: 1600px) {
   .t {
     svg {
-      width: 800px;
+      width: 620px;
     }
   }
 }

@@ -1,21 +1,8 @@
 import LetterAnimations from '../../components/letteranimations/LetterAnimations';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './Projects.scss';
 import '../../App.scss';
 import { motion } from 'framer-motion';
-import gsap from 'gsap';
-import PersonalTraining from '../../assets/project-images/personal-training.png';
-import ClickAMole from '../../assets/project-images/click-a-mole.png';
-import TheCoziCorgi from '../../assets/project-images/the-cozi-corgi.png';
-import ContactManager from '../../assets/project-images/contact-manager.png';
-import CorgiLand from '../../assets/project-images/corgi-land.png';
-import RockPaperScissors from '../../assets/project-images/rock-paper-scissors.png';
-import GroceryList from '../../assets/project-images/grocery-list.png';
-import TvMovieVideoGame from '../../assets/project-images/tv-movie-videogame.png';
-import FakeStore from '../../assets/project-images/fake-store.png';
-import PupperNewsfeed from '../../assets/project-images/pupper-newsfeed.png';
-import NBA from '../../assets/project-images/nba.png';
-import NBA2 from '../../assets/project-images/nba2.png';
 import NutritionTracker from '../../assets/project-images/nutritiontracker.png';
 import LinkRay from '../../assets/project-images/linkray.png';
 import HolidayHub from '../../assets/project-images/holiday-hub.png';
@@ -27,11 +14,8 @@ import FitFunnel from '../../assets/project-images/fit-funnel.png';
 import TylerAllenSolutions from '../../assets/project-images/tyler-allen-solutions.png';
 
 const Projects = () => {
-  // We will NOT append UTMs to the visible URL; Outbound will POST UTM payloads instead.
-  const utm = (url, campaign) => url;
   // Outbound link helper: POSTs a serverless Measurement Protocol hit, then opens the target.
   const Outbound = ({ href, campaign, children, ...props }) => {
-    const target = href;
     const handleClick = async (e) => {
       e.preventDefault();
       const body = {
@@ -70,20 +54,6 @@ const Projects = () => {
   const [letterClass] = useState('text-animate');
 
   const projectTitle = ['P', 'r', 'o', 'j', 'e', 'c', 't', 's'];
-
-  // Project cards
-  useEffect(() => {
-    // gsap.fromTo(
-    //   '.card',
-    //   { opacity: 0 },
-    //   { stagger: 0.2, opacity: 1, duration: 1, delay: 0.5 }
-    // );
-    // gsap.fromTo(
-    //   '.project-title',
-    //   { opacity: 0 },
-    //   { stagger: 0.2, opacity: 1, duration: 1, delay: 0.5 }
-    // );
-  }, []);
 
   return (
     <>

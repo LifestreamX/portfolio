@@ -7,8 +7,9 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  padding-bottom: 50px;
+  padding: 5rem 1.5rem 3rem;
   min-height: 100vh;
+  gap: 2rem;
 
   .about-hero {
     display: flex;
@@ -16,7 +17,7 @@
     align-items: center;
     width: 100%;
     z-index: 10;
-    margin-top: 40px; // Default mobile margin
+    margin-top: 0;
     animation: heroPop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 
     .about-hero-img {
@@ -39,20 +40,6 @@
     }
   }
 
-  .right-side-about {
-    height: 0;
-    width: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 60px;
-    display: none; // Hidden on mobile by default to avoid clutter with photo
-
-    .react-logo {
-      // styles for the logo if needed
-    }
-  }
-
   .text-animate-hover {
     &:hover {
       color: $soft-peach;
@@ -68,7 +55,8 @@
     align-items: center;
     flex-direction: column;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 0;
+    max-width: 48rem;
 
     .about-me-title {
       width: 100%;
@@ -129,8 +117,9 @@
 // TABLET / SMALL DESKTOP
 @media screen and (min-width: 768px) {
   .about-page {
+    padding: 5.5rem 2.5rem 3rem;
+
     .about-hero {
-      margin-top: 80px;
       .about-hero-img {
         width: 220px;
       }
@@ -140,8 +129,8 @@
     }
 
     .text-zone-about {
-      width: 50%;
-      margin-top: 40px;
+      width: min(100%, 50rem);
+      margin-top: 0;
 
       .about-me-title {
         font-size: 2.2rem;
@@ -151,30 +140,25 @@
         font-size: 1.1rem;
       }
     }
-
-    .right-side-about {
-      display: block; // Show background logo on larger screens
-      opacity: 0.1 !important;
-      pointer-events: none;
-    }
   }
 }
 
-// LARGE DESKTOP
 @media screen and (min-width: 1025px) {
   .about-page {
+    padding: 6rem 4rem 3rem;
+
     .about-hero {
-      margin-top: 120px;
       .about-hero-img {
         width: 250px;
       }
     }
 
     .text-zone-about {
-      width: 50%;
-      margin-top: 60px;
+      width: min(100%, 54rem);
+
       p {
-        width: 80%;
+        width: 100%;
+        font-size: 1.08rem;
       }
     }
   }

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.scss';
 import HomeIcon from '@mui/icons-material/Home';
@@ -13,121 +13,72 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import ArticleIcon from '@mui/icons-material/Article';
 import OutboundLink from '../OutboundLink';
 
-const Sidebar = () => {
-  const theme = createTheme({
-    components: {
-      MuiTooltip: {
-        styleOverrides: {
-          tooltip: {
-            fontSize: '24px',
-            background: 'white',
-            color: 'black',
-            padding: '10px',
-          },
-          arrow: {
-            color: 'white',
-          },
+const theme = createTheme({
+  components: {
+    MuiTooltip: {
+      styleOverrides: {
+        tooltip: {
+          fontSize: '18px',
+          background: 'white',
+          color: 'black',
+          padding: '10px 12px',
+        },
+        arrow: {
+          color: 'white',
         },
       },
     },
-  });
+  },
+});
 
-  // Button icon color change on active link
-  let activeStyle = {
-    color: '#fc8a68',
-    fontSize: '48px',
+const Sidebar = () => {
+  const activeStyle = ({ isActive }) => ({
+    color: isActive ? '#fc8a68' : undefined,
     textDecoration: 'none',
-  };
+  });
 
   return (
     <ThemeProvider theme={theme}>
       <div className='navigation-wrapper'>
-        {/* Page links */}
         <nav className='nav-links-1-wrapper'>
-          {/* Home icon link */}
-          <NavLink
-            to='/'
-            className='about-nav-link'
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
-          >
+          <NavLink to='/' className='about-nav-link' style={activeStyle}>
             <Tooltip title='Home' placement='right' arrow>
-              <HomeIcon
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-                id='icons'
-              />
+              <HomeIcon id='icons' />
             </Tooltip>
           </NavLink>
 
-          {/* About icon link */}
-          <NavLink
-            to='/about'
-            className='about-nav-link'
-            exact='true'
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
-          >
+          <NavLink to='/about' className='about-nav-link' style={activeStyle}>
             <Tooltip title='About' placement='right' arrow>
-              <PersonIcon
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-                id='icons'
-              />
+              <PersonIcon id='icons' />
             </Tooltip>
           </NavLink>
 
-          {/* Experience */}
-          <NavLink
-            to='/skills'
-            className='about-nav-link'
-            exact='true'
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
-          >
+          <NavLink to='/skills' className='about-nav-link' style={activeStyle}>
             <Tooltip title='Experience' placement='right' arrow>
-              <SettingsIcon
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-                id='icons'
-              />
+              <SettingsIcon id='icons' />
             </Tooltip>
           </NavLink>
-          {/* Projects */}
+
           <NavLink
             to='/projects'
             className='about-nav-link'
-            exact='true'
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            style={activeStyle}
           >
             <Tooltip title='Projects' placement='right' arrow>
-              <VisibilityIcon
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-                id='icons'
-              />
+              <VisibilityIcon id='icons' />
             </Tooltip>
           </NavLink>
 
-          {/* Contact  link */}
           <NavLink
             to='/contact'
             className='contact-nav-link'
-            exact='true'
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            style={activeStyle}
           >
             <Tooltip title='Contact' placement='right' arrow>
-              <ContactMailIcon
-                className={({ isActive }) =>
-                  isActive ? activeStyle : undefined
-                }
-                id='icons'
-              />
+              <ContactMailIcon id='icons' />
             </Tooltip>
           </NavLink>
 
-          {/* Links for Resume, Github and Linkedin */}
           <li className='about-nav-link'>
             <OutboundLink
               href={'/Resume.pdf'}

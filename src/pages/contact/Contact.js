@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Contact.scss';
-import { motion, AnimatePresence, useCycle } from 'framer-motion';
-import '../../pages/home/HomePage.scss';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { motion } from 'framer-motion';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import gsap from 'gsap';
@@ -11,28 +9,30 @@ import Alert from '@mui/material/Alert';
 import analytics from '../../analytics';
 import { useSpring, animated, config } from 'react-spring';
 
+const EMAILJS_SERVICE_ID =
+  process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_n9kx9lu';
+const EMAILJS_TEMPLATE_ID =
+  process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_95sbm8s';
+const EMAILJS_PUBLIC_KEY =
+  process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'VGREUHM3uBzR_I_AT';
+
 const calc = (x, y) => [
-  // Turned off by switching  from /2 to /0
-  -(y - window.innerHeight / 0) / 20,
-  (x - window.innerWidth / 0) / 20,
-  1,
+  -(y - window.innerHeight / 2) / 35,
+  (x - window.innerWidth / 2) / 35,
+  1.03,
 ];
 const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 const Contact = () => {
-  library.add(faEnvelope);
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState('idle');
 
-  // 3d animation for left side logo
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
-    config: config.default,
+    config: config.gentle,
   }));
 
-  // Gsap
   useEffect(() => {
-    // Left side logo
     gsap.fromTo(
       '.animation-wrapper',
       {
@@ -47,9 +47,8 @@ const Contact = () => {
       },
     );
 
-    // Form section
     gsap.fromTo(
-      'h1',
+      '.contact-page-title',
       { x: '1000%' },
       { stagger: 0.3, duration: 1, x: '0', delay: 0 },
     );
@@ -60,49 +59,43 @@ const Contact = () => {
       { stagger: 0.3, duration: 1.0, delay: 0.5, x: '0' },
     );
     gsap.fromTo(
-      'button',
+      '.submit-button',
       { opacity: 0 },
       { stagger: 0.3, duration: 1.4, delay: 2.3, opacity: 1 },
     );
   }, []);
 
-  // Email
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+    if (!form.current) return;
 
-    emailjs
-      .sendForm(
-        'service_n9kx9lu',
-        'template_95sbm8s',
-        form.current,
-        'VGREUHM3uBzR_I_AT',
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        },
-      );
-    setSent(true);
+    setStatus('sending');
+
     try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form.current,
+        EMAILJS_PUBLIC_KEY,
+      );
+
+      setStatus('sent');
       analytics.trackEvent({
         category: 'Contact',
         action: 'submit',
         label: 'Contact Form',
       });
-    } catch (e) {}
-    e.target.reset();
+      form.current.reset();
+    } catch (error) {
+      setStatus('error');
+    }
 
-    setTimeout(() => {
-      setSent(false);
-    }, '5000');
+    window.setTimeout(() => {
+      setStatus('idle');
+    }, 5000);
   };
-
-  console.log(sent);
 
   return (
     <motion.div
@@ -111,9 +104,10 @@ const Contact = () => {
       animate={{ width: '100%' }}
       exit={{ x: window.innerWidth, transition: { duration: 0.5 } }}
     >
-      {/* TITLE */}
-      <h1 className='input-1'>CONTACT ME</h1>
-      {/* LOGO */}
+      <div className='contact-intro'>
+        <h1 className='contact-page-title'>Contact Me</h1>
+      </div>
+
       <animated.div
         className='animation-wrapper'
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
@@ -122,68 +116,81 @@ const Contact = () => {
           transform: props.xys.to(trans),
         }}
       >
-        <FontAwesomeIcon icon='envelope' className=' contact-page-logo ' />
+        <FontAwesomeIcon icon={faEnvelope} className='contact-page-logo' />
       </animated.div>
 
-      {/* FORM  */}
-      {/* Form */}
       <form className='form' ref={form} onSubmit={sendEmail}>
-        {sent === true && (
+        {status === 'sent' && (
           <Alert className='alert' severity='success'>
-            Email has been sent.
+            Message sent successfully.
+          </Alert>
+        )}
+
+        {status === 'error' && (
+          <Alert className='alert' severity='error'>
+            Something went wrong. Please try again in a moment.
           </Alert>
         )}
 
         <div className='form-wrapper'>
-          {/* Name input */}
-          <div className='group input-2'>
-            <input type='text' required name='name' />
-            <span className='highlight'></span>
-            <label className='labels'>Name</label>
+          <div className='group'>
+            <label htmlFor='contact-name' className='labels'>
+              Name
+            </label>
+            <input id='contact-name' type='text' required name='name' />
           </div>
-          {/* Email input */}
-          <div className='group input-3'>
-            <input type='email' required name='email' />
-            <span className='highlight'></span>
-            <label for='email' className='labels'>
+
+          <div className='group'>
+            <label htmlFor='contact-email' className='labels'>
               Email
             </label>
+            <input id='contact-email' type='email' required name='email' />
           </div>
-          {/* Subject input */}
-          <div className='group input-4'>
-            <input type='text' required name='subject' />
-            <span className='highlight'></span>
-            <label className='labels'>Subject</label>
+
+          <div className='group'>
+            <label htmlFor='contact-subject' className='labels'>
+              Subject
+            </label>
+            <input id='contact-subject' type='text' required name='subject' />
           </div>
-          {/* Message input */}
-          <div className='group message-wrapper input-5'>
-            <textarea required className='message-box' name='message' />
-            <label>Message</label>
+
+          <div className='group'>
+            <label htmlFor='contact-message' className='labels'>
+              Message
+            </label>
+            <textarea
+              id='contact-message'
+              required
+              className='message-box'
+              name='message'
+            />
           </div>
-          {/* Send button  */}
+
           <button
             type='submit'
+            className='submit-button'
+            disabled={status === 'sending'}
             data-ga-category='Contact'
             data-ga-action='click'
             data-ga-label='Send Button'
           >
-            <div class='svg-wrapper-1'>
-              <div class='svg-wrapper'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  viewBox='0 0 24 24'
-                  width='24'
-                  height='24'
-                >
-                  <path fill='none' d='M0 0h24v24H0z'></path>
-                  <path
-                    fill='currentColor'
-                    d='M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z'
-                  ></path>
-                </svg>
-              </div>
-              <span className='send-button'>Send</span>
-            </div>
+            <span className='button-icon'>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 24 24'
+                width='24'
+                height='24'
+              >
+                <path fill='none' d='M0 0h24v24H0z'></path>
+                <path
+                  fill='currentColor'
+                  d='M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z'
+                ></path>
+              </svg>
+            </span>
+            <span className='send-button'>
+              {status === 'sending' ? 'Sending...' : 'Send Message'}
+            </span>
           </button>
         </div>
       </form>

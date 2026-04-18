@@ -1,9 +1,10 @@
-﻿import './Skills.scss';
 import React, { useEffect, useState } from 'react';
-import '../../App.scss';
-import LetterAnimations from '../../components/letteranimations/LetterAnimations';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
+
+import '../../App.scss';
+import LetterAnimations from '../../components/letteranimations/LetterAnimations';
+import './Skills.scss';
 
 const skillCategories = [
   {
@@ -97,9 +98,9 @@ const Skills = () => {
   const aboutTitle = ['E', 'x', 'p', 'e', 'r', 'i', 'e', 'n', 'c', 'e'];
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = window.setTimeout(() => {
       setLetterClass('text-animate-hover');
-    }, '3000');
+    }, 3000);
 
     gsap.fromTo(
       '.sentence',
@@ -112,6 +113,8 @@ const Skills = () => {
       { opacity: 0, y: 20 },
       { stagger: 0.15, opacity: 1, y: 0, duration: 0.6, delay: 0.5 },
     );
+
+    return () => window.clearTimeout(timer);
   }, []);
 
   return (
@@ -132,7 +135,7 @@ const Skills = () => {
         </span>
 
         <h2 className='sentence'>
-          These are the technologies that i've worked with
+          These are the technologies that I've worked with
         </h2>
       </div>
 
