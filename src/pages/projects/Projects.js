@@ -12,6 +12,7 @@ import NeoView from '../../assets/project-images/neo-view.png';
 import TylerAllenPersonalTraining from '../../assets/project-images/tyler-allen-personal-training.png';
 import FitFunnel from '../../assets/project-images/fit-funnel.png';
 import TylerAllenSolutions from '../../assets/project-images/tyler-allen-solutions.png';
+import SiteSprout from '../../assets/project-images/site-sprout.png';
 
 const Projects = () => {
   // Outbound link helper: POSTs a serverless Measurement Protocol hit, then opens the target.
@@ -378,6 +379,33 @@ const Projects = () => {
         {/* Cards */}
         <div className='scene'>
           <div className='cards'>
+            {/* Project : Sitesprout */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <Outbound
+                href='https://sitesprout.tyler-allen.com'
+                campaign='sitesprout'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='SiteSprout'
+              >
+                <div className='project-title'>SiteSprout</div>{' '}
+              </Outbound>
+              {/* Image */}
+              <Outbound
+                href='https://sitesprout.tyler-allen.com/'
+                campaign='sitesprout'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='SiteSprout Image'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img src={SiteSprout} alt='SiteSprout' />
+                  </div>
+                </div>
+              </Outbound>
+            </div>
             {/* Project : Tyler Allen Solutions */}
             <div className='card-wrapper'>
               {/* Title */}
@@ -408,38 +436,7 @@ const Projects = () => {
                 </div>
               </Outbound>
             </div>
-            {/* Project : Tyler Allen Personal Training */}
-            <div className='card-wrapper'>
-              {/* Title */}
-              <Outbound
-                href='https://personal-training.tyler-allen.com'
-                campaign='personal_training'
-                data-ga-category='Project'
-                data-ga-action='click'
-                data-ga-label='Tyler Allen Personal Training'
-              >
-                <div className='project-title'>
-                  Tyler Allen Personal Training
-                </div>{' '}
-              </Outbound>
-              {/* Image */}
-              <Outbound
-                href='https://personal-training.tyler-allen.com'
-                campaign='personal_training'
-                data-ga-category='Project'
-                data-ga-action='click'
-                data-ga-label='Tyler Allen Personal Training Image'
-              >
-                <div className='card'>
-                  <div className='card__face card__face--front'>
-                    <img
-                      src={TylerAllenPersonalTraining}
-                      alt='Tyler Allen Personal Training'
-                    />
-                  </div>
-                </div>
-              </Outbound>
-            </div>
+
             {/* Project : linkray */}
             <div className='card-wrapper'>
               {/* Title */}
@@ -538,6 +535,38 @@ const Projects = () => {
                 <div className='card'>
                   <div className='card__face card__face--front'>
                     <img src={NeoView} alt='NeoView' />
+                  </div>
+                </div>
+              </Outbound>
+            </div>
+            {/* Project : Tyler Allen Personal Training */}
+            <div className='card-wrapper'>
+              {/* Title */}
+              <Outbound
+                href='https://personal-training.tyler-allen.com'
+                campaign='personal_training'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='Tyler Allen Personal Training'
+              >
+                <div className='project-title'>
+                  Tyler Allen Personal Training
+                </div>{' '}
+              </Outbound>
+              {/* Image */}
+              <Outbound
+                href='https://personal-training.tyler-allen.com'
+                campaign='personal_training'
+                data-ga-category='Project'
+                data-ga-action='click'
+                data-ga-label='Tyler Allen Personal Training Image'
+              >
+                <div className='card'>
+                  <div className='card__face card__face--front'>
+                    <img
+                      src={TylerAllenPersonalTraining}
+                      alt='Tyler Allen Personal Training'
+                    />
                   </div>
                 </div>
               </Outbound>
